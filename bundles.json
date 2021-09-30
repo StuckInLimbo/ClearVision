@@ -34,6 +34,17 @@
 				"assets/commonassets/physics/physicsmaterials.bundle",
 				"packages/com.unity.postproessing/postprocessing/postprocessresources.bundle"
 			]
+		},
+		{
+			"key": "assets/content/items/mods/tactical/tactical_mp155_kalashnikov_ultima_camera_thermal.bundle",
+			"dependencyKeys": [
+				"shaders",
+				"cubemap",
+				"assets/systems/effects/nightvision.bundle",
+				"assets/systems/effects/nightvision/mask_nv_textures",
+				"assets/commonassets/physics/physicsmaterials.bundle",
+				"packages/com.unity.postproessing/postprocessing/postprocessresources.bundle"
+			]
 		}
 	]
 }

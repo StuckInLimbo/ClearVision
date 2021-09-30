@@ -1,0 +1,67 @@
+{
+	"ClearVision": {
+		"Enabled": true
+	},
+	"GPNVG" : {
+		"Enabled": true,
+		"Intensity": 1.35,
+		"NoiseIntensity": 0.0,
+		"NoiseScale": 2.5,
+		"DiffuseIntensity": 0.0,
+		"Mask": "Anvis",
+		"MaskSize": 2.5,
+		"Red": 25,
+		"Green": 255,
+		"Blue": 69,
+		"Alpha": 235
+	},
+	"N15" : {
+		"Enabled": true,
+		"Intensity": 1.35,
+		"NoiseIntensity": 0.0,
+		"NoiseScale": 2.5,
+		"DiffuseIntensity": 0.0,
+		"Mask": "Anvis",
+		"MaskSize": 2.5,
+		"Red": 25,
+		"Green": 125,
+		"Blue": 255,
+		"Alpha": 235
+	},
+	"PVS14" : {
+		"Enabled": true,
+		"Intensity": 1.35,
+		"NoiseIntensity": 0.0,
+		"NoiseScale": 2.5,
+		"DiffuseIntensity": 0.0,
+		"Mask": "Anvis",
+		"MaskSize": 2.5,
+		"Red": 255,
+		"Green": 25,
+		"Blue": 25,
+		"Alpha": 235
+	},
+	"PNV10T" : {
+		"Enabled": true,
+		"Intensity": 1.35,
+		"NoiseIntensity": 0.0,
+		"NoiseScale": 2.5,
+		"DiffuseIntensity": 0.0,
+		"Mask": "Anvis",
+		"MaskSize": 2.5,
+		"Red": 25,
+		"Green": 235,
+		"Blue": 125,
+		"Alpha": 235
+	},
+	"T7" : {
+		"Enabled": true,
+		"Noise": false,
+		"NoiseIntensity": 0.0,
+		"MotionBlur": false,
+		"Mask": "Thermal",
+		"MaskSize": 2.5,
+		"HeatMin": 0.40,
+		"ColdMax": 0.25
+	}
+}

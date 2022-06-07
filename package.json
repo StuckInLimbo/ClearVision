@@ -1,8 +1,8 @@
 {
 	"name": "ClearVision",
 	"author": "Limbo",
-	"version": "1.0.3",
-	"akiVersion": "2.2.0",
+	"version": "1.0.4",
+	"akiVersion": "2.3.1",
 	"license": "CC BY-NC 4.0",
 	"optionalDependencies": {},
 	"main": "package.js"

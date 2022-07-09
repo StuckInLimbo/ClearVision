@@ -1,10 +1,10 @@
 {
-       "name": "ClearVision",
+       "name": "clearvision",
        "version": "1.1.0",
        "author": "Limbo",
        "license": "CC BY-NC 4.0",
        "main": "src/mod.js",
-       "akiVersion": "3.0.1",
+       "akiVersion": "3.0.0",
        "isBundleMod": true,
        "scripts": {
               "setup:environment": "npm i",

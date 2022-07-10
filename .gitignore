@@ -23,9 +23,9 @@ coverage
 .env
 
 # Dependency directory
-node_modules
-bower_components
-_uabe
+/node_modules/
+/bower_components/
+/_uabe/
 
 # Editors
 .idea

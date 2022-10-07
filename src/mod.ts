@@ -1,21 +1,22 @@
 import { DependencyContainer } from "tsyringe";
-import { IMod } from "@spt-aki/models/external/mod";
+
+import { IPreAkiLoadMod } from "@spt-aki/models/external/IPreAkiLoadMod";
 import { ILogger } from "@spt-aki/models/spt/utils/ILogger";
 import { DatabaseServer } from "@spt-aki/servers/DatabaseServer";
 
-class Mod implements IMod
+class Mod implements IPreAkiLoadMod
 {
     private modConfig = require("../cfg/config.json");
 
     // Code added here will load BEFORE the server has started loading
-    public load(container: DependencyContainer): void 
+    public preAkiLoad(container: DependencyContainer): void 
     {
         const logger = container.resolve<ILogger>("WinstonLogger");
         logger.info("Loading: ClearVision");
     }
 
     // Code added here will be run AFTER the server has started
-    public delayedLoad(container: DependencyContainer): void 
+    public postDBLoad(container: DependencyContainer): void 
     {
         // get the logger from the server container
         const logger = container.resolve<ILogger>("WinstonLogger");

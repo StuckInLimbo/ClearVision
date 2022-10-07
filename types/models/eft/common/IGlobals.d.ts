@@ -1128,8 +1128,11 @@ export interface Inertia {
     SprintAccelerationLimits: xyz;
     SideTime: xyz;
     DiagonalTime: xyz;
+    MaxTimeWithoutInput: xyz;
     MinDirectionBlendTime: number;
-    MoveTime: number;
+    MoveTimeRange: xyz;
+    ProneDirectionAccelerationRange: xyz;
+    ProneSpeedAccelerationRange: xyz;
     MinMovementAccelerationRangeRight: xyz;
     MaxMovementAccelerationRangeRight: xyz;
 }
@@ -1172,5 +1175,6 @@ export interface Preset {
     _name: string;
     _parent: string;
     _items: Item[];
+    /** Default presets have this property */
     _encyclopedia?: string;
 }

@@ -34,6 +34,7 @@ export interface Props {
     LootExperience?: number;
     ExamineExperience?: number;
     HideEntrails?: boolean;
+    InsuranceDisabled?: boolean;
     RepairCost?: number;
     RepairSpeed?: number;
     ExtraSizeLeft?: number;
@@ -50,6 +51,7 @@ export interface Props {
     UnlootableFromSide?: string[];
     AnimationVariantsNumber?: number;
     DiscardingBlock?: boolean;
+    DropSoundType?: string;
     RagFairCommissionModifier?: number;
     IsAlwaysAvailableForInsurance?: boolean;
     DiscardLimit?: number;
@@ -78,7 +80,7 @@ export interface Props {
     HasShoulderContact?: boolean;
     SightingRange?: number;
     DoubleActionAccuracyPenaltyMult?: number;
-    ModesCount: any;
+    ModesCount?: any;
     DurabilityBurnModificator?: number;
     HeatFactor?: number;
     CoolFactor?: number;
@@ -89,7 +91,7 @@ export interface Props {
     SightModesCount?: number;
     OpticCalibrationDistances?: number[];
     ScopesCount?: number;
-    AimSensitivity: any;
+    AimSensitivity?: number | number[][];
     Zooms?: number[][];
     CalibrationDistances?: number[][];
     Intensity?: number;
@@ -154,7 +156,7 @@ export interface Props {
     RigLayoutName?: string;
     MaxDurability?: number;
     armorZone?: string[];
-    armorClass: any;
+    armorClass?: any;
     mousePenalty?: number;
     weaponErgonomicPenalty?: number;
     BluntThroughput?: number;
@@ -200,8 +202,12 @@ export interface Props {
     MinRepairDegradation?: number;
     MaxRepairDegradation?: number;
     IronSightRange?: number;
+    IsFlareGun?: boolean;
+    IsGrenadeLauncher?: boolean;
+    IsOneoff?: boolean;
     MustBoltBeOpennedForExternalReload?: boolean;
     MustBoltBeOpennedForInternalReload?: boolean;
+    NoFiremodeOnBoltcatch?: boolean;
     BoltAction?: boolean;
     HipAccuracyRestorationDelay?: number;
     HipAccuracyRestorationSpeed?: number;
@@ -248,8 +254,8 @@ export interface Props {
     foodUseTime?: number;
     foodEffectType?: string;
     StimulatorBuffs?: string;
-    effects_health: any;
-    effects_damage: any;
+    effects_health?: any;
+    effects_damage?: any;
     MaximumNumberOfUsage?: number;
     knifeHitDelay?: number;
     knifeHitSlashRate?: number;

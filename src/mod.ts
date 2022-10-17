@@ -43,10 +43,10 @@ class Mod implements IPreAkiLoadMod
                     pvs14._props.NoiseIntensity = this.modConfig.PVS14.NoiseIntensity;
                     pvs14._props.NoiseScale = this.modConfig.PVS14.NoiseScale;
                     pvs14._props.DiffuseIntensity = this.modConfig.PVS14.DiffuseIntensity;
-                    pvs14._props.Color[0] = this.modConfig.PVS14.Red;
-                    pvs14._props.Color[1] = this.modConfig.PVS14.Green;
-                    pvs14._props.Color[2] = this.modConfig.PVS14.Blue;
-                    pvs14._props.Color[3] = this.modConfig.PVS14.Alpha;
+                    pvs14._props.Color.r = this.modConfig.PVS14.Red;
+                    pvs14._props.Color.g = this.modConfig.PVS14.Green;
+                    pvs14._props.Color.b = this.modConfig.PVS14.Blue;
+                    pvs14._props.Color.a = this.modConfig.PVS14.Alpha;
                     logger.info("CV: AN/PVS14 Monocular tuned!");
                 }
 
@@ -59,10 +59,10 @@ class Mod implements IPreAkiLoadMod
                     n15._props.NoiseIntensity = this.modConfig.N15.NoiseIntensity;
                     n15._props.NoiseScale = this.modConfig.N15.NoiseScale;
                     n15._props.DiffuseIntensity = this.modConfig.N15.DiffuseIntensity;
-                    n15._props.Color[0] = this.modConfig.N15.Red;
-                    n15._props.Color[1] = this.modConfig.N15.Green;
-                    n15._props.Color[2] = this.modConfig.N15.Blue;
-                    n15._props.Color[3] = this.modConfig.N15.Alpha;
+                    n15._props.Color.r = this.modConfig.N15.Red;
+                    n15._props.Color.g = this.modConfig.N15.Green;
+                    n15._props.Color.b = this.modConfig.N15.Blue;
+                    n15._props.Color.a = this.modConfig.N15.Alpha;
                     logger.info("CV: Armasight N-15 tuned!");
                 }
                 //GPNVG-18
@@ -74,10 +74,10 @@ class Mod implements IPreAkiLoadMod
                     gpnvg._props.NoiseIntensity = this.modConfig.GPNVG.NoiseIntensity;
                     gpnvg._props.NoiseScale = this.modConfig.GPNVG.NoiseScale;
                     gpnvg._props.DiffuseIntensity = this.modConfig.GPNVG.DiffuseIntensity;
-                    gpnvg._props.Color[0] = this.modConfig.GPNVG.Red;
-                    gpnvg._props.Color[1] = this.modConfig.GPNVG.Green;
-                    gpnvg._props.Color[2] = this.modConfig.GPNVG.Blue;
-                    gpnvg._props.Color[3] = this.modConfig.GPNVG.Alpha;
+                    gpnvg._props.Color.r = this.modConfig.GPNVG.Red;
+                    gpnvg._props.Color.g = this.modConfig.GPNVG.Green;
+                    gpnvg._props.Color.b = this.modConfig.GPNVG.Blue;
+                    gpnvg._props.Color.a = this.modConfig.GPNVG.Alpha;
                     logger.info("CV: GPNVG-18 tuned!");
                 }
                 //PNV-10T
@@ -89,10 +89,10 @@ class Mod implements IPreAkiLoadMod
                     pnv10._props.NoiseIntensity = this.modConfig.PNV10T.NoiseIntensity;
                     pnv10._props.NoiseScale = this.modConfig.PNV10T.NoiseScale;
                     pnv10._props.DiffuseIntensity = this.modConfig.PNV10T.DiffuseIntensity;
-                    pnv10._props.Color[0] = this.modConfig.PNV10T.Red;
-                    pnv10._props.Color[1] = this.modConfig.PNV10T.Green;
-                    pnv10._props.Color[2] = this.modConfig.PNV10T.Blue;
-                    pnv10._props.Color[3] = this.modConfig.PNV10T.Alpha;
+                    pnv10._props.Color.r = this.modConfig.PNV10T.Red;
+                    pnv10._props.Color.g = this.modConfig.PNV10T.Green;
+                    pnv10._props.Color.b = this.modConfig.PNV10T.Blue;
+                    pnv10._props.Color.a = this.modConfig.PNV10T.Alpha;
                     logger.info("CV: PNV-10T tuned!");
                 }
                 //T-7 Thermal Goggles

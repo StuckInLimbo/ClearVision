@@ -7,6 +7,7 @@ lib-cov
 *.pid
 *.gz
 *.swp
+*.lnk
 
 pids
 logs
@@ -26,7 +27,6 @@ coverage
 # Dependency directory
 /node_modules/
 /bower_components/
-/_uabe/
 
 # Editors
 .idea

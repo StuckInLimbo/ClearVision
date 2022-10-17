@@ -1,0 +1,426 @@
+0 AssetBundle Base
+ 1 string m_Name = "assets/content/items/mods/scopes/scope_all_torrey_pines_logic_t12_w_30hz.bundle"
+ 0 vector m_PreloadTable
+  1 Array Array (95 items)
+   0 int size = 95
+   [0]
+    0 PPtr<Object> data
+     0 int m_FileID = 1
+     0 SInt64 m_PathID = -9098473984068178372
+   [1]
+    0 PPtr<Object> data
+     0 int m_FileID = 1
+     0 SInt64 m_PathID = -8368840478660104786
+   [2]
+    0 PPtr<Object> data
+     0 int m_FileID = 1
+     0 SInt64 m_PathID = -7926059857204510293
+   [3]
+    0 PPtr<Object> data
+     0 int m_FileID = 1
+     0 SInt64 m_PathID = -7596296163913447224
+   [4]
+    0 PPtr<Object> data
+     0 int m_FileID = 1
+     0 SInt64 m_PathID = -2839820890974624566
+   [5]
+    0 PPtr<Object> data
+     0 int m_FileID = 1
+     0 SInt64 m_PathID = -2415094849731080427
+   [6]
+    0 PPtr<Object> data
+     0 int m_FileID = 1
+     0 SInt64 m_PathID = -872022254163293265
+   [7]
+    0 PPtr<Object> data
+     0 int m_FileID = 1
+     0 SInt64 m_PathID = 2862045551766238708
+   [8]
+    0 PPtr<Object> data
+     0 int m_FileID = 1
+     0 SInt64 m_PathID = 3963011786341507362
+   [9]
+    0 PPtr<Object> data
+     0 int m_FileID = 1
+     0 SInt64 m_PathID = 5291691016692073821
+   [10]
+    0 PPtr<Object> data
+     0 int m_FileID = 1
+     0 SInt64 m_PathID = 5808810239059734513
+   [11]
+    0 PPtr<Object> data
+     0 int m_FileID = 1
+     0 SInt64 m_PathID = 5977476836669679858
+   [12]
+    0 PPtr<Object> data
+     0 int m_FileID = 5
+     0 SInt64 m_PathID = -4679999331080453473
+   [13]
+    0 PPtr<Object> data
+     0 int m_FileID = 5
+     0 SInt64 m_PathID = -4504813805791030888
+   [14]
+    0 PPtr<Object> data
+     0 int m_FileID = 5
+     0 SInt64 m_PathID = 6747781150766600812
+   [15]
+    0 PPtr<Object> data
+     0 int m_FileID = 5
+     0 SInt64 m_PathID = 7789947214477360350
+   [16]
+    0 PPtr<Object> data
+     0 int m_FileID = 3
+     0 SInt64 m_PathID = -4309039717055082381
+   [17]
+    0 PPtr<Object> data
+     0 int m_FileID = 6
+     0 SInt64 m_PathID = -14191494099089390
+   [18]
+    0 PPtr<Object> data
+     0 int m_FileID = 4
+     0 SInt64 m_PathID = -6193653337146545632
+   [19]
+    0 PPtr<Object> data
+     0 int m_FileID = 4
+     0 SInt64 m_PathID = -3548446952302143892
+   [20]
+    0 PPtr<Object> data
+     0 int m_FileID = 4
+     0 SInt64 m_PathID = -3129771501855889499
+   [21]
+    0 PPtr<Object> data
+     0 int m_FileID = 4
+     0 SInt64 m_PathID = 8199788924419820673
+   [22]
+    0 PPtr<Object> data
+     0 int m_FileID = 2
+     0 SInt64 m_PathID = 1052853038577482737
+   [23]
+    0 PPtr<Object> data
+     0 int m_FileID = 2
+     0 SInt64 m_PathID = 3504963903896989238
+   [24]
+    0 PPtr<Object> data
+     0 int m_FileID = 0
+     0 SInt64 m_PathID = -8851132669561012901
+   [25]
+    0 PPtr<Object> data
+     0 int m_FileID = 0
+     0 SInt64 m_PathID = -8684660965968392214
+   [26]
+    0 PPtr<Object> data
+     0 int m_FileID = 0
+     0 SInt64 m_PathID = -8661240658400462794
+   [27]
+    0 PPtr<Object> data
+     0 int m_FileID = 0
+     0 SInt64 m_PathID = -8141891124458479124
+   [28]
+    0 PPtr<Object> data
+     0 int m_FileID = 0
+     0 SInt64 m_PathID = -8129378891187355650
+   [29]
+    0 PPtr<Object> data
+     0 int m_FileID = 0
+     0 SInt64 m_PathID = -8029112086110729668
+   [30]
+    0 PPtr<Object> data
+     0 int m_FileID = 0
+     0 SInt64 m_PathID = -6745752683450323195
+   [31]
+    0 PPtr<Object> data
+     0 int m_FileID = 0
+     0 SInt64 m_PathID = -6691807063133362299
+   [32]
+    0 PPtr<Object> data
+     0 int m_FileID = 0
+     0 SInt64 m_PathID = -6389776632897732435
+   [33]
+    0 PPtr<Object> data
+     0 int m_FileID = 0
+     0 SInt64 m_PathID = -5597468277124244090
+   [34]
+    0 PPtr<Object> data
+     0 int m_FileID = 0
+     0 SInt64 m_PathID = -5445516024758774730
+   [35]
+    0 PPtr<Object> data
+     0 int m_FileID = 0
+     0 SInt64 m_PathID = -5308082483163730899
+   [36]
+    0 PPtr<Object> data
+     0 int m_FileID = 0
+     0 SInt64 m_PathID = -5152019446405794523
+   [37]
+    0 PPtr<Object> data
+     0 int m_FileID = 0
+     0 SInt64 m_PathID = -4431244669001285805
+   [38]
+    0 PPtr<Object> data
+     0 int m_FileID = 0
+     0 SInt64 m_PathID = -4270933938035260544
+   [39]
+    0 PPtr<Object> data
+     0 int m_FileID = 0
+     0 SInt64 m_PathID = -4017998779439376959
+   [40]
+    0 PPtr<Object> data
+     0 int m_FileID = 0
+     0 SInt64 m_PathID = -3578583156398971955
+   [41]
+    0 PPtr<Object> data
+     0 int m_FileID = 0
+     0 SInt64 m_PathID = -3221874279550817961
+   [42]
+    0 PPtr<Object> data
+     0 int m_FileID = 0
+     0 SInt64 m_PathID = -3130472411721770974
+   [43]
+    0 PPtr<Object> data
+     0 int m_FileID = 0
+     0 SInt64 m_PathID = -2446311142659158880
+   [44]
+    0 PPtr<Object> data
+     0 int m_FileID = 0
+     0 SInt64 m_PathID = -2419018150302673517
+   [45]
+    0 PPtr<Object> data
+     0 int m_FileID = 0
+     0 SInt64 m_PathID = -2344020856168762411
+   [46]
+    0 PPtr<Object> data
+     0 int m_FileID = 0
+     0 SInt64 m_PathID = -1821722498388293237
+   [47]
+    0 PPtr<Object> data
+     0 int m_FileID = 0
+     0 SInt64 m_PathID = -1793309441882186875
+   [48]
+    0 PPtr<Object> data
+     0 int m_FileID = 0
+     0 SInt64 m_PathID = -1468699738895150601
+   [49]
+    0 PPtr<Object> data
+     0 int m_FileID = 0
+     0 SInt64 m_PathID = -1297916086147052249
+   [50]
+    0 PPtr<Object> data
+     0 int m_FileID = 0
+     0 SInt64 m_PathID = -1150009332669463531
+   [51]
+    0 PPtr<Object> data
+     0 int m_FileID = 0
+     0 SInt64 m_PathID = -743384961782098559
+   [52]
+    0 PPtr<Object> data
+     0 int m_FileID = 0
+     0 SInt64 m_PathID = -699964031241212397
+   [53]
+    0 PPtr<Object> data
+     0 int m_FileID = 0
+     0 SInt64 m_PathID = -451563055253731854
+   [54]
+    0 PPtr<Object> data
+     0 int m_FileID = 0
+     0 SInt64 m_PathID = -342482863825094493
+   [55]
+    0 PPtr<Object> data
+     0 int m_FileID = 0
+     0 SInt64 m_PathID = -219374833739207628
+   [56]
+    0 PPtr<Object> data
+     0 int m_FileID = 0
+     0 SInt64 m_PathID = 455887115103439974
+   [57]
+    0 PPtr<Object> data
+     0 int m_FileID = 0
+     0 SInt64 m_PathID = 566566470738362846
+   [58]
+    0 PPtr<Object> data
+     0 int m_FileID = 0
+     0 SInt64 m_PathID = 571241949921511872
+   [59]
+    0 PPtr<Object> data
+     0 int m_FileID = 0
+     0 SInt64 m_PathID = 780009852504680199
+   [60]
+    0 PPtr<Object> data
+     0 int m_FileID = 0
+     0 SInt64 m_PathID = 949729545946894254
+   [61]
+    0 PPtr<Object> data
+     0 int m_FileID = 0
+     0 SInt64 m_PathID = 1014662403389731162
+   [62]
+    0 PPtr<Object> data
+     0 int m_FileID = 0
+     0 SInt64 m_PathID = 1124504151081603031
+   [63]
+    0 PPtr<Object> data
+     0 int m_FileID = 0
+     0 SInt64 m_PathID = 1521740952611069745
+   [64]
+    0 PPtr<Object> data
+     0 int m_FileID = 0
+     0 SInt64 m_PathID = 1650646325710518794
+   [65]
+    0 PPtr<Object> data
+     0 int m_FileID = 0
+     0 SInt64 m_PathID = 1749668217791138235
+   [66]
+    0 PPtr<Object> data
+     0 int m_FileID = 0
+     0 SInt64 m_PathID = 2114758385760708141
+   [67]
+    0 PPtr<Object> data
+     0 int m_FileID = 0
+     0 SInt64 m_PathID = 2265597676938544022
+   [68]
+    0 PPtr<Object> data
+     0 int m_FileID = 0
+     0 SInt64 m_PathID = 2454368541904477853
+   [69]
+    0 PPtr<Object> data
+     0 int m_FileID = 0
+     0 SInt64 m_PathID = 2710773388349277377
+   [70]
+    0 PPtr<Object> data
+     0 int m_FileID = 0
+     0 SInt64 m_PathID = 3060034081448610329
+   [71]
+    0 PPtr<Object> data
+     0 int m_FileID = 0
+     0 SInt64 m_PathID = 3286366818467659899
+   [72]
+    0 PPtr<Object> data
+     0 int m_FileID = 0
+     0 SInt64 m_PathID = 3708372791746159321
+   [73]
+    0 PPtr<Object> data
+     0 int m_FileID = 0
+     0 SInt64 m_PathID = 4023666204334414581
+   [74]
+    0 PPtr<Object> data
+     0 int m_FileID = 0
+     0 SInt64 m_PathID = 4386706712637974459
+   [75]
+    0 PPtr<Object> data
+     0 int m_FileID = 0
+     0 SInt64 m_PathID = 5201105341037700710
+   [76]
+    0 PPtr<Object> data
+     0 int m_FileID = 0
+     0 SInt64 m_PathID = 5257698492161618182
+   [77]
+    0 PPtr<Object> data
+     0 int m_FileID = 0
+     0 SInt64 m_PathID = 5565369305611123200
+   [78]
+    0 PPtr<Object> data
+     0 int m_FileID = 0
+     0 SInt64 m_PathID = 5728966020398279744
+   [79]
+    0 PPtr<Object> data
+     0 int m_FileID = 0
+     0 SInt64 m_PathID = 5790941813690607288
+   [80]
+    0 PPtr<Object> data
+     0 int m_FileID = 0
+     0 SInt64 m_PathID = 5954746195058278120
+   [81]
+    0 PPtr<Object> data
+     0 int m_FileID = 0
+     0 SInt64 m_PathID = 6262387455499146292
+   [82]
+    0 PPtr<Object> data
+     0 int m_FileID = 0
+     0 SInt64 m_PathID = 6368363410730956438
+   [83]
+    0 PPtr<Object> data
+     0 int m_FileID = 0
+     0 SInt64 m_PathID = 6386765308273832457
+   [84]
+    0 PPtr<Object> data
+     0 int m_FileID = 0
+     0 SInt64 m_PathID = 6653721926322572926
+   [85]
+    0 PPtr<Object> data
+     0 int m_FileID = 0
+     0 SInt64 m_PathID = 6772396478379204674
+   [86]
+    0 PPtr<Object> data
+     0 int m_FileID = 0
+     0 SInt64 m_PathID = 6838258107796826452
+   [87]
+    0 PPtr<Object> data
+     0 int m_FileID = 0
+     0 SInt64 m_PathID = 7508151943853232840
+   [88]
+    0 PPtr<Object> data
+     0 int m_FileID = 0
+     0 SInt64 m_PathID = 7627543263119983944
+   [89]
+    0 PPtr<Object> data
+     0 int m_FileID = 0
+     0 SInt64 m_PathID = 7786449788349368442
+   [90]
+    0 PPtr<Object> data
+     0 int m_FileID = 0
+     0 SInt64 m_PathID = 7876396646398551329
+   [91]
+    0 PPtr<Object> data
+     0 int m_FileID = 0
+     0 SInt64 m_PathID = 8134794411095503850
+   [92]
+    0 PPtr<Object> data
+     0 int m_FileID = 0
+     0 SInt64 m_PathID = 8184174339162719726
+   [93]
+    0 PPtr<Object> data
+     0 int m_FileID = 0
+     0 SInt64 m_PathID = 8202776213919217747
+   [94]
+    0 PPtr<Object> data
+     0 int m_FileID = 0
+     0 SInt64 m_PathID = 9210461998381279632
+ 0 map m_Container
+  0 Array Array (1 items)
+   0 int size = 1
+   [0]
+    0 pair data
+     1 string first = "assets/content/items/mods/scopes/scope_all_torrey_pines_logic_t12_w_30hz.prefab"
+     0 AssetInfo second
+      0 int preloadIndex = 0
+      0 int preloadSize = 95
+      0 PPtr<Object> asset
+       0 int m_FileID = 0
+       0 SInt64 m_PathID = 571241949921511872
+ 0 AssetInfo m_MainAsset
+  0 int preloadIndex = 0
+  0 int preloadSize = 0
+  0 PPtr<Object> asset
+   0 int m_FileID = 0
+   0 SInt64 m_PathID = 0
+ 0 unsigned int m_RuntimeCompatibility = 1
+ 1 string m_AssetBundleName = "assets/content/items/mods/scopes/scope_all_torrey_pines_logic_t12_w_30hz.bundle"
+ 0 vector m_Dependencies
+  1 Array Array (6 items)
+   0 int size = 6
+   [0]
+    1 string data = "shaders"
+   [1]
+    1 string data = "cubemaps"
+   [2]
+    1 string data = "assets/systems/effects/nightvision.bundle"
+   [3]
+    1 string data = "assets/systems/effects/nightvision/mask_nv_textures"
+   [4]
+    1 string data = "assets/commonassets/physics/physicsmaterials.bundle"
+   [5]
+    1 string data = "packages/com.unity.postprocessing/postprocessing/postprocessresources.bundle"
+ 1 bool m_IsStreamedSceneAssetBundle = false
+ 0 int m_ExplicitDataLayout = 0
+ 0 int m_PathFlags = 7
+ 0 map m_SceneHashes
+  0 Array Array (0 items)
+   0 int size = 0

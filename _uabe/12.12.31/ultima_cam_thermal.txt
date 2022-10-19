@@ -74,7 +74,7 @@
     0 int m_FileID = 4
     0 SInt64 m_PathID = -4679999331080453473
  0 StuckFPSUtilities StuckFpsUtilities
-  0 int MinFramerate = 0
+  0 int MinFramerate = 15
   0 int MaxFramerate = 30
  0 MotionBlurUtilities MotionBlurUtilities
   0 PPtr<$Shader> Shader
@@ -110,8 +110,8 @@
   0 PPtr<$Shader> PixelationShader
    0 int m_FileID = 1
    0 SInt64 m_PathID = 2862045551766238708
-  0 float BlockCount = 4800
-  0 float Alpha = 0.19
+  0 float BlockCount = 250
+  0 float Alpha = 0.25
   0 PPtr<$Texture> PixelationMask
    0 int m_FileID = 0
    0 SInt64 m_PathID = -3130472411721770974

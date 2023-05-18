@@ -7,11 +7,8 @@
        "akiVersion": "3.5.6",
        "isBundleMod": true,
        "scripts": {
-              "setup:environment": "npm i",
-              "build:unzipped": "copyfiles -e \"./node_modules/**/*.*\" -e \"./dist/**/*.*\" -e \"./package-lock.json\" -e \"./tsconfig.json\" -e \"./README.txt\" -e \"./ClearVision.code-workspace\" -e \"./_uabe/**/*.*\" \"./**/*.*\" ./dist",
-              "zip:files": "cd dist/ && bestzip ../mod.zip *",
-              "build:zip": "npm run clean:environment && npm run build:unzipped && npm run zip:files",
-              "clean:environment": "node -e \"require('fs').rm('mod.zip', ()=>{})\" && node -e \"require('fs').rmdir('./dist/',{recursive:true},()=>{})\""
+              "setup": "npm i",
+              "build": "node ./packageBuild.ts"
        },
        "devDependencies": {
               "@types/node": "16.18.10",

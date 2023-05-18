@@ -67,16 +67,16 @@ export declare class RagfairController {
     protected configServer: ConfigServer;
     protected ragfairConfig: IRagfairConfig;
     constructor(logger: ILogger, timeUtil: TimeUtil, httpResponse: HttpResponseUtil, eventOutputHolder: EventOutputHolder, ragfairServer: RagfairServer, ragfairPriceService: RagfairPriceService, databaseServer: DatabaseServer, itemHelper: ItemHelper, saveServer: SaveServer, ragfairSellHelper: RagfairSellHelper, ragfairTaxHelper: RagfairTaxHelper, ragfairSortHelper: RagfairSortHelper, ragfairOfferHelper: RagfairOfferHelper, profileHelper: ProfileHelper, paymentService: PaymentService, handbookHelper: HandbookHelper, paymentHelper: PaymentHelper, inventoryHelper: InventoryHelper, traderHelper: TraderHelper, ragfairHelper: RagfairHelper, ragfairOfferService: RagfairOfferService, ragfairRequiredItemsService: RagfairRequiredItemsService, ragfairOfferGenerator: RagfairOfferGenerator, localisationService: LocalisationService, configServer: ConfigServer);
-    getOffers(sessionID: string, info: ISearchRequestData): IGetOffersResult;
+    getOffers(sessionID: string, searchRequest: ISearchRequestData): IGetOffersResult;
     /**
      * Get offers for the client based on type of search being performed
      * @param searchRequest Client search request data
      * @param itemsToAdd
-     * @param assorts
+     * @param traderAssorts Trader assorts
      * @param pmcProfile Player profile
      * @returns array of offers
      */
-    protected getOffersForSearchType(searchRequest: ISearchRequestData, itemsToAdd: string[], assorts: Record<string, ITraderAssort>, pmcProfile: IPmcData): IRagfairOffer[];
+    protected getOffersForSearchType(searchRequest: ISearchRequestData, itemsToAdd: string[], traderAssorts: Record<string, ITraderAssort>, pmcProfile: IPmcData): IRagfairOffer[];
     /**
      * Get categories for the type of search being performed, linked/required/all
      * @param searchRequest Client search request data
@@ -100,8 +100,14 @@ export declare class RagfairController {
     /**
      * Update a trader flea offer with buy restrictions stored in the traders assort
      * @param offer flea offer to update
+     * @param profile full profile of player
      */
-    protected setTraderOfferPurchaseLimits(offer: IRagfairOffer): void;
+    protected setTraderOfferPurchaseLimits(offer: IRagfairOffer, profile: IAkiProfile): void;
+    /**
+     * Adjust ragfair offer stack count to match same value as traders assort stack count
+     * @param offer Flea offer to adjust
+     */
+    protected setTraderOfferStackSize(offer: IRagfairOffer): void;
     protected isLinkedSearch(info: ISearchRequestData): boolean;
     protected isRequiredSearch(info: ISearchRequestData): boolean;
     update(): void;
@@ -111,9 +117,38 @@ export declare class RagfairController {
      * @returns min/avg/max values for an item based on flea offers available
      */
     getItemMinAvgMaxFleaPriceValues(getPriceRequest: IGetMarketPriceRequestData): IGetItemPriceResult;
-    addPlayerOffer(pmcData: IPmcData, info: IAddOfferRequestData, sessionID: string): IItemEventRouterResponse;
+    /**
+     * List item(s) on flea for sale
+     * @param pmcData Player profile
+     * @param offerRequest Flea list creatio offer
+     * @param sessionID Session id
+     * @returns IItemEventRouterResponse
+     */
+    addPlayerOffer(pmcData: IPmcData, offerRequest: IAddOfferRequestData, sessionID: string): IItemEventRouterResponse;
+    /**
+     * Is the item to be listed on the flea valid
+     * @param offerRequest Client offer request
+     * @param errorMessage message to show to player when offer is invalid
+     * @returns Is offer valid
+     */
+    protected isValidPlayerOfferRequest(offerRequest: IAddOfferRequestData, errorMessage: string): boolean;
+    /**
+     * Get the handbook price in roubles for the items being listed
+     * @param requirements
+     * @returns Rouble price
+     */
+    protected calculateRequirementsPriceInRub(requirements: Requirement[]): number;
+    /**
+     * Using item ids from flea offer request, find corrispnding items from player inventory and return as array
+     * @param pmcData Player profile
+     * @param itemIdsFromFleaOfferRequest Ids from request
+     * @param errorMessage if item is not found, add error message to this parameter
+     * @returns Array of items from player inventory
+     */
+    protected getItemsToListOnFleaFromInventory(pmcData: IPmcData, itemIdsFromFleaOfferRequest: string[], errorMessage: string): Item[];
     createPlayerOffer(profile: IAkiProfile, requirements: Requirement[], items: Item[], sellInOnePiece: boolean, amountToSend: number): IRagfairOffer;
     getAllFleaPrices(): Record<string, number>;
+    getStaticPrices(): Record<string, number>;
     removeOffer(offerId: string, sessionID: string): IItemEventRouterResponse;
     extendOffer(info: IExtendOfferRequestData, sessionID: string): IItemEventRouterResponse;
 }

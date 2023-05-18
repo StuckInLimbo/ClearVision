@@ -1,5 +1,8 @@
 import { MinMax } from "../../common/MinMax";
 export interface IPmcConfig {
+    vestLoot: SlotLootSettings;
+    pocketLoot: SlotLootSettings;
+    backpackLoot: SlotLootSettings;
     dynamicLoot: DynamicLoot;
     useDifficultyOverride: boolean;
     difficulty: string;
@@ -16,13 +19,17 @@ export interface IPmcConfig {
     maxVestLootTotalRub: number;
     convertIntoPmcChance: Record<string, MinMax>;
     enemyTypes: string[];
+    botRelativeLevelDeltaMax: number;
 }
 export interface PmcTypes {
     usec: string;
     bear: string;
 }
-export interface DynamicLoot {
+export interface SlotLootSettings {
     whitelist: string[];
     blacklist: string[];
+    moneyStackLimits: Record<string, number>;
+}
+export interface DynamicLoot {
     moneyStackLimits: Record<string, number>;
 }

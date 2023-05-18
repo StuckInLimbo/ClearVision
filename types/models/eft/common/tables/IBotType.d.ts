@@ -57,6 +57,10 @@ export interface ModsChances {
     mod_pistol_grip: number;
     mod_reciever: number;
     mod_scope: number;
+    mod_scope_000: number;
+    mod_scope_001: number;
+    mod_scope_002: number;
+    mod_scope_003: number;
     mod_sight_front: number;
     mod_sight_rear: number;
     mod_stock: number;
@@ -100,13 +104,17 @@ export interface Generation {
     items: ItemMinMax;
 }
 export interface ItemMinMax {
-    grenades: MinMax;
-    healing: MinMax;
-    drugs: MinMax;
-    stims: MinMax;
-    looseLoot: MinMax;
-    magazines: MinMax;
-    specialItems: MinMax;
+    grenades: MinMaxWithWhitelist;
+    healing: MinMaxWithWhitelist;
+    drugs: MinMaxWithWhitelist;
+    stims: MinMaxWithWhitelist;
+    looseLoot: MinMaxWithWhitelist;
+    magazines: MinMaxWithWhitelist;
+    specialItems: MinMaxWithWhitelist;
+}
+export interface MinMaxWithWhitelist extends MinMax {
+    /** Array of item tpls */
+    whitelist: string[];
 }
 export interface Health {
     BodyParts: BodyPart[];
@@ -152,4 +160,4 @@ export interface Items {
     SpecialLoot: string[];
     TacticalVest: string[];
 }
-export declare type Mods = Record<string, Record<string, string[]>>;
+export type Mods = Record<string, Record<string, string[]>>;

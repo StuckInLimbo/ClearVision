@@ -1,59 +1,89 @@
 import { ApplicationContext } from "../context/ApplicationContext";
-import { GameEventHelper } from "../helpers/GameEventHelper";
+import { HideoutHelper } from "../helpers/HideoutHelper";
 import { HttpServerHelper } from "../helpers/HttpServerHelper";
 import { ProfileHelper } from "../helpers/ProfileHelper";
+import { PreAkiModLoader } from "../loaders/PreAkiModLoader";
 import { IEmptyRequestData } from "../models/eft/common/IEmptyRequestData";
-import { Config } from "../models/eft/common/IGlobals";
+import { IPmcData } from "../models/eft/common/IPmcData";
 import { ICheckVersionResponse } from "../models/eft/game/ICheckVersionResponse";
 import { IGameConfigResponse } from "../models/eft/game/IGameConfigResponse";
 import { IServerDetails } from "../models/eft/game/IServerDetails";
 import { IAkiProfile } from "../models/eft/profile/IAkiProfile";
 import { ICoreConfig } from "../models/spt/config/ICoreConfig";
 import { IHttpConfig } from "../models/spt/config/IHttpConfig";
-import { ISeasonalEvent } from "../models/spt/config/ISeasonalEventConfig";
+import { ILocationConfig } from "../models/spt/config/ILocationConfig";
 import { ILogger } from "../models/spt/utils/ILogger";
 import { ConfigServer } from "../servers/ConfigServer";
 import { DatabaseServer } from "../servers/DatabaseServer";
-import { LocaleService } from "../services/LocaleService";
+import { CustomLocationWaveService } from "../services/CustomLocationWaveService";
 import { LocalisationService } from "../services/LocalisationService";
+import { OpenZoneService } from "../services/OpenZoneService";
 import { ProfileFixerService } from "../services/ProfileFixerService";
-import { Watermark } from "../utils/Watermark";
+import { SeasonalEventService } from "../services/SeasonalEventService";
+import { JsonUtil } from "../utils/JsonUtil";
+import { TimeUtil } from "../utils/TimeUtil";
 export declare class GameController {
     protected logger: ILogger;
     protected databaseServer: DatabaseServer;
-    protected watermark: Watermark;
+    protected jsonUtil: JsonUtil;
+    protected timeUtil: TimeUtil;
+    protected preAkiModLoader: PreAkiModLoader;
     protected httpServerHelper: HttpServerHelper;
-    protected localeService: LocaleService;
+    protected hideoutHelper: HideoutHelper;
     protected profileHelper: ProfileHelper;
     protected profileFixerService: ProfileFixerService;
     protected localisationService: LocalisationService;
-    protected gameEventHelper: GameEventHelper;
+    protected customLocationWaveService: CustomLocationWaveService;
+    protected openZoneService: OpenZoneService;
+    protected seasonalEventService: SeasonalEventService;
     protected applicationContext: ApplicationContext;
     protected configServer: ConfigServer;
     protected httpConfig: IHttpConfig;
     protected coreConfig: ICoreConfig;
-    constructor(logger: ILogger, databaseServer: DatabaseServer, watermark: Watermark, httpServerHelper: HttpServerHelper, localeService: LocaleService, profileHelper: ProfileHelper, profileFixerService: ProfileFixerService, localisationService: LocalisationService, gameEventHelper: GameEventHelper, applicationContext: ApplicationContext, configServer: ConfigServer);
+    protected locationConfig: ILocationConfig;
+    constructor(logger: ILogger, databaseServer: DatabaseServer, jsonUtil: JsonUtil, timeUtil: TimeUtil, preAkiModLoader: PreAkiModLoader, httpServerHelper: HttpServerHelper, hideoutHelper: HideoutHelper, profileHelper: ProfileHelper, profileFixerService: ProfileFixerService, localisationService: LocalisationService, customLocationWaveService: CustomLocationWaveService, openZoneService: OpenZoneService, seasonalEventService: SeasonalEventService, applicationContext: ApplicationContext, configServer: ConfigServer);
     gameStart(_url: string, _info: IEmptyRequestData, sessionID: string, startTimeStampMS: number): void;
     /**
-     * Check if current date falls inside any of the seasons events pased in, if so, handle them
-     * @param seasonalEvents events to check for
+     * BSG have two values for shotgun dispersion, we make sure both have the same value
      */
-    protected checkForAndEnableSeasonalEvents(seasonalEvents: ISeasonalEvent[]): void;
+    protected fixShotgunDispersions(): void;
     /**
-     * Make adjusted to server code based on the name of the event passed in
-     * @param globalConfig globals.json
-     * @param eventName Name of the event to enable. e.g. Christmas
+     * Players set botReload to a high value and don't expect the crazy fast reload speeds, give them a warn about it
+     * @param pmcProfile Player profile
      */
-    protected updateGlobalEvents(globalConfig: Config, eventName: string): void;
+    protected warnOnActiveBotReloadSkill(pmcProfile: IPmcData): void;
     /**
-     * Read in data from seasonalEvents.json and add found equipment items to bots
-     * @param eventName Name of the event to read equipment in from config
+     * When player logs in, iterate over all active effects and reduce timer
+     * TODO - add body part HP regen
+     * @param pmcProfile
      */
-    protected addEventGearToScavs(eventName: string): void;
+    protected updateProfileHealthValues(pmcProfile: IPmcData): void;
     /**
-     * Set Khorovod(dancing tree) chance to 100% on all maps that support it
+     * Waves with an identical min/max values spawn nothing, the number of bots that spawn is the difference between min and max
      */
-    protected enableDancingTree(): void;
+    protected fixBrokenOfflineMapWaves(): void;
+    /**
+     * Make Rogues spawn later to allow for scavs to spawn first instead of rogues filling up all spawn positions
+     */
+    protected fixRoguesSpawningInstantlyOnLighthouse(): void;
+    /**
+     * Find and split waves with large numbers of bots into smaller waves - BSG appears to reduce the size of these waves to one bot when they're waiting to spawn for too long
+     */
+    protected splitBotWavesIntoSingleWaves(): void;
+    /**
+     * Get a list of installed mods and save their details to the profile being used
+     * @param fullProfile Profile to add mod details to
+     */
+    protected saveActiveModsToProfile(fullProfile: IAkiProfile): void;
+    /**
+     * Add the logged in players name to PMC name pool
+     * @param pmcProfile
+     */
+    protected addPlayerToPMCNames(pmcProfile: IPmcData): void;
+    /**
+     * Blank out the "test" mail message from prapor
+     */
+    protected removePraporTestMessage(): void;
     /**
      * Make non-trigger-spawned raiders spawn earlier + always
      */
@@ -61,6 +91,6 @@ export declare class GameController {
     protected logProfileDetails(fullProfile: IAkiProfile): void;
     getGameConfig(sessionID: string): IGameConfigResponse;
     getServer(): IServerDetails[];
-    protected addPumpkinsToScavBackpacks(): void;
+    getCurrentGroup(sessionId: any): any;
     getValidGameVersion(): ICheckVersionResponse;
 }

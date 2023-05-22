@@ -39,7 +39,8 @@ const ignoreList = [
     "packageBuild.ts",
     "mod.code-workspace",
     "package-lock.json",
-    "tsconfig.json"
+    "tsconfig.json",
+    "_uabe/"
 ];
 const exclude = glob.sync(`{${ignoreList.join(",")}}`, { realpath: true, dot: true });
 

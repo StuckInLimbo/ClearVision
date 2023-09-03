@@ -16,16 +16,38 @@ export declare class CustomizationController {
     protected saveServer: SaveServer;
     protected localisationService: LocalisationService;
     protected profileHelper: ProfileHelper;
+    protected readonly clothingIds: {
+        lowerParentId: string;
+        upperParentId: string;
+    };
     constructor(logger: ILogger, eventOutputHolder: EventOutputHolder, databaseServer: DatabaseServer, saveServer: SaveServer, localisationService: LocalisationService, profileHelper: ProfileHelper);
+    /**
+     * Get purchasable clothing items from trader that match players side (usec/bear)
+     * @param traderID trader to look up clothing for
+     * @param sessionID Session id
+     * @returns ISuit array
+     */
     getTraderSuits(traderID: string, sessionID: string): ISuit[];
+    /**
+     * Handle CustomizationWear event
+     * Equip one to many clothing items to player
+     */
     wearClothing(pmcData: IPmcData, wearClothingRequest: IWearClothingRequestData, sessionID: string): IItemEventRouterResponse;
+    /**
+     * Handle CustomizationBuy event
+     * Purchase/unlock a clothing item from a trader
+     * @param pmcData Player profile
+     * @param buyClothingRequest Request object
+     * @param sessionId Session id
+     * @returns IItemEventRouterResponse
+     */
     buyClothing(pmcData: IPmcData, buyClothingRequest: IBuyClothingRequestData, sessionId: string): IItemEventRouterResponse;
     protected getTraderClothingOffer(sessionId: string, offerId: string): ISuit;
     /**
      * Has an outfit been purchased by a player
      * @param suitId clothing id
-     * @param sessionID Session id
-     * @returns true/false
+     * @param sessionID Session id of profile to check for clothing in
+     * @returns true if already purchased
      */
     protected outfitAlreadyPurchased(suitId: string, sessionID: string): boolean;
     /**
@@ -42,7 +64,6 @@ export declare class CustomizationController {
      * @param pmcData Player profile
      * @param clothingItem Clothing item purchased
      * @param output Client response
-     * @returns
      */
     protected payForClothingItem(sessionId: string, pmcData: IPmcData, clothingItem: ClothingItem, output: IItemEventRouterResponse): void;
     protected getAllTraderSuits(sessionID: string): ISuit[];

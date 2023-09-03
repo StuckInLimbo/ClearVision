@@ -1,5 +1,7 @@
 import { IPmcData } from "../models/eft/common/IPmcData";
+import { ProfileTraderTemplate } from "../models/eft/common/tables/IProfileTemplate";
 import { ITraderAssort, ITraderBase, LoyaltyLevel } from "../models/eft/common/tables/ITrader";
+import { Traders } from "../models/enums/Traders";
 import { ITraderConfig } from "../models/spt/config/ITraderConfig";
 import { ILogger } from "../models/spt/utils/ILogger";
 import { ConfigServer } from "../servers/ConfigServer";
@@ -41,6 +43,7 @@ export declare class TraderHelper {
      * @param traderID trader id to reset
      */
     resetTrader(sessionID: string, traderID: string): void;
+    protected getStartingStanding(traderId: string, rawProfileTemplate: ProfileTraderTemplate): number;
     /**
      * Alter a traders unlocked status
      * @param traderId Trader to alter
@@ -106,4 +109,16 @@ export declare class TraderHelper {
      * @returns Rouble price
      */
     getHighestSellToTraderPrice(tpl: string): number;
+    /**
+     * Get a trader enum key by its value
+     * @param traderId Traders id
+     * @returns Traders key
+     */
+    getTraderById(traderId: string): Traders;
+    /**
+     * Does the 'Traders' enum has a value that matches the passed in parameter
+     * @param value Value to check for
+     * @returns True, values exists in Traders enum as a value
+     */
+    traderEnumHasValue(value: string): boolean;
 }

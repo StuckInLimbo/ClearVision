@@ -40,6 +40,7 @@ export interface Info {
     Nickname: string;
     LowerNickname: string;
     Side: string;
+    SquadInviteRestriction: boolean;
     Voice: string;
     Level: number;
     Experience: number;
@@ -266,6 +267,7 @@ export interface BackendCounter {
     value: number;
 }
 export interface InsuredItem {
+    /** Trader Id item was insured by */
     tid: string;
     itemId: string;
 }

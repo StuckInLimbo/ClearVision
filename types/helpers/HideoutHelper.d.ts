@@ -39,28 +39,47 @@ export declare class HideoutHelper {
     static maxSkillPoint: number;
     protected hideoutConfig: IHideoutConfig;
     constructor(logger: ILogger, hashUtil: HashUtil, timeUtil: TimeUtil, databaseServer: DatabaseServer, eventOutputHolder: EventOutputHolder, httpResponse: HttpResponseUtil, profileHelper: ProfileHelper, inventoryHelper: InventoryHelper, playerService: PlayerService, localisationService: LocalisationService, configServer: ConfigServer);
+    /**
+     * Add production to profiles' Hideout.Production array
+     * @param pmcData Profile to add production to
+     * @param body Production request
+     * @param sessionID Session id
+     * @returns client response
+     */
     registerProduction(pmcData: IPmcData, body: IHideoutSingleProductionStartRequestData | IHideoutContinuousProductionStartRequestData, sessionID: string): IItemEventRouterResponse;
     /**
      * This convenience function initializes new Production Object
      * with all the constants.
      */
     initProduction(recipeId: string, productionTime: number): Production;
-    isProductionType(productive: Productive): productive is Production;
-    applyPlayerUpgradesBonuses(pmcData: IPmcData, bonus: StageBonus): void;
     /**
-     * TODO:
-     * After looking at the skills there doesnt seem to be a configuration per skill to boost
-     * the XP gain PER skill. I THINK you should be able to put the variable "SkillProgress" (just like health has it)
-     * and be able to tune the skill gain PER skill, but I havent tested it and Im not sure!
-     * @param pmcData
-     * @param bonus
+     * Is the provided object a Production type
+     * @param productive
+     * @returns
      */
-    protected applySkillXPBoost(pmcData: IPmcData, bonus: StageBonus): void;
+    isProductionType(productive: Productive): productive is Production;
+    /**
+     * Apply bonus to player profile given after completing hideout upgrades
+     * @param pmcData Profile to add bonus to
+     * @param bonus Bonus to add to profile
+     */
+    applyPlayerUpgradesBonuses(pmcData: IPmcData, bonus: StageBonus): void;
     /**
      * Process a players hideout, update areas that use resources + increment production timers
      * @param sessionID Session id
      */
     updatePlayerHideout(sessionID: string): void;
+    /**
+     * Get various properties that will be passed to hideout update-related functions
+     * @param pmcData Player profile
+     * @returns Properties
+     */
+    protected getHideoutProperties(pmcData: IPmcData): {
+        btcFarmCGs: number;
+        isGeneratorOn: boolean;
+        waterCollectorHasFilter: boolean;
+    };
+    protected doesWaterCollectorHaveFilter(waterCollector: HideoutArea): boolean;
     /**
      * Update progress timer for water collector
      * @param pmcData profile to update
@@ -119,9 +138,8 @@ export declare class HideoutHelper {
         isGeneratorOn: boolean;
         waterCollectorHasFilter: boolean;
     }): void;
-    protected updateWaterCollector(sessionId: string, pmcData: IPmcData, area: HideoutArea, isGeneratorOn: boolean): void;
-    protected doesWaterCollectorHaveFilter(waterCollector: HideoutArea): boolean;
     protected updateFuel(generatorArea: HideoutArea, pmcData: IPmcData): void;
+    protected updateWaterCollector(sessionId: string, pmcData: IPmcData, area: HideoutArea, isGeneratorOn: boolean): void;
     /**
      * Adjust water filter objects resourceValue or delete when they reach 0 resource
      * @param waterFilterArea water filter area to update
@@ -173,15 +191,15 @@ export declare class HideoutHelper {
      */
     protected getBTCSlots(pmcData: IPmcData): number;
     /**
-     * Get a count of bitcoins player miner can hold
-     */
-    protected getManagementSkillsSlots(): number;
-    /**
      * Does profile have elite hideout management skill
      * @param pmcData Profile to look at
      * @returns True if profile has skill
      */
     protected hasEliteHideoutManagementSkill(pmcData: IPmcData): boolean;
+    /**
+     * Get a count of bitcoins player miner can hold
+     */
+    protected getBitcoinMinerContainerSlotSize(): number;
     /**
      * Get the hideout management skill from player profile
      * @param pmcData Profile to look at
@@ -189,12 +207,6 @@ export declare class HideoutHelper {
      */
     protected getHideoutManagementSkill(pmcData: IPmcData): Common;
     protected getHideoutManagementConsumptionBonus(pmcData: IPmcData): number;
-    /**
-     * Get the crafting skill details from player profile
-     * @param pmcData Player profile
-     * @returns crafting skill, null if not found
-     */
-    protected getCraftingSkill(pmcData: IPmcData): Common;
     /**
      * Adjust craft time based on crafting skill level found in player profile
      * @param pmcData Player profile

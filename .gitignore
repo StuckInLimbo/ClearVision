@@ -37,6 +37,7 @@ coverage
 Thumbs.db
 
 # Ignore built ts files
+dist
 dist/**/*
 
 # ignore lock files

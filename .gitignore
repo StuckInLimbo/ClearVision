@@ -25,12 +25,13 @@ coverage
 .env
 
 # Dependency directory
-/node_modules/
-/bower_components/
+node_modules/
+bower_components/
 
 # Editors
 .idea
 *.iml
+*.code-workspace
 
 # OS metadata
 .DS_Store

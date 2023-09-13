@@ -1,6 +1,10 @@
-﻿using BepInEx;
+﻿using Aki.Reflection.Patching;
+using BepInEx;
 using BepInEx.Configuration;
+using System.Reflection;
 using UnityEngine;
+using EFT;
+using System.Threading.Tasks;
 
 namespace ClearVision {
     [BepInPlugin("com.LimboFPS.ClearVision", "ClearVision", "1.0.0")]

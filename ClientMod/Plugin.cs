@@ -1,10 +1,6 @@
-﻿using Aki.Reflection.Patching;
-using BepInEx;
+﻿using BepInEx;
 using BepInEx.Configuration;
-using System.Reflection;
 using UnityEngine;
-using EFT;
-using System.Threading.Tasks;
 
 namespace ClearVision {
     [BepInPlugin("com.LimboFPS.ClearVision", "ClearVision", "1.0.0")]
@@ -62,7 +58,7 @@ namespace ClearVision {
         public static ConfigEntry<bool> T7MaskEnabled { get; set; }
         public static ConfigEntry<float> T7MaskSize { get; set; }
         
-        // REAP-IR WhiteHot/BlackHot Thermal
+        // REAP-IR Thermal
         public static ConfigEntry<bool> IREnabled { get; set; }
         public static ConfigEntry<bool> IRGlitch { get; set; }
         public static ConfigEntry<bool> IRNoise { get; set; }

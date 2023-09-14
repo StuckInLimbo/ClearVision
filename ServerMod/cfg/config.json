@@ -1,6 +1,6 @@
 {
 	"ClearVision": {
-		"Enabled": true
+		"Enabled": false
 	},
 	"GPNVG" : {
 		"Enabled": true,

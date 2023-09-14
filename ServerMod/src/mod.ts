@@ -99,7 +99,8 @@ class Mod implements IPostDBLoadMod
                     logger.info("CV: T-7 Thermal Goggles tuned!");
                 }
             }
-            logger.info("CV: Thermal sights tuned to 60Hz and glitch free!");
+            else
+                logger.warning("CV: No db changes made!")
         }
         catch (e) 
         {

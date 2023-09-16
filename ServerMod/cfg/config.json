@@ -21,7 +21,7 @@
 		"NoiseIntensity": 0.0,
 		"NoiseScale": 0.0,
 		"DiffuseIntensity": 0.0,
-		"Mask": "Binocular",
+		"Mask": "Anvis",
 		"MaskSize": 1.5,
 		"Red": 0,
 		"Green": 100,
@@ -34,7 +34,7 @@
 		"NoiseIntensity": 0.0,
 		"NoiseScale": 0.0,
 		"DiffuseIntensity": 0.0,
-		"Mask": "OldMonocular",
+		"Mask": "Anvis",
 		"MaskSize": 1.5,
 		"Red": 200,
 		"Green": 100,
@@ -47,7 +47,7 @@
 		"NoiseIntensity": 0.0,
 		"NoiseScale": 0.0,
 		"DiffuseIntensity": 0.0,
-		"Mask": "Binocular",
+		"Mask": "Anvis",
 		"MaskSize": 1.5,
 		"Red": 0,
 		"Green": 200,
@@ -66,6 +66,6 @@
 		"HeatMin": 0.40,
 		"ColdMax": 0.25,
 		"ColorCoef": 1.5,
-		"ClipPlane": 1500
+		"ClipPlane": 1000
 	}
 }

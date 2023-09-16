@@ -6,68 +6,30 @@ using System.Reflection;
 namespace ClearVision {
     public class GogglesPatches : ModulePatch {
         protected override MethodBase GetTargetMethod() {
-            Debug.LogError("GogglesPatches GTM()");
             var result = typeof(NightVision).GetMethod("method_1", BindingFlags.Instance | BindingFlags.NonPublic);
             return result;
          }
 
           [PatchPostfix]
          static void Postfix() {
-            Debug.LogError("GogglesPatches Postfix()");
             if(Plugin.GlobalEnabled.Value) { // sanity check
                 // Get Camera
                 GameObject maincam = GameObject.Find("FPS Camera");
                 NightVision nv = maincam.GetComponent<NightVision>();
                 CC_Vintage vintage = maincam.GetComponent<CC_Vintage>();
                 if(nv.On || nv.InProcessSwitching) {
-                    // Apply each individual setting depending on original texmask, hence why we cannot change it, but rather disable it.
-                    if(nv.TextureMask.Mask == nv.AnvisMaskTexture) {
-                        nv.Intensity = Plugin.GPIntensity.Value;
-                        nv.NoiseIntensity = Plugin.GPNoiseIntensity.Value;
-                        nv.NoiseScale = Plugin.GPNoiseScale.Value;
-                        if (Plugin.GPMaskEnabled.Value) {
-                            nv.TextureMask.enabled = true;
-                            nv.TextureMask.Size = Plugin.GPMaskSize.Value;
-                        }
-                        else {
-                            nv.TextureMask.enabled = false;
-                        }
-                        nv.Color = Plugin.GPColor.Value;
-                    } 
-                    else if (nv.TextureMask.Mask == nv.BinocularMaskTexture) {
-                        nv.Intensity = Plugin.GPIntensity.Value;
-                        nv.NoiseIntensity = Plugin.GPNoiseIntensity.Value;
-                        nv.NoiseScale = Plugin.GPNoiseScale.Value;
-                        if (Plugin.GPMaskEnabled.Value) {
-                            nv.TextureMask.enabled = true;
-                            nv.TextureMask.Size = Plugin.GPMaskSize.Value;
-                        }
-                        else {
-                            nv.TextureMask.enabled = false;
-                        }
-                        nv.Color = Plugin.GPColor.Value;
-                    } 
-                    else if (nv.TextureMask.Mask == nv.OldMonocularMaskTexture) {
-                        nv.Intensity = Plugin.GPIntensity.Value;
-                        nv.NoiseIntensity = Plugin.GPNoiseIntensity.Value;
-                        nv.NoiseScale = Plugin.GPNoiseScale.Value;
-                        if (Plugin.GPMaskEnabled.Value) {
-                            nv.TextureMask.enabled = true;
-                            nv.TextureMask.Size = Plugin.GPMaskSize.Value;
-                        }
-                        else {
-                            nv.TextureMask.enabled = false;
-                        }
-                        nv.Color = Plugin.GPColor.Value;
-                    } 
-                    else { // makes any other exception to the above be noiseless, but still otherwise vanilla.
-                        nv.Intensity = 2.3f;
-                        nv.NoiseIntensity = 0.0f;
-                        nv.NoiseScale = 0.0f;
+                    nv.Intensity = Plugin.NVGIntensity.Value;
+                    nv.NoiseIntensity = Plugin.NVGNoiseIntensity.Value;
+                    nv.NoiseScale = Plugin.NVGNoiseScale.Value;
+                    if (Plugin.NVGMaskEnabled.Value) {
                         nv.TextureMask.enabled = true;
-                        nv.TextureMask.Size = 1.2f;
-                        // color left default
+                        nv.TextureMask.Size = Plugin.NVGMaskSize.Value;
                     }
+                    else {
+                        nv.TextureMask.enabled = false;
+                    }
+                    nv.Color = Plugin.NVGColor.Value;
+                    
                     vintage.enabled = false;
                     return;
                 }
@@ -112,8 +74,15 @@ namespace ClearVision {
                     vintage.enabled = false;
                     // no idea how to change the clip plane distance, YET.
                 }
-                else if (thermal.On && !t7.On) { // Make sure the thermal headgear isn't on, no need to do worthless changes.
-                    //how do I determine which scope is which FUCK
+                if (thermal.On && !t7.On) { // Make sure the thermal headgear isn't on, no need to do worthless changes.
+                    thermal.IsGlitch = Plugin.ThermalGlitch.Value;
+                    thermal.IsPixelated = Plugin.ThermalPixel.Value;
+                    thermal.IsNoisy = Plugin.ThermalGlitch.Value;
+                    thermal.IsFpsStuck = Plugin.ThermalGlitch.Value;
+                    if (Plugin.ThermalGlitch.Value) {
+                        thermal.StuckFpsUtilities.MaxFramerate = Plugin.ThermalFpsMax.Value;
+                        thermal.StuckFpsUtilities.MinFramerate = Plugin.ThermalFpsMax.Value;
+                    }
                     vintage.enabled = false;
                 }
                 else {

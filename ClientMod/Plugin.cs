@@ -3,7 +3,7 @@ using BepInEx.Configuration;
 using UnityEngine;
 
 namespace ClearVision {
-    [BepInPlugin("com.LimboFPS.ClearVision", "ClearVision", "1.0.0")]
+    [BepInPlugin("com.LimboFPS.ClearVision", "LimboFPS-ClearVision", "1.0.0")]
     public class Plugin : BaseUnityPlugin {
         public static ConfigEntry<bool> GlobalEnabled { get; set; }
         

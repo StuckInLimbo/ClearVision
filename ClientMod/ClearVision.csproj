@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>net472</TargetFramework>
-    <AssemblyName>ClearVision</AssemblyName>
+    <AssemblyName>LimboFPS-ClearVision</AssemblyName>
     <Description>ClearVision Client Mod</Description>
     <Version>1.0.0</Version>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>

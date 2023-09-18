@@ -8,7 +8,7 @@ using EFT;
 namespace ClearVision {
     public class GogglesPatches : ModulePatch {
         protected override MethodBase GetTargetMethod() {
-            Debug.Log("GogglesPatches GTM()");
+            Logger.LogInfo("GogglesPatches GTM()");
             var result = typeof(NightVision).GetMethod("method_1", BindingFlags.Instance | BindingFlags.NonPublic);
             return result;
          }
@@ -21,7 +21,7 @@ namespace ClearVision {
                 NightVision nv = maincam.GetComponent<NightVision>();
                 CC_Vintage vintage = maincam.GetComponent<CC_Vintage>();
                 if(nv != null && nv.On) {
-                    Debug.Log("nv is not null and is enabled/being enabled");
+                    Logger.LogInfo("nv is not null and is enabled/being enabled");
                     nv.Intensity = Plugin.NVGIntensity.Value;
                     nv.NoiseIntensity = Plugin.NVGNoiseIntensity.Value;
                     nv.NoiseScale = Plugin.NVGNoiseScale.Value;
@@ -50,7 +50,7 @@ namespace ClearVision {
 
     public class ScopePatches : ModulePatch {
         protected override MethodBase GetTargetMethod() {
-            Debug.Log("ScopePatches GTM()");
+            Logger.LogInfo("ScopePatches GTM()");
             var result = typeof(ThermalVision).GetMethod("method_1", BindingFlags.Instance | BindingFlags.NonPublic);
             return result;
          }
@@ -58,14 +58,9 @@ namespace ClearVision {
           [PatchPostfix]
          static void Postfix() {
             if(Plugin.GlobalEnabled.Value && Singleton<GameWorld>.Instantiated) { // sanity check
-                // Get Camera
                 GameObject maincam = GameObject.Find("FPS Camera");
                 ThermalVision t7 = maincam.GetComponent<ThermalVision>();
-                // Get BaseOpticScope(Clone) obj, but need to check if it actually exists
-                GameObject scope = GameObject.FindGameObjectWithTag("OpticCamera");
-                ThermalVision thermal = scope.GetComponent<ThermalVision>();
-                if(t7 != null && t7.On) {
-                    Debug.Log("t7 is not null and is on!");
+                if(t7.On) {
                     t7.IsGlitch = Plugin.T7Glitch.Value;
                     t7.IsPixelated = Plugin.T7Pixel.Value;
                     t7.IsNoisy = Plugin.T7Noise.Value;
@@ -86,24 +81,9 @@ namespace ClearVision {
                     // just need to see where it is in the data structure
                     return;
                 }
-                else if (scope != null && thermal != null && thermal.On && !t7.On) {
-                    Debug.Log("scope and thermal script are not null and is on!");
-                    thermal.IsGlitch = Plugin.ThermalGlitch.Value;
-                    thermal.IsPixelated = Plugin.ThermalPixel.Value;
-                    thermal.IsNoisy = Plugin.ThermalNoise.Value;
-                    thermal.IsMotionBlurred = Plugin.ThermalMotionBlur.Value;
-                    thermal.IsFpsStuck = Plugin.ThermalFpsLock.Value;
-                    if (Plugin.ThermalFpsLock.Value) {
-                        thermal.StuckFpsUtilities.MaxFramerate = Plugin.ThermalFpsMax.Value;
-                        thermal.StuckFpsUtilities.MinFramerate = Plugin.ThermalFpsMax.Value;
-                    }
-                    return;
-                }
-                else 
+                else
                     return;
             }
-            else 
-                return;
          }
     }
 }

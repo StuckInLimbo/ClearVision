@@ -26,18 +26,9 @@ namespace ClearVision {
         public static ConfigEntry<bool> T7MotionBlur { get; set; }
         public static ConfigEntry<bool> T7MaskEnabled { get; set; }
         public static ConfigEntry<float> T7MaskSize { get; set; }
-        
-        // All Thermal Sights
-        public static ConfigEntry<bool> ThermalEnabled { get; set; }
-        public static ConfigEntry<bool> ThermalGlitch { get; set; }
-        public static ConfigEntry<bool> ThermalNoise { get; set; }
-        public static ConfigEntry<bool> ThermalPixel { get; set; }
-        public static ConfigEntry<bool> ThermalFpsLock { get; set; }
-        public static ConfigEntry<int> ThermalFpsMax { get; set; }
-        public static ConfigEntry<bool> ThermalMotionBlur { get; set; }
 
         private void Start() {
-            Debug.Log("ClearVision Start()");
+            Logger.LogInfo("ClearVision Start()");
             GlobalEnabled = Config.Bind("ClearVision", "GlobalEnabled", true, new ConfigDescription("Main Toggle", null));
             // NVG Goggles
             NVGEnabled = Config.Bind("NVG", "NVGEnabled", true, new ConfigDescription("Enable GPNVG-18", null));
@@ -58,14 +49,6 @@ namespace ClearVision {
             T7FpsMax = Config.Bind("T7", "T7FpsMax", 60, new ConfigDescription("T-7 FPS Max FPS", new AcceptableValueRange<int>(15, 60)));
             T7MaskEnabled = Config.Bind("T7", "T7MaskEnabled", false, new ConfigDescription("T-7 Mask Overlay On/Off", null));
             T7MaskSize = Config.Bind("T7", "T7MaskSize", 1.5f, new ConfigDescription("T-7 Mask Overlay Size", new AcceptableValueRange<float>(0f, 5f)));
-            // Thermal 60Hz
-            ThermalEnabled = Config.Bind("Scopes", "ThermalEnabled", true, new ConfigDescription("Enable Thermal Sights", null));
-            ThermalNoise = Config.Bind("Scopes", "ThermalNosie", false, new ConfigDescription("Thermal Noise", null));
-            ThermalGlitch = Config.Bind("Scopes", "ThermalGlitch", false, new ConfigDescription("Thermal Glitchiness", null));
-            ThermalPixel = Config.Bind("Scopes", "ThermalPixel", false, new ConfigDescription("Thermal Pixelation", null));
-            ThermalMotionBlur = Config.Bind("Scopes", "ThermalMotionBlur", false, new ConfigDescription("Thermal Motion Blur", null));
-            ThermalFpsLock = Config.Bind("Scopes", "ThermalFpsLock", true, new ConfigDescription("Thermal FPS Lock Enabled", null));
-            ThermalFpsMax = Config.Bind("Scopes", "ThermalFpsMax", 60, new ConfigDescription("Thermal FPS Max FPS", new AcceptableValueRange<int>(15, 60)));
 
             new GogglesPatches().Enable();
             new ScopePatches().Enable();

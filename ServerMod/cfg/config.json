@@ -1,9 +1,9 @@
 {
 	"ClearVision": {
-		"Enabled": false
+		"Enabled": true
 	},
 	"GPNVG" : {
-		"Enabled": true,
+		"Enabled": false,
 		"Intensity": 2.3,
 		"NoiseIntensity": 0.0,
 		"NoiseScale": 0.0,
@@ -16,7 +16,7 @@
 		"Alpha": 254
 	},
 	"N15" : {
-		"Enabled": true,
+		"Enabled": false,
 		"Intensity": 2.3,
 		"NoiseIntensity": 0.0,
 		"NoiseScale": 0.0,
@@ -29,7 +29,7 @@
 		"Alpha": 254
 	},
 	"PVS14" : {
-		"Enabled": true,
+		"Enabled": false,
 		"Intensity": 2.3,
 		"NoiseIntensity": 0.0,
 		"NoiseScale": 0.0,
@@ -42,7 +42,7 @@
 		"Alpha": 235
 	},
 	"PNV10T" : {
-		"Enabled": true,
+		"Enabled": false,
 		"Intensity": 2.3,
 		"NoiseIntensity": 0.0,
 		"NoiseScale": 0.0,
@@ -55,7 +55,7 @@
 		"Alpha": 254
 	},
 	"T7" : {
-		"Enabled": true,
+		"Enabled": false,
 		"Noise": false,
 		"NoiseIntensity": 0.0,
 		"MotionBlur": false,

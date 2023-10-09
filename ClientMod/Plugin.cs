@@ -3,7 +3,7 @@ using BepInEx.Configuration;
 using UnityEngine;
 
 namespace ClearVision {
-    [BepInPlugin("com.LimboFPS.ClearVision", "LimboFPS-ClearVision", "1.0.0")]
+    [BepInPlugin("com.LimboFPS.ClearVision", "LimboFPS-ClearVision", "1.0.1")]
     public class Plugin : BaseUnityPlugin {
         public static ConfigEntry<bool> GlobalEnabled { get; set; }
         
@@ -35,7 +35,6 @@ namespace ClearVision {
             NVGIntensity = Config.Bind("NVG", "NVGIntensity", 2.0f, new ConfigDescription("NVG Intensity", null));
             NVGNoiseIntensity = Config.Bind("NVG", "NVGNoiseIntensity", 0.0f, new ConfigDescription("NVG Noise Intensity", null));
             NVGNoiseScale = Config.Bind("NVG", "NVGNoiseScale", 0.0f, new ConfigDescription("NVG Noise Scale", null));
-            //NVGDiffuseIntensity = Config.Bind("NVG", "NVGDiffuseIntensity", 0.0f, new ConfigDescription("NVG Diffuse Intensity", null));
             NVGMaskEnabled = Config.Bind("NVG", "NVGMaskEnabled", false, new ConfigDescription("NVG Mask Overlay", null));
             NVGMaskSize = Config.Bind("NVG", "NVGMaskSize", 1.5f, new ConfigDescription("NVG Mask Overlay Size", null));
             NVGColor = Config.Bind("NVG", "NVGColor", new Color(0.00f, 0.78f, 0.78f, 0.99f), new ConfigDescription("NVG Color", null));

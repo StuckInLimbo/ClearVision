@@ -36,6 +36,28 @@
 			]
 		},
 		{
+			"key": "assets/content/items/mods/scopes/scope_all_sig_sauer_echo1_thermal_reflex_sight_1_2x_30hz.bundle",
+			"dependencyKeys": [
+				"shaders",
+				"cubemap",
+				"assets/systems/effects/nightvision.bundle",
+				"assets/systems/effects/nightvision/mask_nv_textures",
+				"assets/commonassets/physics/physicsmaterials.bundle",
+				"packages/com.unity.postproessing/postprocessing/postprocessresources.bundle"
+			]
+		},
+		{
+			"key": "assets/content/items/mods/scopes/scope_base_armasight_zeus_pro_640_2_16x50_30hz.bundle",
+			"dependencyKeys": [
+				"shaders",
+				"cubemap",
+				"assets/systems/effects/nightvision.bundle",
+				"assets/systems/effects/nightvision/mask_nv_textures",
+				"assets/commonassets/physics/physicsmaterials.bundle",
+				"packages/com.unity.postproessing/postprocessing/postprocessresources.bundle"
+			]
+		},
+		{
 			"key": "assets/content/items/mods/tactical/tactical_mp155_kalashnikov_ultima_camera_thermal.bundle",
 			"dependencyKeys": [
 				"shaders",

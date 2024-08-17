@@ -4,7 +4,7 @@
        "author": "LimboFPS",
        "license": "CC BY-NC 4.0",
        "main": "src/mod.js",
-       "akiVersion": "~3.9",
+       "sptVersion": "~3.9",
        "loadBefore": [],
        "loadAfter": [],
        "incompatibilities": [],

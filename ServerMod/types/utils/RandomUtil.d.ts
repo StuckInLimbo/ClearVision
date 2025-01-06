@@ -106,7 +106,6 @@ export declare class RandomUtil {
     protected cloner: ICloner;
     protected logger: ILogger;
     constructor(cloner: ICloner, logger: ILogger);
-<<<<<<< HEAD
     /**
      * The IEEE-754 standard for double-precision floating-point numbers limits the number of digits (including both
      * integer + fractional parts) to about 15–17 significant digits. 15 is a safe upper bound, so we'll use that.
@@ -139,8 +138,6 @@ export declare class RandomUtil {
      * @param max - The maximum value (inclusive).
      * @returns A random integer between the specified minimum and maximum values.
      */
-=======
->>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
     getInt(min: number, max: number): number;
     /**
      * Generates a random integer between 1 (inclusive) and the specified maximum value (exclusive).

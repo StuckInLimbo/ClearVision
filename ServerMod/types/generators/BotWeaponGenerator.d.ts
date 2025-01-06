@@ -4,19 +4,11 @@ import { BotGeneratorHelper } from "@spt/helpers/BotGeneratorHelper";
 import { BotWeaponGeneratorHelper } from "@spt/helpers/BotWeaponGeneratorHelper";
 import { ItemHelper } from "@spt/helpers/ItemHelper";
 import { WeightedRandomHelper } from "@spt/helpers/WeightedRandomHelper";
-<<<<<<< HEAD
 import { IInventory as PmcInventory } from "@spt/models/eft/common/tables/IBotBase";
 import { IGenerationData, IInventory, IModsChances } from "@spt/models/eft/common/tables/IBotType";
 import { IItem } from "@spt/models/eft/common/tables/IItem";
 import { ITemplateItem } from "@spt/models/eft/common/tables/ITemplateItem";
 import { IGenerateWeaponResult } from "@spt/models/spt/bots/IGenerateWeaponResult";
-=======
-import { Inventory as PmcInventory } from "@spt/models/eft/common/tables/IBotBase";
-import { GenerationData, Inventory, ModsChances } from "@spt/models/eft/common/tables/IBotType";
-import { Item } from "@spt/models/eft/common/tables/IItem";
-import { ITemplateItem } from "@spt/models/eft/common/tables/ITemplateItem";
-import { GenerateWeaponResult } from "@spt/models/spt/bots/GenerateWeaponResult";
->>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
 import { IBotConfig } from "@spt/models/spt/config/IBotConfig";
 import { IPmcConfig } from "@spt/models/spt/config/IPmcConfig";
 import { IRepairConfig } from "@spt/models/spt/config/IRepairConfig";

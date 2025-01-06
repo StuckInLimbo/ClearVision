@@ -1,10 +1,5 @@
-<<<<<<< HEAD
 import { IInventory } from "@spt/models/eft/common/tables/IBotBase";
 import { IGenerationData } from "@spt/models/eft/common/tables/IBotType";
-=======
-import { Inventory } from "@spt/models/eft/common/tables/IBotBase";
-import { GenerationData } from "@spt/models/eft/common/tables/IBotType";
->>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
 import { ITemplateItem } from "@spt/models/eft/common/tables/ITemplateItem";
 export declare class InventoryMagGen {
     private magCounts;

@@ -1,10 +1,6 @@
 import { BotHelper } from "@spt/helpers/BotHelper";
-<<<<<<< HEAD
 import { IDifficultyCategories } from "@spt/models/eft/common/tables/IBotType";
 import { IBots } from "@spt/models/spt/bots/IBots";
-=======
-import { Difficulty } from "@spt/models/eft/common/tables/IBotType";
->>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
 import { IPmcConfig } from "@spt/models/spt/config/IPmcConfig";
 import { ILogger } from "@spt/models/spt/utils/ILogger";
 import { ConfigServer } from "@spt/servers/ConfigServer";
@@ -22,31 +18,6 @@ export declare class BotDifficultyHelper {
     protected cloner: ICloner;
     protected pmcConfig: IPmcConfig;
     constructor(logger: ILogger, databaseService: DatabaseService, randomUtil: RandomUtil, localisationService: LocalisationService, botHelper: BotHelper, configServer: ConfigServer, cloner: ICloner);
-<<<<<<< HEAD
-=======
-    /**
-     * Get a difficulty object modified to handle fighting other PMCs
-     * @param pmcType 'bear or 'usec'
-     * @param difficulty easy / normal / hard / impossible
-     * @param usecType pmcUSEC
-     * @param bearType pmcBEAR
-     * @returns Difficulty object
-     */
-    getPmcDifficultySettings(pmcType: "bear" | "usec", difficulty: string, usecType: string, bearType: string): Difficulty;
->>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
-    /**
-     * Add bot types to ENEMY_BOT_TYPES array
-     * @param difficultySettings Bot settings to alter
-     * @param typesToAdd Bot types to add to enemy list
-     * @param typeBeingEdited Bot type to ignore and not add to enemy list
-     */
-    protected addBotToEnemyList(difficultySettings: Difficulty, typesToAdd: string[], typeBeingEdited?: string): void;
-    /**
-     * Configure difficulty settings to be hostile to USEC and BEAR
-     * Look up value in bot.json/chanceSameSideIsHostilePercent
-     * @param difficultySettings pmc difficulty settings
-     */
-    protected setDifficultyToHostileToBearAndUsec(difficultySettings: Difficulty): void;
     /**
      * Get difficulty settings for desired bot type, if not found use assault bot types
      * @param type bot type to retrieve difficulty of

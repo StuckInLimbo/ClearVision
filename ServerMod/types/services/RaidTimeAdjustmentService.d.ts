@@ -3,11 +3,7 @@ import { WeightedRandomHelper } from "@spt/helpers/WeightedRandomHelper";
 import { ILocationBase } from "@spt/models/eft/common/ILocationBase";
 import { IGetRaidTimeRequest } from "@spt/models/eft/game/IGetRaidTimeRequest";
 import { ExtractChange, IGetRaidTimeResponse } from "@spt/models/eft/game/IGetRaidTimeResponse";
-<<<<<<< HEAD
 import { ILocationConfig, ILootMultiplier, IScavRaidTimeLocationSettings } from "@spt/models/spt/config/ILocationConfig";
-=======
-import { ILocationConfig, IScavRaidTimeLocationSettings, LootMultiplier } from "@spt/models/spt/config/ILocationConfig";
->>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
 import { IRaidChanges } from "@spt/models/spt/location/IRaidChanges";
 import { ILogger } from "@spt/models/spt/utils/ILogger";
 import { ConfigServer } from "@spt/servers/ConfigServer";

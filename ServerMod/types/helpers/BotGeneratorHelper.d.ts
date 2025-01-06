@@ -3,15 +3,9 @@ import { ContainerHelper } from "@spt/helpers/ContainerHelper";
 import { DurabilityLimitsHelper } from "@spt/helpers/DurabilityLimitsHelper";
 import { InventoryHelper } from "@spt/helpers/InventoryHelper";
 import { ItemHelper } from "@spt/helpers/ItemHelper";
-<<<<<<< HEAD
 import { IInventory } from "@spt/models/eft/common/tables/IBotBase";
 import { IItem, IUpd, IUpdRepairable } from "@spt/models/eft/common/tables/IItem";
 import { IGrid, ITemplateItem } from "@spt/models/eft/common/tables/ITemplateItem";
-=======
-import { Inventory } from "@spt/models/eft/common/tables/IBotBase";
-import { Item, Repairable, Upd } from "@spt/models/eft/common/tables/IItem";
-import { Grid, ITemplateItem } from "@spt/models/eft/common/tables/ITemplateItem";
->>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
 import { ItemAddedResult } from "@spt/models/enums/ItemAddedResult";
 import { IChooseRandomCompatibleModResult } from "@spt/models/spt/bots/IChooseRandomCompatibleModResult";
 import { EquipmentFilters, IBotConfig, IRandomisedResourceValues } from "@spt/models/spt/config/IBotConfig";
@@ -66,23 +60,14 @@ export declare class BotGeneratorHelper {
      * @param botRole type of bot being generated for
      * @returns Repairable object
      */
-<<<<<<< HEAD
     protected generateWeaponRepairableProperties(itemTemplate: ITemplateItem, botRole?: string): IUpdRepairable;
-=======
-    protected generateWeaponRepairableProperties(itemTemplate: ITemplateItem, botRole?: string): Repairable;
->>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
     /**
      * Create a repairable object for an armor that containers durability + max durability properties
      * @param itemTemplate weapon object being generated for
      * @param botRole type of bot being generated for
      * @returns Repairable object
      */
-<<<<<<< HEAD
     protected generateArmorRepairableProperties(itemTemplate: ITemplateItem, botRole?: string): IUpdRepairable;
-=======
-    protected generateArmorRepairableProperties(itemTemplate: ITemplateItem, botRole?: string): Repairable;
-    isWeaponModIncompatibleWithCurrentMods(itemsEquipped: Item[], tplToCheck: string, modSlot: string): IChooseRandomCompatibleModResult;
->>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
     /**
      * Can item be added to another item without conflict
      * @param itemsEquipped Items to check compatibilities with

@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 import { IDaum } from "@spt/models/eft/itemEvent/IItemEventRouterRequest";
-=======
-import { Daum } from "@spt/models/eft/itemEvent/IItemEventRouterRequest";
->>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
 import { LogBackgroundColor } from "@spt/models/spt/logging/LogBackgroundColor";
 import { LogTextColor } from "@spt/models/spt/logging/LogTextColor";
 export interface ILogger {

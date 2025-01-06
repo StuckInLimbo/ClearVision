@@ -4,11 +4,7 @@ export interface ITemplateItem {
     _name: string;
     _parent: string;
     _type: ItemType;
-<<<<<<< HEAD
     _props: IProps;
-=======
-    _props: Props;
->>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
     _proto?: string;
 }
 export interface IProps {
@@ -481,13 +477,8 @@ export interface ISlot {
     _mergeSlotWithChildren?: boolean;
     _proto: string;
 }
-<<<<<<< HEAD
 export interface ISlotProps {
     filters: ISlotFilter[];
-=======
-export interface SlotProps {
-    filters: SlotFilter[];
->>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
     MaxStackCount?: number;
 }
 export interface ISlotFilter {

@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 import { MinMax } from "@spt/models/common/MinMax";
-=======
->>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
 import { IBaseConfig, IRunIntervalValues } from "@spt/models/spt/config/IBaseConfig";
 export interface IHideoutConfig extends IBaseConfig {
     kind: "spt-hideout";

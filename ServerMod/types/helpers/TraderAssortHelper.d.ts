@@ -4,11 +4,7 @@ import { AssortHelper } from "@spt/helpers/AssortHelper";
 import { PaymentHelper } from "@spt/helpers/PaymentHelper";
 import { ProfileHelper } from "@spt/helpers/ProfileHelper";
 import { TraderHelper } from "@spt/helpers/TraderHelper";
-<<<<<<< HEAD
 import { IItem } from "@spt/models/eft/common/tables/IItem";
-=======
-import { Item } from "@spt/models/eft/common/tables/IItem";
->>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
 import { ITrader, ITraderAssort } from "@spt/models/eft/common/tables/ITrader";
 import { ITraderConfig } from "@spt/models/spt/config/ITraderConfig";
 import { ILogger } from "@spt/models/spt/utils/ILogger";
@@ -52,12 +48,6 @@ export declare class TraderAssortHelper {
      * @returns a traders' assorts
      */
     getAssort(sessionId: string, traderId: string, showLockedAssorts?: boolean): ITraderAssort;
-    /**
-     * Given the blacklist provided, remove root items from assort
-     * @param assortToFilter Trader assort to modify
-     * @param itemsTplsToRemove Item TPLs the assort should not have
-     */
-    protected removeItemsFromAssort(assortToFilter: ITraderAssort, itemsTplsToRemove: string[]): void;
     /**
      * Given the blacklist provided, remove root items from assort
      * @param assortToFilter Trader assort to modify

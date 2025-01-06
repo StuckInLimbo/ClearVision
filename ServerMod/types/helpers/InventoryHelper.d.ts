@@ -6,13 +6,8 @@ import { PresetHelper } from "@spt/helpers/PresetHelper";
 import { ProfileHelper } from "@spt/helpers/ProfileHelper";
 import { TraderAssortHelper } from "@spt/helpers/TraderAssortHelper";
 import { IPmcData } from "@spt/models/eft/common/IPmcData";
-<<<<<<< HEAD
 import { IInventory } from "@spt/models/eft/common/tables/IBotBase";
 import { IItem, IItemLocation, IUpd } from "@spt/models/eft/common/tables/IItem";
-=======
-import { Inventory } from "@spt/models/eft/common/tables/IBotBase";
-import { Item, Upd } from "@spt/models/eft/common/tables/IItem";
->>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
 import { IAddItemDirectRequest } from "@spt/models/eft/inventory/IAddItemDirectRequest";
 import { IAddItemsDirectRequest } from "@spt/models/eft/inventory/IAddItemsDirectRequest";
 import { IInventoryMergeRequestData } from "@spt/models/eft/inventory/IInventoryMergeRequestData";
@@ -21,11 +16,7 @@ import { IInventoryRemoveRequestData } from "@spt/models/eft/inventory/IInventor
 import { IInventorySplitRequestData } from "@spt/models/eft/inventory/IInventorySplitRequestData";
 import { IInventoryTransferRequestData } from "@spt/models/eft/inventory/IInventoryTransferRequestData";
 import { IItemEventRouterResponse } from "@spt/models/eft/itemEvent/IItemEventRouterResponse";
-<<<<<<< HEAD
 import { IInventoryConfig, IRewardDetails } from "@spt/models/spt/config/IInventoryConfig";
-=======
-import { IInventoryConfig, RewardDetails } from "@spt/models/spt/config/IInventoryConfig";
->>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
 import { IOwnerInventoryItems } from "@spt/models/spt/inventory/IOwnerInventoryItems";
 import { ILogger } from "@spt/models/spt/utils/ILogger";
 import { ConfigServer } from "@spt/servers/ConfigServer";
@@ -118,11 +109,7 @@ export declare class InventoryHelper {
      * @param useSortingTable Should sorting table to be used if main stash has no space
      * @param output output to send back to client
      */
-<<<<<<< HEAD
     protected placeItemInInventory(stashFS2D: number[][], sortingTableFS2D: number[][], itemWithChildren: IItem[], playerInventory: IInventory, useSortingTable: boolean, output: IItemEventRouterResponse): void;
-=======
-    protected placeItemInInventory(stashFS2D: number[][], sortingTableFS2D: number[][], itemWithChildren: Item[], playerInventory: Inventory, useSortingTable: boolean, output: IItemEventRouterResponse): void;
->>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
     /**
      * Handle Remove event
      * Remove item from player inventory + insured items array
@@ -157,11 +144,7 @@ export declare class InventoryHelper {
      * @param inventoryItems
      * @returns [width, height]
      */
-<<<<<<< HEAD
     getItemSize(itemTpl: string, itemID: string, inventoryItems: IItem[]): number[];
-=======
-    getItemSize(itemTpl: string, itemID: string, inventoryItems: Item[]): number[];
->>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
     /**
      * Calculates the size of an item including attachements
      * takes into account if item is folded
@@ -236,11 +219,7 @@ export declare class InventoryHelper {
      * @param toItems Inventory of the destination
      * @param request Move request
      */
-<<<<<<< HEAD
     moveItemToProfile(sourceItems: IItem[], toItems: IItem[], request: IInventoryMoveRequestData): void;
-=======
-    moveItemToProfile(sourceItems: Item[], toItems: Item[], request: IInventoryMoveRequestData): void;
->>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
     /**
      * Internal helper function to move item within the same profile_f.
      * @param pmcData profile to edit
@@ -261,11 +240,7 @@ export declare class InventoryHelper {
     /**
      * Internal helper function to handle cartridges in inventory if any of them exist.
      */
-<<<<<<< HEAD
     protected handleCartridges(items: IItem[], request: IInventoryMoveRequestData): void;
-=======
-    protected handleCartridges(items: Item[], request: IInventoryMoveRequestData): void;
->>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
     /**
      * Get details for how a random loot container should be handled, max rewards, possible reward tpls
      * @param itemTpl Container being opened

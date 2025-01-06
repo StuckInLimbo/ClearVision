@@ -3,13 +3,8 @@ import { ItemHelper } from "@spt/helpers/ItemHelper";
 import { NotificationSendHelper } from "@spt/helpers/NotificationSendHelper";
 import { NotifierHelper } from "@spt/helpers/NotifierHelper";
 import { TraderHelper } from "@spt/helpers/TraderHelper";
-<<<<<<< HEAD
 import { IItem } from "@spt/models/eft/common/tables/IItem";
 import { IDialogue, IMessage, IMessageContentRagfair, IMessageItems, ISystemData, IUserDialogInfo } from "@spt/models/eft/profile/ISptProfile";
-=======
-import { Item } from "@spt/models/eft/common/tables/IItem";
-import { Dialogue, ISystemData, IUserDialogInfo, Message, MessageContentRagfair, MessageItems } from "@spt/models/eft/profile/ISptProfile";
->>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
 import { MessageType } from "@spt/models/enums/MessageType";
 import { Traders } from "@spt/models/enums/Traders";
 import { IProfileChangeEvent, ISendMessageDetails } from "@spt/models/spt/dialog/ISendMessageDetails";
@@ -42,11 +37,7 @@ export declare class MailSendService {
      * @param items Optional items to send to player
      * @param maxStorageTimeSeconds Optional time to collect items before they expire
      */
-<<<<<<< HEAD
     sendDirectNpcMessageToPlayer(sessionId: string, trader: Traders, messageType: MessageType, message: string, items?: IItem[], maxStorageTimeSeconds?: number, systemData?: ISystemData, ragfair?: IMessageContentRagfair): void;
-=======
-    sendDirectNpcMessageToPlayer(sessionId: string, trader: Traders, messageType: MessageType, message: string, items?: Item[], maxStorageTimeSeconds?: number, systemData?: ISystemData, ragfair?: MessageContentRagfair): void;
->>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
     /**
      * Send a message from an NPC (e.g. prapor) to the player with or without items
      * @param sessionId The session ID to send the message to
@@ -56,11 +47,7 @@ export declare class MailSendService {
      * @param items Optional items to send to player
      * @param maxStorageTimeSeconds Optional time to collect items before they expire
      */
-<<<<<<< HEAD
     sendLocalisedNpcMessageToPlayer(sessionId: string, trader: Traders, messageType: MessageType, messageLocaleId: string, items?: IItem[], maxStorageTimeSeconds?: number, systemData?: ISystemData, ragfair?: IMessageContentRagfair): void;
-=======
-    sendLocalisedNpcMessageToPlayer(sessionId: string, trader: Traders, messageType: MessageType, messageLocaleId: string, items?: Item[], maxStorageTimeSeconds?: number, systemData?: ISystemData, ragfair?: MessageContentRagfair): void;
->>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
     /**
      * Send a message from SYSTEM to the player with or without items
      * @param sessionId The session ID to send the message to
@@ -85,11 +72,7 @@ export declare class MailSendService {
      * @param items Optional items to send to player
      * @param maxStorageTimeSeconds Optional time to collect items before they expire
      */
-<<<<<<< HEAD
     sendUserMessageToPlayer(sessionId: string, senderDetails: IUserDialogInfo, message: string, items?: IItem[], maxStorageTimeSeconds?: number): void;
-=======
-    sendUserMessageToPlayer(sessionId: string, senderDetails: IUserDialogInfo, message: string, items?: Item[], maxStorageTimeSeconds?: number): void;
->>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
     /**
      * Large function to send messages to players from a variety of sources (SYSTEM/NPC/USER)
      * Helper functions in this class are available to simplify common actions
@@ -116,11 +99,7 @@ export declare class MailSendService {
      * @param itemsToSendToPlayer Items to add to message
      * @param maxStorageTimeSeconds total time items are stored in mail before being deleted
      */
-<<<<<<< HEAD
     protected addRewardItemsToMessage(message: IMessage, itemsToSendToPlayer: IMessageItems | undefined, maxStorageTimeSeconds: number | undefined): void;
-=======
-    protected addRewardItemsToMessage(message: Message, itemsToSendToPlayer: MessageItems | undefined, maxStorageTimeSeconds: number | undefined): void;
->>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
     /**
      * perform various sanitising actions on the items before they're considered ready for insertion into message
      * @param dialogType The type of the dialog that will hold the reward items being processed

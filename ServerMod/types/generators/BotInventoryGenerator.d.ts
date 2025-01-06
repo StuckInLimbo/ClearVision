@@ -1,14 +1,10 @@
-<<<<<<< HEAD
 import { ApplicationContext } from "@spt/context/ApplicationContext";
-=======
->>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
 import { BotEquipmentModGenerator } from "@spt/generators/BotEquipmentModGenerator";
 import { BotLootGenerator } from "@spt/generators/BotLootGenerator";
 import { BotWeaponGenerator } from "@spt/generators/BotWeaponGenerator";
 import { BotGeneratorHelper } from "@spt/helpers/BotGeneratorHelper";
 import { BotHelper } from "@spt/helpers/BotHelper";
 import { ItemHelper } from "@spt/helpers/ItemHelper";
-<<<<<<< HEAD
 import { ProfileHelper } from "@spt/helpers/ProfileHelper";
 import { WeatherHelper } from "@spt/helpers/WeatherHelper";
 import { WeightedRandomHelper } from "@spt/helpers/WeightedRandomHelper";
@@ -21,16 +17,6 @@ import { IBotConfig } from "@spt/models/spt/config/IBotConfig";
 import { ILogger } from "@spt/models/spt/utils/ILogger";
 import { ConfigServer } from "@spt/servers/ConfigServer";
 import { BotEquipmentFilterService } from "@spt/services/BotEquipmentFilterService";
-=======
-import { WeightedRandomHelper } from "@spt/helpers/WeightedRandomHelper";
-import { Inventory as PmcInventory } from "@spt/models/eft/common/tables/IBotBase";
-import { Chances, Equipment, Generation, IBotType, Inventory } from "@spt/models/eft/common/tables/IBotType";
-import { EquipmentSlots } from "@spt/models/enums/EquipmentSlots";
-import { IGenerateEquipmentProperties } from "@spt/models/spt/bots/IGenerateEquipmentProperties";
-import { EquipmentFilterDetails, IBotConfig } from "@spt/models/spt/config/IBotConfig";
-import { ILogger } from "@spt/models/spt/utils/ILogger";
-import { ConfigServer } from "@spt/servers/ConfigServer";
->>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
 import { BotEquipmentModPoolService } from "@spt/services/BotEquipmentModPoolService";
 import { DatabaseService } from "@spt/services/DatabaseService";
 import { LocalisationService } from "@spt/services/LocalisationService";
@@ -41,10 +27,7 @@ export declare class BotInventoryGenerator {
     protected hashUtil: HashUtil;
     protected randomUtil: RandomUtil;
     protected databaseService: DatabaseService;
-<<<<<<< HEAD
     protected applicationContext: ApplicationContext;
-=======
->>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
     protected botWeaponGenerator: BotWeaponGenerator;
     protected botLootGenerator: BotLootGenerator;
     protected botGeneratorHelper: BotGeneratorHelper;
@@ -59,11 +42,7 @@ export declare class BotInventoryGenerator {
     protected botEquipmentModGenerator: BotEquipmentModGenerator;
     protected configServer: ConfigServer;
     protected botConfig: IBotConfig;
-<<<<<<< HEAD
     constructor(logger: ILogger, hashUtil: HashUtil, randomUtil: RandomUtil, databaseService: DatabaseService, applicationContext: ApplicationContext, botWeaponGenerator: BotWeaponGenerator, botLootGenerator: BotLootGenerator, botGeneratorHelper: BotGeneratorHelper, profileHelper: ProfileHelper, botHelper: BotHelper, weightedRandomHelper: WeightedRandomHelper, itemHelper: ItemHelper, weatherHelper: WeatherHelper, localisationService: LocalisationService, botEquipmentFilterService: BotEquipmentFilterService, botEquipmentModPoolService: BotEquipmentModPoolService, botEquipmentModGenerator: BotEquipmentModGenerator, configServer: ConfigServer);
-=======
-    constructor(logger: ILogger, hashUtil: HashUtil, randomUtil: RandomUtil, databaseService: DatabaseService, botWeaponGenerator: BotWeaponGenerator, botLootGenerator: BotLootGenerator, botGeneratorHelper: BotGeneratorHelper, botHelper: BotHelper, weightedRandomHelper: WeightedRandomHelper, itemHelper: ItemHelper, localisationService: LocalisationService, botEquipmentModPoolService: BotEquipmentModPoolService, botEquipmentModGenerator: BotEquipmentModGenerator, configServer: ConfigServer);
->>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
     /**
      * Add equipment/weapons/loot to bot
      * @param sessionId Session id
@@ -90,7 +69,6 @@ export declare class BotInventoryGenerator {
      * @param botLevel Level of bot
      * @param chosenGameVersion Game version for bot, only really applies for PMCs
      */
-<<<<<<< HEAD
     protected generateAndAddEquipmentToBot(sessionId: string, templateInventory: IInventory, wornItemChances: IChances, botRole: string, botInventory: PmcInventory, botLevel: number, chosenGameVersion: string, raidConfig: IGetRaidConfigurationRequestData): void;
     /**
      * Remove non-armored rigs from parameter data
@@ -105,19 +83,6 @@ export declare class BotInventoryGenerator {
      * @param allowEmptyResult Should the function return all rigs when 0 unarmored are found
      */
     protected filterRigsToThoseWithoutProtection(templateEquipment: IEquipment, botRole: string, allowEmptyResult?: boolean): void;
-=======
-    protected generateAndAddEquipmentToBot(templateInventory: Inventory, wornItemChances: Chances, botRole: string, botInventory: PmcInventory, botLevel: number, chosenGameVersion: string): void;
-    /**
-     * Remove non-armored rigs from parameter data
-     * @param templateEquipment Equpiment to filter TacticalVest of
-     */
-    protected filterRigsToThoseWithProtection(templateEquipment: Equipment): void;
-    /**
-     * Remove armored rigs from parameter data
-     * @param templateEquipment Equpiment to filter TacticalVest of
-     */
-    protected filterRigsToThoseWithoutProtection(templateEquipment: Equipment): void;
->>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
     /**
      * Add a piece of equipment with mods to inventory from the provided pools
      * @param sessionId Session id
@@ -167,9 +132,5 @@ export declare class BotInventoryGenerator {
     protected addWeaponAndMagazinesToInventory(sessionId: string, weaponSlot: {
         slot: EquipmentSlots;
         shouldSpawn: boolean;
-<<<<<<< HEAD
     }, templateInventory: IInventory, botInventory: PmcInventory, equipmentChances: IChances, botRole: string, isPmc: boolean, itemGenerationWeights: IGeneration, botLevel: number): void;
-=======
-    }, templateInventory: Inventory, botInventory: PmcInventory, equipmentChances: Chances, botRole: string, isPmc: boolean, itemGenerationWeights: Generation, botLevel: number): void;
->>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
 }

@@ -53,10 +53,7 @@ export interface IRepeatableQuestConfig {
     rewardAmmoStackMinSize: number;
     freeChangesAvailable: number;
     freeChanges: number;
-<<<<<<< HEAD
     keepDailyQuestTypeOnReplacement: boolean;
-=======
->>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
 }
 export interface IRewardScaling {
     levels: number[];

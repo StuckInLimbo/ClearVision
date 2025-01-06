@@ -4,7 +4,6 @@ import { ItemHelper } from "@spt/helpers/ItemHelper";
 import { PaymentHelper } from "@spt/helpers/PaymentHelper";
 import { TraderHelper } from "@spt/helpers/TraderHelper";
 import { IPmcData } from "@spt/models/eft/common/IPmcData";
-<<<<<<< HEAD
 import { IItem } from "@spt/models/eft/common/tables/IItem";
 import { IItemEventRouterResponse } from "@spt/models/eft/itemEvent/IItemEventRouterResponse";
 import { IProcessBuyTradeRequestData } from "@spt/models/eft/trade/IProcessBuyTradeRequestData";
@@ -12,13 +11,6 @@ import { IProcessSellTradeRequestData } from "@spt/models/eft/trade/IProcessSell
 import { IInventoryConfig } from "@spt/models/spt/config/IInventoryConfig";
 import { ILogger } from "@spt/models/spt/utils/ILogger";
 import { ConfigServer } from "@spt/servers/ConfigServer";
-=======
-import { Item } from "@spt/models/eft/common/tables/IItem";
-import { IItemEventRouterResponse } from "@spt/models/eft/itemEvent/IItemEventRouterResponse";
-import { IProcessBuyTradeRequestData } from "@spt/models/eft/trade/IProcessBuyTradeRequestData";
-import { IProcessSellTradeRequestData } from "@spt/models/eft/trade/IProcessSellTradeRequestData";
-import { ILogger } from "@spt/models/spt/utils/ILogger";
->>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
 import { DatabaseService } from "@spt/services/DatabaseService";
 import { LocalisationService } from "@spt/services/LocalisationService";
 import { HashUtil } from "@spt/utils/HashUtil";
@@ -34,13 +26,9 @@ export declare class PaymentService {
     protected inventoryHelper: InventoryHelper;
     protected localisationService: LocalisationService;
     protected paymentHelper: PaymentHelper;
-<<<<<<< HEAD
     protected configServer: ConfigServer;
     protected inventoryConfig: IInventoryConfig;
     constructor(logger: ILogger, hashUtil: HashUtil, httpResponse: HttpResponseUtil, databaseService: DatabaseService, handbookHelper: HandbookHelper, traderHelper: TraderHelper, itemHelper: ItemHelper, inventoryHelper: InventoryHelper, localisationService: LocalisationService, paymentHelper: PaymentHelper, configServer: ConfigServer);
-=======
-    constructor(logger: ILogger, hashUtil: HashUtil, httpResponse: HttpResponseUtil, databaseService: DatabaseService, handbookHelper: HandbookHelper, traderHelper: TraderHelper, itemHelper: ItemHelper, inventoryHelper: InventoryHelper, localisationService: LocalisationService, paymentHelper: PaymentHelper);
->>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
     /**
      * Take money and insert items into return to server request
      * @param pmcData Pmc profile
@@ -101,9 +89,5 @@ export declare class PaymentService {
      * @param playerStashId Players stash id
      * @returns true if its in inventory
      */
-<<<<<<< HEAD
     protected isInStash(itemId: string | undefined, inventoryItems: IItem[], playerStashId: string): boolean;
-=======
-    protected isInStash(itemId: string | undefined, inventoryItems: Item[], playerStashId: string): boolean;
->>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
 }

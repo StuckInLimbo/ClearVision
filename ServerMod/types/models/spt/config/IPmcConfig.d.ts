@@ -1,8 +1,5 @@
 import { MinMax } from "@spt/models/common/MinMax";
-<<<<<<< HEAD
 import { IChancedEnemy } from "@spt/models/eft/common/ILocationBase";
-=======
->>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
 import { MemberCategory } from "@spt/models/enums/MemberCategory";
 import { IBaseConfig } from "@spt/models/spt/config/IBaseConfig";
 export interface IPmcConfig extends IBaseConfig {

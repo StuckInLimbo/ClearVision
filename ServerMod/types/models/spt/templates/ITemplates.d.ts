@@ -1,10 +1,7 @@
 import { IAchievement } from "@spt/models/eft/common/tables/IAchievement";
 import { ICustomizationItem } from "@spt/models/eft/common/tables/ICustomizationItem";
 import { IHandbookBase } from "@spt/models/eft/common/tables/IHandbookBase";
-<<<<<<< HEAD
 import { ILocationServices } from "@spt/models/eft/common/tables/ILocationServices";
-=======
->>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
 import { IProfileTemplates } from "@spt/models/eft/common/tables/IProfileTemplate";
 import { IQuest } from "@spt/models/eft/common/tables/IQuest";
 import { IRepeatableQuestDatabase } from "@spt/models/eft/common/tables/IRepeatableQuests";
@@ -25,9 +22,6 @@ export interface ITemplates {
     defaultEquipmentPresets: IDefaultEquipmentPreset[];
     /** Achievements */
     achievements: IAchievement[];
-<<<<<<< HEAD
     /** Location services data */
     locationServices: ILocationServices;
-=======
->>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
 }

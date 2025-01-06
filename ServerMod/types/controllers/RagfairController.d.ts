@@ -10,19 +10,11 @@ import { RagfairSellHelper } from "@spt/helpers/RagfairSellHelper";
 import { RagfairSortHelper } from "@spt/helpers/RagfairSortHelper";
 import { TraderHelper } from "@spt/helpers/TraderHelper";
 import { IPmcData } from "@spt/models/eft/common/IPmcData";
-<<<<<<< HEAD
 import { IItem } from "@spt/models/eft/common/tables/IItem";
 import { ITraderAssort } from "@spt/models/eft/common/tables/ITrader";
 import { IItemEventRouterResponse } from "@spt/models/eft/itemEvent/IItemEventRouterResponse";
 import { ISptProfile } from "@spt/models/eft/profile/ISptProfile";
 import { IAddOfferRequestData, IRequirement } from "@spt/models/eft/ragfair/IAddOfferRequestData";
-=======
-import { Item } from "@spt/models/eft/common/tables/IItem";
-import { ITraderAssort } from "@spt/models/eft/common/tables/ITrader";
-import { IItemEventRouterResponse } from "@spt/models/eft/itemEvent/IItemEventRouterResponse";
-import { ISptProfile } from "@spt/models/eft/profile/ISptProfile";
-import { IAddOfferRequestData, Requirement } from "@spt/models/eft/ragfair/IAddOfferRequestData";
->>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
 import { IExtendOfferRequestData } from "@spt/models/eft/ragfair/IExtendOfferRequestData";
 import { IGetItemPriceResult } from "@spt/models/eft/ragfair/IGetItemPriceResult";
 import { IGetMarketPriceRequestData } from "@spt/models/eft/ragfair/IGetMarketPriceRequestData";
@@ -229,11 +221,7 @@ export declare class RagfairController {
      * @returns Array of items from player inventory
      */
     protected getItemsToListOnFleaFromInventory(pmcData: IPmcData, itemIdsFromFleaOfferRequest: string[]): {
-<<<<<<< HEAD
         items: IItem[][] | undefined;
-=======
-        items: Item[][] | undefined;
->>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
         errorMessage: string | undefined;
     };
     createPlayerOffer(sessionId: string, requirements: IRequirement[], items: IItem[], sellInOnePiece: boolean): IRagfairOffer;

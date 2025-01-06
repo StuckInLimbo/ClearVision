@@ -1,9 +1,6 @@
 import { MinMax } from "@spt/models/common/MinMax";
 import { Ixyz } from "@spt/models/eft/common/Ixyz";
-<<<<<<< HEAD
 import { ISpawnpointTemplate } from "./ILooseLoot";
-=======
->>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
 export interface ILocationBase {
     AccessKeys: string[];
     AccessKeysPvE: string[];
@@ -28,13 +25,9 @@ export interface ILocationBase {
     BotMaxPlayer: number;
     /** Is not used in 33420 */
     BotMaxTimePlayer: number;
-<<<<<<< HEAD
     /** Does not even exist in the client in 33420 */
     BotMaxPvE: number;
     /** Weighting on how likely a bot will be Normal difficulty */
-=======
-    BotMaxPvE: number;
->>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
     BotNormal: number;
     /** How many bot slots that need to be open before trying to spawn new bots. */
     BotSpawnCountStep: number;
@@ -97,10 +90,7 @@ export interface ILocationBase {
     EscapeTimeLimit: number;
     EscapeTimeLimitCoop: number;
     EscapeTimeLimitPVE: number;
-<<<<<<< HEAD
     Events: ILocationEvents;
-=======
->>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
     exit_access_time: number;
     ForceOnlineRaidInPVE: boolean;
     exit_count: number;

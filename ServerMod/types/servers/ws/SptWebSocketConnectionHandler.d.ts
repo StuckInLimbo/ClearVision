@@ -1,10 +1,4 @@
-<<<<<<< HEAD
 import { IncomingMessage } from "node:http";
-=======
-/// <reference types="node" />
-/// <reference types="node" />
-import { IncomingMessage } from "http";
->>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
 import { ProfileHelper } from "@spt/helpers/ProfileHelper";
 import { IWsNotificationEvent } from "@spt/models/eft/ws/IWsNotificationEvent";
 import { IHttpConfig } from "@spt/models/spt/config/IHttpConfig";

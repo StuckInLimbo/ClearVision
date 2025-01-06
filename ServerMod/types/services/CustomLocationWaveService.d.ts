@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 import { IBossLocationSpawn, IWave } from "@spt/models/eft/common/ILocationBase";
-=======
-import { BossLocationSpawn, Wave } from "@spt/models/eft/common/ILocationBase";
->>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
 import { ILocationConfig } from "@spt/models/spt/config/ILocationConfig";
 import { ILogger } from "@spt/models/spt/utils/ILogger";
 import { ConfigServer } from "@spt/servers/ConfigServer";

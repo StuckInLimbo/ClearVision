@@ -1,12 +1,7 @@
 import { IPmcData } from "@spt/models/eft/common/IPmcData";
-<<<<<<< HEAD
 import { IBodyPartsHealth, IHealth } from "@spt/models/eft/common/tables/IBotBase";
 import { ISyncHealthRequestData } from "@spt/models/eft/health/ISyncHealthRequestData";
 import { IEffects, ISptProfile } from "@spt/models/eft/profile/ISptProfile";
-=======
-import { ISyncHealthRequestData } from "@spt/models/eft/health/ISyncHealthRequestData";
-import { Effects, ISptProfile } from "@spt/models/eft/profile/ISptProfile";
->>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
 import { IHealthConfig } from "@spt/models/spt/config/IHealthConfig";
 import { ILogger } from "@spt/models/spt/utils/ILogger";
 import { ConfigServer } from "@spt/servers/ConfigServer";
@@ -29,7 +24,6 @@ export declare class HealthHelper {
     resetVitality(sessionID: string): ISptProfile;
     /**
      * Update player profile vitality values with changes from client request object
-<<<<<<< HEAD
      * @param pmcData Player profile
      * @param postRaidHealth Post raid data
      * @param sessionID Session id
@@ -47,8 +41,6 @@ export declare class HealthHelper {
     protected transferPostRaidLimbEffectsToProfile(postRaidBodyParts: IBodyPartsHealth, profileData: IPmcData): void;
     /**
      * Update player profile vitality values with changes from client request object
-=======
->>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
      * @param pmcData Player profile
      * @param request Heal request
      * @param sessionID Session id

@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-/// <reference types="node" />
->>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
 import { IncomingMessage } from "node:http";
 import { WebSocket } from "ws";
 export interface IWebSocketConnectionHandler {

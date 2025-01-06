@@ -5,15 +5,9 @@ import { HandbookHelper } from "@spt/helpers/HandbookHelper";
 import { InventoryHelper } from "@spt/helpers/InventoryHelper";
 import { ItemHelper } from "@spt/helpers/ItemHelper";
 import { WeightedRandomHelper } from "@spt/helpers/WeightedRandomHelper";
-<<<<<<< HEAD
 import { IInventory as PmcInventory } from "@spt/models/eft/common/tables/IBotBase";
 import { IBotType, IInventory, IModsChances } from "@spt/models/eft/common/tables/IBotType";
 import { IItem } from "@spt/models/eft/common/tables/IItem";
-=======
-import { Inventory as PmcInventory } from "@spt/models/eft/common/tables/IBotBase";
-import { IBotType, Inventory, ModsChances } from "@spt/models/eft/common/tables/IBotType";
-import { Item } from "@spt/models/eft/common/tables/IItem";
->>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
 import { ITemplateItem } from "@spt/models/eft/common/tables/ITemplateItem";
 import { EquipmentSlots } from "@spt/models/enums/EquipmentSlots";
 import { IItemSpawnLimitSettings } from "@spt/models/spt/bots/IItemSpawnLimitSettings";

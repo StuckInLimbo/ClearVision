@@ -1,10 +1,5 @@
-<<<<<<< HEAD
 import { IItem } from "@spt/models/eft/common/tables/IItem";
 import { IProps, ITemplateItem } from "@spt/models/eft/common/tables/ITemplateItem";
-=======
-import { Item } from "@spt/models/eft/common/tables/IItem";
-import { ITemplateItem, Props } from "@spt/models/eft/common/tables/ITemplateItem";
->>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
 import { IRepairConfig } from "@spt/models/spt/config/IRepairConfig";
 import { ILogger } from "@spt/models/spt/utils/ILogger";
 import { ConfigServer } from "@spt/servers/ConfigServer";

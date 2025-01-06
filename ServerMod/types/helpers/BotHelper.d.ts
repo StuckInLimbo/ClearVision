@@ -1,11 +1,6 @@
 import { MinMax } from "@spt/models/common/MinMax";
-<<<<<<< HEAD
 import { IBotType, IDifficultyCategories } from "@spt/models/eft/common/tables/IBotType";
 import { EquipmentFilters, IBotConfig, IRandomisationDetails } from "@spt/models/spt/config/IBotConfig";
-=======
-import { Difficulty, IBotType } from "@spt/models/eft/common/tables/IBotType";
-import { EquipmentFilters, IBotConfig, RandomisationDetails } from "@spt/models/spt/config/IBotConfig";
->>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
 import { IPmcConfig } from "@spt/models/spt/config/IPmcConfig";
 import { ILogger } from "@spt/models/spt/utils/ILogger";
 import { ConfigServer } from "@spt/servers/ConfigServer";
@@ -38,11 +33,7 @@ export declare class BotHelper {
      * @param difficultySettings bot settings to alter
      * @param typeToAdd bot type to add to friendly list
      */
-<<<<<<< HEAD
     addBotToFriendlyList(difficultySettings: IDifficultyCategories, typeToAdd: string): void;
-=======
-    addBotToFriendlyList(difficultySettings: Difficulty, typeToAdd: string): void;
->>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
     /**
      * Add a bot to the REVENGE_BOT_TYPES array
      * @param difficultySettings bot settings to alter
@@ -56,16 +47,6 @@ export declare class BotHelper {
      * @param botRole Role to check
      * @returns True if role is PMC
      */
-<<<<<<< HEAD
-=======
-    shouldBotBePmc(botRole: string): boolean;
-    rollChanceToBePmc(role: string, botConvertMinMax: MinMax): boolean;
-    /**
-     * is the provided role a PMC, case-agnostic
-     * @param botRole Role to check
-     * @returns True if role is PMC
-     */
->>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
     botRoleIsPmc(botRole: string): boolean;
     /**
      * Get randomization settings for bot from config/bot.json
@@ -73,11 +54,7 @@ export declare class BotHelper {
      * @param botEquipConfig bot equipment json
      * @returns RandomisationDetails
      */
-<<<<<<< HEAD
     getBotRandomizationDetails(botLevel: number, botEquipConfig: EquipmentFilters): IRandomisationDetails | undefined;
-=======
-    getBotRandomizationDetails(botLevel: number, botEquipConfig: EquipmentFilters): RandomisationDetails | undefined;
->>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
     /**
      * Choose between pmcBEAR and pmcUSEC at random based on the % defined in pmcConfig.isUsec
      * @returns pmc role
@@ -94,7 +71,6 @@ export declare class BotHelper {
      * @returns pmc side as string
      */
     protected getRandomizedPmcSide(): string;
-<<<<<<< HEAD
     /**
      * Get a name from a PMC that fits the desired length
      * @param maxLength Max length of name, inclusive
@@ -102,7 +78,4 @@ export declare class BotHelper {
      * @returns name of PMC
      */
     getPmcNicknameOfMaxLength(maxLength: number, side?: string): string;
-=======
-    getPmcNicknameOfMaxLength(userId: string, maxLength: number): string;
->>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
 }

@@ -7,11 +7,7 @@ import { TraderHelper } from "@spt/helpers/TraderHelper";
 import { IPmcData } from "@spt/models/eft/common/IPmcData";
 import { IItemEventRouterResponse } from "@spt/models/eft/itemEvent/IItemEventRouterResponse";
 import { IMiniProfile } from "@spt/models/eft/launcher/IMiniProfile";
-<<<<<<< HEAD
 import { IGetProfileStatusResponseData } from "@spt/models/eft/profile/GetProfileStatusResponseData";
-=======
-import { GetProfileStatusResponseData } from "@spt/models/eft/profile/GetProfileStatusResponseData";
->>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
 import { IGetOtherProfileRequest } from "@spt/models/eft/profile/IGetOtherProfileRequest";
 import { IGetOtherProfileResponse } from "@spt/models/eft/profile/IGetOtherProfileResponse";
 import { IGetProfileSettingsRequest } from "@spt/models/eft/profile/IGetProfileSettingsRequest";

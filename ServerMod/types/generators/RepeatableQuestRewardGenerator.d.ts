@@ -1,11 +1,7 @@
 import { HandbookHelper } from "@spt/helpers/HandbookHelper";
 import { ItemHelper } from "@spt/helpers/ItemHelper";
 import { PresetHelper } from "@spt/helpers/PresetHelper";
-<<<<<<< HEAD
 import { IItem } from "@spt/models/eft/common/tables/IItem";
-=======
-import { Item } from "@spt/models/eft/common/tables/IItem";
->>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
 import { IQuestReward, IQuestRewards } from "@spt/models/eft/common/tables/IQuest";
 import { ITemplateItem } from "@spt/models/eft/common/tables/ITemplateItem";
 import { IBaseQuestConfig, IQuestConfig, IRepeatableQuestConfig, IRewardScaling } from "@spt/models/spt/config/IQuestConfig";
@@ -16,10 +12,7 @@ import { DatabaseService } from "@spt/services/DatabaseService";
 import { ItemFilterService } from "@spt/services/ItemFilterService";
 import { LocalisationService } from "@spt/services/LocalisationService";
 import { SeasonalEventService } from "@spt/services/SeasonalEventService";
-<<<<<<< HEAD
 import { HashUtil } from "@spt/utils/HashUtil";
-=======
->>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
 import { MathUtil } from "@spt/utils/MathUtil";
 import { ObjectId } from "@spt/utils/ObjectId";
 import { RandomUtil } from "@spt/utils/RandomUtil";
@@ -40,11 +33,7 @@ export declare class RepeatableQuestRewardGenerator {
     protected configServer: ConfigServer;
     protected cloner: ICloner;
     protected questConfig: IQuestConfig;
-<<<<<<< HEAD
     constructor(logger: ILogger, randomUtil: RandomUtil, hashUtil: HashUtil, mathUtil: MathUtil, databaseService: DatabaseService, itemHelper: ItemHelper, presetHelper: PresetHelper, handbookHelper: HandbookHelper, localisationService: LocalisationService, objectId: ObjectId, itemFilterService: ItemFilterService, seasonalEventService: SeasonalEventService, configServer: ConfigServer, cloner: ICloner);
-=======
-    constructor(logger: ILogger, randomUtil: RandomUtil, mathUtil: MathUtil, databaseService: DatabaseService, itemHelper: ItemHelper, presetHelper: PresetHelper, handbookHelper: HandbookHelper, localisationService: LocalisationService, objectId: ObjectId, itemFilterService: ItemFilterService, seasonalEventService: SeasonalEventService, configServer: ConfigServer, cloner: ICloner);
->>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
     /**
      * Generate the reward for a mission. A reward can consist of:
      * - Experience
@@ -69,11 +58,7 @@ export declare class RepeatableQuestRewardGenerator {
      * @param rewardTplBlacklist OPTIONAL: list of tpls to NOT use when picking a reward
      * @returns IQuestRewards
      */
-<<<<<<< HEAD
     generateReward(pmcLevel: number, difficulty: number, traderId: string, repeatableConfig: IRepeatableQuestConfig, questConfig: IBaseQuestConfig, rewardTplBlacklist?: string[]): IQuestRewards;
-=======
-    generateReward(pmcLevel: number, difficulty: number, traderId: string, repeatableConfig: IRepeatableQuestConfig, questConfig: IBaseQuestConfig): IQuestRewards;
->>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
     protected getQuestRewardValues(rewardScaling: IRewardScaling, difficulty: number, pmcLevel: number): IQuestRewardValues;
     /**
      * Get an array of items + stack size to give to player as reward that fit inside of a rouble budget
@@ -144,11 +129,7 @@ export declare class RepeatableQuestRewardGenerator {
      * @param preset Optional array of preset items
      * @returns {object}                    Object of "Reward"-item-type
      */
-<<<<<<< HEAD
     protected generateItemReward(tpl: string, count: number, index: number, foundInRaid?: boolean): IQuestReward;
-=======
-    protected generateItemReward(tpl: string, count: number, index: number): IQuestReward;
->>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
     /**
      * Helper to create a reward item structured as required by the client
      *
@@ -158,11 +139,7 @@ export declare class RepeatableQuestRewardGenerator {
      * @param preset Optional array of preset items
      * @returns {object}                    Object of "Reward"-item-type
      */
-<<<<<<< HEAD
     protected generatePresetReward(tpl: string, count: number, index: number, preset?: IItem[], foundInRaid?: boolean): IQuestReward;
-=======
-    protected generatePresetReward(tpl: string, count: number, index: number, preset?: Item[]): IQuestReward;
->>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
     /**
      * Picks rewardable items from items.json
      * This means they must:

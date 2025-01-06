@@ -1,17 +1,11 @@
 import { ItemHelper } from "@spt/helpers/ItemHelper";
 import { IPmcData } from "@spt/models/eft/common/IPmcData";
-<<<<<<< HEAD
 import { Common, ICounterKeyValue, IStats } from "@spt/models/eft/common/tables/IBotBase";
 import { IItem } from "@spt/models/eft/common/tables/IItem";
 import { ISearchFriendResponse } from "@spt/models/eft/profile/ISearchFriendResponse";
 import { ISptProfile } from "@spt/models/eft/profile/ISptProfile";
 import { IValidateNicknameRequestData } from "@spt/models/eft/profile/IValidateNicknameRequestData";
 import { BonusType } from "@spt/models/enums/BonusType";
-=======
-import { Common, CounterKeyValue, Stats } from "@spt/models/eft/common/tables/IBotBase";
-import { ISptProfile } from "@spt/models/eft/profile/ISptProfile";
-import { IValidateNicknameRequestData } from "@spt/models/eft/profile/IValidateNicknameRequestData";
->>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
 import { SkillTypes } from "@spt/models/enums/SkillTypes";
 import { IInventoryConfig } from "@spt/models/spt/config/IInventoryConfig";
 import { ILogger } from "@spt/models/spt/utils/ILogger";
@@ -19,10 +13,6 @@ import { ConfigServer } from "@spt/servers/ConfigServer";
 import { SaveServer } from "@spt/servers/SaveServer";
 import { DatabaseService } from "@spt/services/DatabaseService";
 import { LocalisationService } from "@spt/services/LocalisationService";
-<<<<<<< HEAD
-=======
-import { ProfileSnapshotService } from "@spt/services/ProfileSnapshotService";
->>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
 import { HashUtil } from "@spt/utils/HashUtil";
 import { TimeUtil } from "@spt/utils/TimeUtil";
 import { Watermark } from "@spt/utils/Watermark";
@@ -39,11 +29,7 @@ export declare class ProfileHelper {
     protected configServer: ConfigServer;
     protected cloner: ICloner;
     protected inventoryConfig: IInventoryConfig;
-<<<<<<< HEAD
     constructor(logger: ILogger, hashUtil: HashUtil, watermark: Watermark, timeUtil: TimeUtil, saveServer: SaveServer, databaseService: DatabaseService, itemHelper: ItemHelper, localisationService: LocalisationService, configServer: ConfigServer, cloner: ICloner);
-=======
-    constructor(logger: ILogger, hashUtil: HashUtil, watermark: Watermark, timeUtil: TimeUtil, saveServer: SaveServer, databaseService: DatabaseService, itemHelper: ItemHelper, profileSnapshotService: ProfileSnapshotService, localisationService: LocalisationService, configServer: ConfigServer, cloner: ICloner);
->>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
     /**
      * Remove/reset a completed quest condtion from players profile quest data
      * @param sessionID Session id
@@ -65,11 +51,7 @@ export declare class ProfileHelper {
      * Sanitize any information from the profile that the client does not expect to receive
      * @param clonedProfile A clone of the full player profile
      */
-<<<<<<< HEAD
     protected sanitizeProfileForClient(clonedProfile: ISptProfile): void;
-=======
-    protected postRaidXpWorkaroundFix(sessionId: string, pmcProfile: IPmcData, scavProfile: IPmcData, output: IPmcData[]): IPmcData[];
->>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
     /**
      * Check if a nickname is used by another profile loaded by the server
      * @param nicknameRequest nickname request object
@@ -109,7 +91,6 @@ export declare class ProfileHelper {
      * @returns ISptProfile object
      */
     getFullProfile(sessionID: string): ISptProfile | undefined;
-<<<<<<< HEAD
     /**
      * Get full representation of a players profile JSON by the account ID, or undefined if not found
      * @param accountId Account ID to find
@@ -128,8 +109,6 @@ export declare class ProfileHelper {
      * @returns
      */
     getChatRoomMemberFromPmcProfile(pmcProfile: IPmcData): ISearchFriendResponse;
-=======
->>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
     /**
      * Get a PMC profile by its session id
      * @param sessionID Profile id to return
@@ -222,7 +201,6 @@ export declare class ProfileHelper {
      * @param rowsToAdd How many rows to give profile
      */
     addStashRowsBonusToProfile(sessionId: string, rowsToAdd: number): void;
-<<<<<<< HEAD
     /**
      * Iterate over all bonuses and sum up all bonuses of desired type in provided profile
      * @param pmcProfile Player profile
@@ -230,8 +208,6 @@ export declare class ProfileHelper {
      * @returns Summed bonus value or 0 if no bonus found
      */
     getBonusValueFromProfile(pmcProfile: IPmcData, desiredBonus: BonusType): number;
-=======
->>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
     playerIsFleaBanned(pmcProfile: IPmcData): boolean;
     /**
      * Add an achievement to player profile
@@ -240,7 +216,6 @@ export declare class ProfileHelper {
      */
     addAchievementToProfile(pmcProfile: IPmcData, achievementId: string): void;
     hasAccessToRepeatableFreeRefreshSystem(pmcProfile: IPmcData): boolean;
-<<<<<<< HEAD
     /**
      * Find a profiles "Pockets" item and replace its tpl with passed in value
      * @param pmcProfile Player profile
@@ -259,6 +234,4 @@ export declare class ProfileHelper {
      * @returns An array of IItem objects representing the favorited data
      */
     getOtherProfileFavorites(profile: IPmcData): IItem[];
-=======
->>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
 }

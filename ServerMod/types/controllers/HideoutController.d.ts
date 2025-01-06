@@ -6,7 +6,6 @@ import { PaymentHelper } from "@spt/helpers/PaymentHelper";
 import { PresetHelper } from "@spt/helpers/PresetHelper";
 import { ProfileHelper } from "@spt/helpers/ProfileHelper";
 import { IPmcData } from "@spt/models/eft/common/IPmcData";
-<<<<<<< HEAD
 import { IBotHideoutArea, IProduct, ITaskConditionCounter } from "@spt/models/eft/common/tables/IBotBase";
 import { IHandleQTEEventRequestData } from "@spt/models/eft/hideout/IHandleQTEEventRequestData";
 import { IHideoutArea, IStage } from "@spt/models/eft/hideout/IHideoutArea";
@@ -14,14 +13,6 @@ import { IHideoutCancelProductionRequestData } from "@spt/models/eft/hideout/IHi
 import { IHideoutCircleOfCultistProductionStartRequestData } from "@spt/models/eft/hideout/IHideoutCircleOfCultistProductionStartRequestData";
 import { IHideoutContinuousProductionStartRequestData } from "@spt/models/eft/hideout/IHideoutContinuousProductionStartRequestData";
 import { IHideoutDeleteProductionRequestData } from "@spt/models/eft/hideout/IHideoutDeleteProductionRequestData";
-=======
-import { HideoutArea, ITaskConditionCounter, Product } from "@spt/models/eft/common/tables/IBotBase";
-import { HideoutUpgradeCompleteRequestData } from "@spt/models/eft/hideout/HideoutUpgradeCompleteRequestData";
-import { IHandleQTEEventRequestData } from "@spt/models/eft/hideout/IHandleQTEEventRequestData";
-import { IHideoutArea, Stage } from "@spt/models/eft/hideout/IHideoutArea";
-import { IHideoutCancelProductionRequestData } from "@spt/models/eft/hideout/IHideoutCancelProductionRequestData";
-import { IHideoutContinuousProductionStartRequestData } from "@spt/models/eft/hideout/IHideoutContinuousProductionStartRequestData";
->>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
 import { IHideoutImproveAreaRequestData } from "@spt/models/eft/hideout/IHideoutImproveAreaRequestData";
 import { IHideoutProduction } from "@spt/models/eft/hideout/IHideoutProduction";
 import { IHideoutPutItemInRequestData } from "@spt/models/eft/hideout/IHideoutPutItemInRequestData";
@@ -30,14 +21,9 @@ import { IHideoutSingleProductionStartRequestData } from "@spt/models/eft/hideou
 import { IHideoutTakeItemOutRequestData } from "@spt/models/eft/hideout/IHideoutTakeItemOutRequestData";
 import { IHideoutTakeProductionRequestData } from "@spt/models/eft/hideout/IHideoutTakeProductionRequestData";
 import { IHideoutToggleAreaRequestData } from "@spt/models/eft/hideout/IHideoutToggleAreaRequestData";
-<<<<<<< HEAD
 import { IHideoutUpgradeCompleteRequestData } from "@spt/models/eft/hideout/IHideoutUpgradeCompleteRequestData";
 import { IHideoutUpgradeRequestData } from "@spt/models/eft/hideout/IHideoutUpgradeRequestData";
 import { IQteData, IQteResult } from "@spt/models/eft/hideout/IQteData";
-=======
-import { IHideoutUpgradeRequestData } from "@spt/models/eft/hideout/IHideoutUpgradeRequestData";
-import { IQteData } from "@spt/models/eft/hideout/IQteData";
->>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
 import { IRecordShootingRangePoints } from "@spt/models/eft/hideout/IRecordShootingRangePoints";
 import { IItemEventRouterResponse } from "@spt/models/eft/itemEvent/IItemEventRouterResponse";
 import { HideoutAreas } from "@spt/models/enums/HideoutAreas";
@@ -46,10 +32,7 @@ import { ILogger } from "@spt/models/spt/utils/ILogger";
 import { EventOutputHolder } from "@spt/routers/EventOutputHolder";
 import { ConfigServer } from "@spt/servers/ConfigServer";
 import { SaveServer } from "@spt/servers/SaveServer";
-<<<<<<< HEAD
 import { CircleOfCultistService } from "@spt/services/CircleOfCultistService";
-=======
->>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
 import { DatabaseService } from "@spt/services/DatabaseService";
 import { FenceService } from "@spt/services/FenceService";
 import { LocalisationService } from "@spt/services/LocalisationService";
@@ -81,19 +64,12 @@ export declare class HideoutController {
     protected profileActivityService: ProfileActivityService;
     protected configServer: ConfigServer;
     protected fenceService: FenceService;
-<<<<<<< HEAD
     protected circleOfCultistService: CircleOfCultistService;
-=======
->>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
     protected cloner: ICloner;
     /** Key used in TaskConditionCounters array */
     protected static nameTaskConditionCountersCraftingId: string;
     protected hideoutConfig: IHideoutConfig;
-<<<<<<< HEAD
     constructor(logger: ILogger, hashUtil: HashUtil, timeUtil: TimeUtil, databaseService: DatabaseService, randomUtil: RandomUtil, inventoryHelper: InventoryHelper, itemHelper: ItemHelper, saveServer: SaveServer, playerService: PlayerService, presetHelper: PresetHelper, paymentHelper: PaymentHelper, eventOutputHolder: EventOutputHolder, httpResponse: HttpResponseUtil, profileHelper: ProfileHelper, hideoutHelper: HideoutHelper, scavCaseRewardGenerator: ScavCaseRewardGenerator, localisationService: LocalisationService, profileActivityService: ProfileActivityService, configServer: ConfigServer, fenceService: FenceService, circleOfCultistService: CircleOfCultistService, cloner: ICloner);
-=======
-    constructor(logger: ILogger, hashUtil: HashUtil, timeUtil: TimeUtil, databaseService: DatabaseService, randomUtil: RandomUtil, inventoryHelper: InventoryHelper, itemHelper: ItemHelper, saveServer: SaveServer, playerService: PlayerService, presetHelper: PresetHelper, paymentHelper: PaymentHelper, eventOutputHolder: EventOutputHolder, httpResponse: HttpResponseUtil, profileHelper: ProfileHelper, hideoutHelper: HideoutHelper, scavCaseRewardGenerator: ScavCaseRewardGenerator, localisationService: LocalisationService, profileActivityService: ProfileActivityService, configServer: ConfigServer, fenceService: FenceService, cloner: ICloner);
->>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
     /**
      * Handle HideoutUpgrade event
      * Start a hideout area upgrade

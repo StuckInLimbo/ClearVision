@@ -1,11 +1,7 @@
 import { ItemHelper } from "@spt/helpers/ItemHelper";
 import { ProfileHelper } from "@spt/helpers/ProfileHelper";
 import { RagfairServerHelper } from "@spt/helpers/RagfairServerHelper";
-<<<<<<< HEAD
 import { IItem } from "@spt/models/eft/common/tables/IItem";
-=======
-import { Item } from "@spt/models/eft/common/tables/IItem";
->>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
 import { IRagfairOffer } from "@spt/models/eft/ragfair/IRagfairOffer";
 import { IRagfairConfig } from "@spt/models/spt/config/IRagfairConfig";
 import { ILogger } from "@spt/models/spt/utils/ILogger";
@@ -14,10 +10,7 @@ import { ConfigServer } from "@spt/servers/ConfigServer";
 import { SaveServer } from "@spt/servers/SaveServer";
 import { DatabaseService } from "@spt/services/DatabaseService";
 import { LocalisationService } from "@spt/services/LocalisationService";
-<<<<<<< HEAD
 import { HashUtil } from "@spt/utils/HashUtil";
-=======
->>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
 import { HttpResponseUtil } from "@spt/utils/HttpResponseUtil";
 import { RagfairOfferHolder } from "@spt/utils/RagfairOfferHolder";
 import { TimeUtil } from "@spt/utils/TimeUtil";
@@ -25,10 +18,7 @@ import { ICloner } from "@spt/utils/cloners/ICloner";
 export declare class RagfairOfferService {
     protected logger: ILogger;
     protected timeUtil: TimeUtil;
-<<<<<<< HEAD
     protected hashUtil: HashUtil;
-=======
->>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
     protected databaseService: DatabaseService;
     protected saveServer: SaveServer;
     protected ragfairServerHelper: RagfairServerHelper;
@@ -44,11 +34,7 @@ export declare class RagfairOfferService {
     protected expiredOffers: Record<string, IRagfairOffer>;
     protected ragfairConfig: IRagfairConfig;
     protected ragfairOfferHandler: RagfairOfferHolder;
-<<<<<<< HEAD
     constructor(logger: ILogger, timeUtil: TimeUtil, hashUtil: HashUtil, databaseService: DatabaseService, saveServer: SaveServer, ragfairServerHelper: RagfairServerHelper, itemHelper: ItemHelper, profileHelper: ProfileHelper, eventOutputHolder: EventOutputHolder, httpResponse: HttpResponseUtil, localisationService: LocalisationService, configServer: ConfigServer, cloner: ICloner);
-=======
-    constructor(logger: ILogger, timeUtil: TimeUtil, databaseService: DatabaseService, saveServer: SaveServer, ragfairServerHelper: RagfairServerHelper, itemHelper: ItemHelper, profileHelper: ProfileHelper, eventOutputHolder: EventOutputHolder, httpResponse: HttpResponseUtil, localisationService: LocalisationService, configServer: ConfigServer, cloner: ICloner);
->>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
     /**
      * Get all offers
      * @returns IRagfairOffer array
@@ -111,9 +97,5 @@ export declare class RagfairOfferService {
      * @param items Offer items to unstack
      * @returns Unstacked array of items
      */
-<<<<<<< HEAD
     protected unstackOfferItems(items: IItem[]): IItem[];
-=======
-    protected unstackOfferItems(items: Item[]): Item[];
->>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
 }

@@ -1,9 +1,5 @@
 import { ProfileHelper } from "@spt/helpers/ProfileHelper";
-<<<<<<< HEAD
 import { ITraderPurchaseData } from "@spt/models/eft/profile/ISptProfile";
-=======
-import { TraderPurchaseData } from "@spt/models/eft/profile/ISptProfile";
->>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
 import { ITraderConfig } from "@spt/models/spt/config/ITraderConfig";
 import { ILogger } from "@spt/models/spt/utils/ILogger";
 import { ConfigServer } from "@spt/servers/ConfigServer";
@@ -28,11 +24,7 @@ export declare class TraderPurchasePersisterService {
      * @param traderId Trader to loop up purchases for
      * @returns Dict of assort id and count purchased
      */
-<<<<<<< HEAD
     getProfileTraderPurchases(sessionId: string, traderId: string): Record<string, ITraderPurchaseData> | undefined;
-=======
-    getProfileTraderPurchases(sessionId: string, traderId: string): Record<string, TraderPurchaseData> | undefined;
->>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
     /**
      * Get a purchase made from a trader for requested profile before the last trader reset
      * @param sessionId Session id
@@ -40,11 +32,7 @@ export declare class TraderPurchasePersisterService {
      * @param assortId Id of assort to get data for
      * @returns TraderPurchaseData
      */
-<<<<<<< HEAD
     getProfileTraderPurchase(sessionId: string, traderId: string, assortId: string): ITraderPurchaseData | undefined;
-=======
-    getProfileTraderPurchase(sessionId: string, traderId: string, assortId: string): TraderPurchaseData | undefined;
->>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
     /**
      * Remove all trader purchase records from all profiles that exist
      * @param traderId Traders id

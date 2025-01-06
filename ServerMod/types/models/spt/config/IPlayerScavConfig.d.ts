@@ -1,16 +1,8 @@
-<<<<<<< HEAD
 import { IGenerationData } from "@spt/models/eft/common/tables/IBotType";
 import { IBaseConfig } from "@spt/models/spt/config/IBaseConfig";
 export interface IPlayerScavConfig extends IBaseConfig {
     kind: "spt-playerscav";
     karmaLevel: Record<string, IKarmaLevel>;
-=======
-import { GenerationData } from "@spt/models/eft/common/tables/IBotType";
-import { IBaseConfig } from "@spt/models/spt/config/IBaseConfig";
-export interface IPlayerScavConfig extends IBaseConfig {
-    kind: "spt-playerscav";
-    karmaLevel: Record<string, KarmaLevel>;
->>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
 }
 export interface IKarmaLevel {
     botTypeForLoot: string;

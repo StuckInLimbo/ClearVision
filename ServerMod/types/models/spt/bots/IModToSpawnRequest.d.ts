@@ -1,22 +1,13 @@
-<<<<<<< HEAD
 import { IItem } from "@spt/models/eft/common/tables/IItem";
 import { ITemplateItem } from "@spt/models/eft/common/tables/ITemplateItem";
 import { ModSpawn } from "@spt/models/enums/ModSpawn";
 import { IBotData, IWeaponStats } from "@spt/models/spt/bots/IGenerateWeaponRequest";
 import { IEquipmentFilterDetails, IRandomisationDetails } from "@spt/models/spt/config/IBotConfig";
-=======
-import { Item } from "@spt/models/eft/common/tables/IItem";
-import { ITemplateItem } from "@spt/models/eft/common/tables/ITemplateItem";
-import { ModSpawn } from "@spt/models/enums/ModSpawn";
-import { IWeaponStats } from "@spt/models/spt/bots/IGenerateWeaponRequest";
-import { EquipmentFilterDetails } from "@spt/models/spt/config/IBotConfig";
->>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
 export interface IModToSpawnRequest {
     /** Slot mod will fit into */
     modSlot: string;
     /** Will generate a randomised mod pool if true */
     isRandomisableSlot: boolean;
-<<<<<<< HEAD
     randomisationSettings: IRandomisationDetails;
     /** Parent slot the item will be a part of */
     botWeaponSightWhitelist: Record<string, string[]>;
@@ -26,16 +17,6 @@ export interface IModToSpawnRequest {
     itemModPool: Record<string, string[]>;
     /** Array with only weapon tpl in it, ready for mods to be added */
     weapon: IItem[];
-=======
-    /** Parent slot the item will be a part of */
-    botWeaponSightWhitelist: Record<string, string[]>;
-    /** Blacklist to prevent mods from being picked */
-    botEquipBlacklist: EquipmentFilterDetails;
-    /** Pool of items to pick from */
-    itemModPool: Record<string, string[]>;
-    /** Array with only weapon tpl in it, ready for mods to be added */
-    weapon: Item[];
->>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
     /** Ammo tpl to use if slot requires a cartridge to be added (e.g. mod_magazine) */
     ammoTpl: string;
     /** Parent item the mod will go into */
@@ -44,10 +25,7 @@ export interface IModToSpawnRequest {
     modSpawnResult: ModSpawn;
     /** Weapon stats for weapon being generated */
     weaponStats: IWeaponStats;
-<<<<<<< HEAD
     /** Array of item tpls the weapon does not support */
     conflictingItemTpls: Set<string>;
     botData: IBotData;
-=======
->>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
 }

@@ -5,10 +5,6 @@ import { IPmcData } from "@spt/models/eft/common/IPmcData";
 import { IHealthTreatmentRequestData } from "@spt/models/eft/health/IHealthTreatmentRequestData";
 import { IOffraidEatRequestData } from "@spt/models/eft/health/IOffraidEatRequestData";
 import { IOffraidHealRequestData } from "@spt/models/eft/health/IOffraidHealRequestData";
-<<<<<<< HEAD
-=======
-import { ISyncHealthRequestData } from "@spt/models/eft/health/ISyncHealthRequestData";
->>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
 import { IWorkoutData } from "@spt/models/eft/health/IWorkoutData";
 import { IItemEventRouterResponse } from "@spt/models/eft/itemEvent/IItemEventRouterResponse";
 import { ILogger } from "@spt/models/spt/utils/ILogger";
@@ -28,18 +24,6 @@ export declare class HealthController {
     protected healthHelper: HealthHelper;
     protected cloner: ICloner;
     constructor(logger: ILogger, eventOutputHolder: EventOutputHolder, itemHelper: ItemHelper, paymentService: PaymentService, inventoryHelper: InventoryHelper, localisationService: LocalisationService, httpResponse: HttpResponseUtil, healthHelper: HealthHelper, cloner: ICloner);
-<<<<<<< HEAD
-=======
-    /**
-     * stores in-raid player health
-     * @param pmcData Player profile
-     * @param info Request data
-     * @param sessionID Player id
-     * @param addEffects Should effects found be added or removed from profile
-     * @param deleteExistingEffects Should all prior effects be removed before apply new ones
-     */
-    saveVitality(pmcData: IPmcData, info: ISyncHealthRequestData, sessionID: string, addEffects?: boolean, deleteExistingEffects?: boolean): void;
->>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
     /**
      * When healing in menu
      * @param pmcData Player profile

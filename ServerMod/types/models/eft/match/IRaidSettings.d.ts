@@ -10,7 +10,6 @@ import { TimeFlowType } from "@spt/models/enums/RaidSettings/TimeAndWeather/Time
 import { WindSpeed } from "@spt/models/enums/RaidSettings/TimeAndWeather/WindSpeed";
 import { SideType } from "@spt/models/enums/SideType";
 export interface IRaidSettings {
-<<<<<<< HEAD
     keyId: string;
     location: string;
     isLocationTransition: boolean;
@@ -25,19 +24,6 @@ export interface IRaidSettings {
     CanShowGroupPreview: boolean;
 }
 export interface ITimeAndWeatherSettings {
-=======
-    location: string;
-    timeVariant: DateTime;
-    raidMode: RaidMode;
-    metabolismDisabled: boolean;
-    playersSpawnPlace: PlayersSpawnPlace;
-    timeAndWeatherSettings: TimeAndWeatherSettings;
-    botSettings: BotSettings;
-    wavesSettings: WavesSettings;
-    side: SideType;
-}
-export interface TimeAndWeatherSettings {
->>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
     isRandomTime: boolean;
     isRandomWeather: boolean;
     cloudinessType: CloudinessType;
@@ -47,19 +33,11 @@ export interface TimeAndWeatherSettings {
     timeFlowType: TimeFlowType;
     hourOfDay: number;
 }
-<<<<<<< HEAD
 export interface IBotSettings {
     isScavWars: boolean;
     botAmount: BotAmount;
 }
 export interface IWavesSettings {
-=======
-export interface BotSettings {
-    isScavWars: boolean;
-    botAmount: BotAmount;
-}
-export interface WavesSettings {
->>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
     botAmount: BotAmount;
     botDifficulty: BotDifficulty;
     isBosses: boolean;

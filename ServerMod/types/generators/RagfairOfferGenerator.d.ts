@@ -6,7 +6,6 @@ import { PaymentHelper } from "@spt/helpers/PaymentHelper";
 import { PresetHelper } from "@spt/helpers/PresetHelper";
 import { ProfileHelper } from "@spt/helpers/ProfileHelper";
 import { RagfairServerHelper } from "@spt/helpers/RagfairServerHelper";
-<<<<<<< HEAD
 import { IItem } from "@spt/models/eft/common/tables/IItem";
 import { ITemplateItem } from "@spt/models/eft/common/tables/ITemplateItem";
 import { IBarterScheme } from "@spt/models/eft/common/tables/ITrader";
@@ -15,13 +14,6 @@ import { IBotConfig } from "@spt/models/spt/config/IBotConfig";
 import { IArmorPlateBlacklistSettings, IBarterDetails, IDynamic, IRagfairConfig } from "@spt/models/spt/config/IRagfairConfig";
 import { ITraderConfig } from "@spt/models/spt/config/ITraderConfig";
 import { ITplWithFleaPrice } from "@spt/models/spt/ragfair/ITplWithFleaPrice";
-=======
-import { Item } from "@spt/models/eft/common/tables/IItem";
-import { ITemplateItem } from "@spt/models/eft/common/tables/ITemplateItem";
-import { IBarterScheme } from "@spt/models/eft/common/tables/ITrader";
-import { IRagfairOffer, IRagfairOfferUser, OfferRequirement } from "@spt/models/eft/ragfair/IRagfairOffer";
-import { Dynamic, IArmorPlateBlacklistSettings, IRagfairConfig } from "@spt/models/spt/config/IRagfairConfig";
->>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
 import { ILogger } from "@spt/models/spt/utils/ILogger";
 import { ConfigServer } from "@spt/servers/ConfigServer";
 import { SaveServer } from "@spt/servers/SaveServer";
@@ -75,11 +67,7 @@ export declare class RagfairOfferGenerator {
      * @param sellInOnePiece Flags sellInOnePiece to be true
      * @returns Created flea offer
      */
-<<<<<<< HEAD
     createAndAddFleaOffer(userID: string, time: number, items: IItem[], barterScheme: IBarterScheme[], loyalLevel: number, sellInOnePiece?: boolean): IRagfairOffer;
-=======
-    createAndAddFleaOffer(userID: string, time: number, items: Item[], barterScheme: IBarterScheme[], loyalLevel: number, sellInOnePiece?: boolean): IRagfairOffer;
->>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
     /**
      * Create an offer object ready to send to ragfairOfferService.addOffer()
      * @param userID Owner of the offer
@@ -90,22 +78,14 @@ export declare class RagfairOfferGenerator {
      * @param isPackOffer Is offer being created flaged as a pack
      * @returns IRagfairOffer
      */
-<<<<<<< HEAD
     protected createOffer(userID: string, time: number, items: IItem[], barterScheme: IBarterScheme[], loyalLevel: number, isPackOffer?: boolean): IRagfairOffer;
-=======
-    protected createOffer(userID: string, time: number, items: Item[], barterScheme: IBarterScheme[], loyalLevel: number, isPackOffer?: boolean): IRagfairOffer;
->>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
     /**
      * Create the user object stored inside each flea offer object
      * @param userID user creating the offer
      * @param isTrader Is the user creating the offer a trader
      * @returns IRagfairOfferUser
      */
-<<<<<<< HEAD
     protected createUserDataForFleaOffer(userID: string, isTrader: boolean): IRagfairOfferUser;
-=======
-    createUserDataForFleaOffer(userID: string, isTrader: boolean): IRagfairOfferUser;
->>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
     /**
      * Calculate the offer price that's listed on the flea listing
      * @param offerRequirements barter requirements for offer

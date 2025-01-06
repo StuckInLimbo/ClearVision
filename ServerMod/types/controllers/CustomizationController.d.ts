@@ -1,11 +1,7 @@
 import { ProfileHelper } from "@spt/helpers/ProfileHelper";
 import { IPmcData } from "@spt/models/eft/common/IPmcData";
 import { ISuit } from "@spt/models/eft/common/tables/ITrader";
-<<<<<<< HEAD
 import { IBuyClothingRequestData, IPaymentItemForClothing } from "@spt/models/eft/customization/IBuyClothingRequestData";
-=======
-import { ClothingItem, IBuyClothingRequestData } from "@spt/models/eft/customization/IBuyClothingRequestData";
->>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
 import { IWearClothingRequestData } from "@spt/models/eft/customization/IWearClothingRequestData";
 import { IItemEventRouterResponse } from "@spt/models/eft/itemEvent/IItemEventRouterResponse";
 import { ILogger } from "@spt/models/spt/utils/ILogger";

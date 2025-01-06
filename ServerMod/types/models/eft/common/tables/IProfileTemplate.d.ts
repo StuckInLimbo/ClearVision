@@ -1,9 +1,5 @@
 import { IPmcData } from "@spt/models/eft/common/IPmcData";
-<<<<<<< HEAD
 import { IDialogue, IUserBuilds } from "@spt/models/eft/profile/ISptProfile";
-=======
-import { Dialogue, IUserBuilds } from "@spt/models/eft/profile/ISptProfile";
->>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
 export interface IProfileTemplates {
     Standard: IProfileSides;
     "Left Behind": IProfileSides;

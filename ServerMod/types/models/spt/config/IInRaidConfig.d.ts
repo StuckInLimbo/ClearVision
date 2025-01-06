@@ -1,10 +1,6 @@
 import { IBaseConfig } from "@spt/models/spt/config/IBaseConfig";
 export interface IInRaidConfig extends IBaseConfig {
     kind: "spt-inraid";
-<<<<<<< HEAD
-=======
-    MIAOnRaidEnd: boolean;
->>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
     /** Overrides to apply to the pre-raid settings screen */
     raidMenuSettings: IRaidMenuSettings;
     /** What effects should be saved post-raid */

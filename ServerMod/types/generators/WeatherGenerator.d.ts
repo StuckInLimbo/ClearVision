@@ -1,13 +1,8 @@
 import { ApplicationContext } from "@spt/context/ApplicationContext";
-<<<<<<< HEAD
 import { WeatherHelper } from "@spt/helpers/WeatherHelper";
 import { WeightedRandomHelper } from "@spt/helpers/WeightedRandomHelper";
 import { IWeather, IWeatherData } from "@spt/models/eft/weather/IWeatherData";
 import { Season } from "@spt/models/enums/Season";
-=======
-import { WeightedRandomHelper } from "@spt/helpers/WeightedRandomHelper";
-import { IWeather, IWeatherData } from "@spt/models/eft/weather/IWeatherData";
->>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
 import { WindDirection } from "@spt/models/enums/WindDirection";
 import { IWeatherConfig } from "@spt/models/spt/config/IWeatherConfig";
 import { ILogger } from "@spt/models/spt/utils/ILogger";
@@ -26,11 +21,7 @@ export declare class WeatherGenerator {
     protected configServer: ConfigServer;
     protected weatherConfig: IWeatherConfig;
     private serverStartTimestampMS;
-<<<<<<< HEAD
     constructor(weightedRandomHelper: WeightedRandomHelper, weatherHelper: WeatherHelper, logger: ILogger, randomUtil: RandomUtil, timeUtil: TimeUtil, seasonalEventService: SeasonalEventService, applicationContext: ApplicationContext, configServer: ConfigServer);
-=======
-    constructor(weightedRandomHelper: WeightedRandomHelper, logger: ILogger, randomUtil: RandomUtil, timeUtil: TimeUtil, seasonalEventService: SeasonalEventService, applicationContext: ApplicationContext, configServer: ConfigServer);
->>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
     /**
      * Get current + raid datetime and format into correct BSG format and return
      * @param data Weather data

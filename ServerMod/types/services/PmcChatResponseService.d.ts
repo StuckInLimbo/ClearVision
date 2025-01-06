@@ -1,21 +1,14 @@
 import { NotificationSendHelper } from "@spt/helpers/NotificationSendHelper";
 import { WeightedRandomHelper } from "@spt/helpers/WeightedRandomHelper";
 import { IPmcData } from "@spt/models/eft/common/IPmcData";
-<<<<<<< HEAD
 import { IAggressor, IVictim } from "@spt/models/eft/common/tables/IBotBase";
-=======
-import { Aggressor, Victim } from "@spt/models/eft/common/tables/IBotBase";
->>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
 import { IUserDialogInfo } from "@spt/models/eft/profile/ISptProfile";
 import { IGiftsConfig } from "@spt/models/spt/config/IGiftsConfig";
 import { IPmcChatResponse } from "@spt/models/spt/config/IPmChatResponse";
 import { ILogger } from "@spt/models/spt/utils/ILogger";
 import { ConfigServer } from "@spt/servers/ConfigServer";
 import { GiftService } from "@spt/services/GiftService";
-<<<<<<< HEAD
 import { LocaleService } from "@spt/services/LocaleService";
-=======
->>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
 import { LocalisationService } from "@spt/services/LocalisationService";
 import { MatchBotDetailsCacheService } from "@spt/services/MatchBotDetailsCacheService";
 import { HashUtil } from "@spt/utils/HashUtil";
@@ -27,20 +20,13 @@ export declare class PmcChatResponseService {
     protected notificationSendHelper: NotificationSendHelper;
     protected matchBotDetailsCacheService: MatchBotDetailsCacheService;
     protected localisationService: LocalisationService;
-<<<<<<< HEAD
     protected localeService: LocaleService;
-=======
->>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
     protected giftService: GiftService;
     protected weightedRandomHelper: WeightedRandomHelper;
     protected configServer: ConfigServer;
     protected pmcResponsesConfig: IPmcChatResponse;
     protected giftConfig: IGiftsConfig;
-<<<<<<< HEAD
     constructor(logger: ILogger, hashUtil: HashUtil, randomUtil: RandomUtil, notificationSendHelper: NotificationSendHelper, matchBotDetailsCacheService: MatchBotDetailsCacheService, localisationService: LocalisationService, localeService: LocaleService, giftService: GiftService, weightedRandomHelper: WeightedRandomHelper, configServer: ConfigServer);
-=======
-    constructor(logger: ILogger, hashUtil: HashUtil, randomUtil: RandomUtil, notificationSendHelper: NotificationSendHelper, matchBotDetailsCacheService: MatchBotDetailsCacheService, localisationService: LocalisationService, giftService: GiftService, weightedRandomHelper: WeightedRandomHelper, configServer: ConfigServer);
->>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
     /**
      * For each PMC victim of the player, have a chance to send a message to the player, can be positive or negative
      * @param sessionId Session id
@@ -62,7 +48,6 @@ export declare class PmcChatResponseService {
      * @param victimData OPTIMAL - details of the pmc killed
      * @returns Message from PMC to player
      */
-<<<<<<< HEAD
     protected chooseMessage(isVictim: boolean, pmcData: IPmcData, victimData?: IVictim): string | undefined;
     /**
      * use map key to get a localised location name
@@ -71,9 +56,6 @@ export declare class PmcChatResponseService {
      * @returns Localised location name
      */
     protected getLocationName(locationKey: string): string;
-=======
-    protected chooseMessage(isVictim: boolean, pmcData: IPmcData): string | undefined;
->>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
     /**
      * Should capitalisation be stripped from the message response before sending
      * @param isVictim Was responder a victim of player

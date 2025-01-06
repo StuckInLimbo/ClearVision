@@ -1,17 +1,10 @@
 import { MinMax } from "@spt/models/common/MinMax";
 import { IBaseConfig } from "@spt/models/spt/config/IBaseConfig";
-<<<<<<< HEAD
 import { ILootRequest } from "@spt/models/spt/services/ILootRequest";
 export interface ITraderConfig extends IBaseConfig {
     kind: "spt-trader";
     updateTime: IUpdateTime[];
     updateTimeDefault: number;
-=======
-import { LootRequest } from "@spt/models/spt/services/LootRequest";
-export interface ITraderConfig extends IBaseConfig {
-    kind: "spt-trader";
-    updateTime: UpdateTime[];
->>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
     purchasesAreFoundInRaid: boolean;
     /** Should trader reset times be set based on server start time (false = bsg time - on the hour) */
     tradersResetFromServerStart: boolean;

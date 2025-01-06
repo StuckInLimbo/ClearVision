@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 import { ISurveyResponseData } from "@spt/models/eft/game/ISurveyResponseData";
-=======
->>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
 import { IBaseConfig } from "@spt/models/spt/config/IBaseConfig";
 export interface ICoreConfig extends IBaseConfig {
     kind: "spt-core";
@@ -78,10 +75,7 @@ export interface IChatbotFeatures {
     commandoEnabled: boolean;
     commandoFeatures: ICommandoFeatures;
     commandUseLimits: Record<string, number>;
-<<<<<<< HEAD
     ids: Record<string, string>;
-=======
->>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
 }
 export interface ICommandoFeatures {
     giveCommandEnabled: boolean;

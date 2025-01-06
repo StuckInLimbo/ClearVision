@@ -2,11 +2,7 @@ import { HandbookHelper } from "@spt/helpers/HandbookHelper";
 import { ItemHelper } from "@spt/helpers/ItemHelper";
 import { TraderAssortHelper } from "@spt/helpers/TraderAssortHelper";
 import { UtilityHelper } from "@spt/helpers/UtilityHelper";
-<<<<<<< HEAD
 import { IItem } from "@spt/models/eft/common/tables/IItem";
-=======
-import { Item } from "@spt/models/eft/common/tables/IItem";
->>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
 import { ITraderAssort } from "@spt/models/eft/common/tables/ITrader";
 import { ISearchRequestData } from "@spt/models/eft/ragfair/ISearchRequestData";
 import { IRagfairConfig } from "@spt/models/spt/config/IRagfairConfig";

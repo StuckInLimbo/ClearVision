@@ -1,5 +1,9 @@
 import { Ixyz } from "@spt/models/eft/common/Ixyz";
+<<<<<<< HEAD
 import { IItem } from "@spt/models/eft/common/tables/IItem";
+=======
+import { Item } from "@spt/models/eft/common/tables/IItem";
+>>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
 export interface IGlobals {
     time: number;
     config: IConfig;
@@ -141,7 +145,10 @@ export interface IConfig {
     Airdrop: IAirdropGlobalSettings;
     ArmorMaterials: IArmorMaterials;
     ArenaEftTransferSettings: IArenaEftTransferSettings;
+<<<<<<< HEAD
     KarmaCalculationSettings: IKarmaCalculationSettings;
+=======
+>>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
     LegsOverdamage: number;
     HandsOverdamage: number;
     StomachOverdamage: number;
@@ -196,6 +203,7 @@ export interface IConfig {
     Ballistic: IBallistic;
     RepairSettings: IRepairSettings;
 }
+<<<<<<< HEAD
 export interface ISeasonActivity {
     InfectionHalloween: ISeasonActivityHalloween;
 }
@@ -204,6 +212,8 @@ export interface ISeasonActivityHalloween {
     Enabled: boolean;
     ZombieBleedMul: number;
 }
+=======
+>>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
 export interface IEnvironmentSetting2 {
     EnvironmentUIData: IEnvironmentUIData;
 }
@@ -570,6 +580,7 @@ export interface IBodyParts {
     Feet: string;
     Hands: string;
 }
+<<<<<<< HEAD
 export interface IAirdropGlobalSettings {
     ParachuteEndOpenHeight: number;
     ParachuteStartOpenHeight: number;
@@ -594,6 +605,12 @@ export interface IArenaEftTransferSettings {
     ArenaEftTransferSettings: IArenaEftTransferSettings;
 }
 export interface IArenaEftTransferSettings {
+=======
+export interface IArenaEftTransferSettings {
+    ArenaEftTransferSettings: ArenaEftTransferSettings;
+}
+export interface ArenaEftTransferSettings {
+>>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
     ArenaManagerReputationTaxMultiplier: number;
     CharismaTaxMultiplier: number;
     CreditPriceTaxMultiplier: number;
@@ -1035,6 +1052,7 @@ export interface IMaxActiveOfferCount {
     from: number;
     to: number;
     count: number;
+    countForSpecialEditions: number;
 }
 export interface IMaxSumForRarity {
     Common: IRarityMaxSum;
@@ -1232,7 +1250,10 @@ export interface IInsurance {
     CoefOfSendingMessageTime: number;
     CoefOfHavingMarkOfUnknown: number;
     EditionSendingMessageTime: Record<string, IMessageSendTImeMultipler>;
+<<<<<<< HEAD
     OnlyInDeathCase: boolean;
+=======
+>>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
 }
 export interface IMessageSendTImeMultipler {
     multiplier: number;

@@ -2,15 +2,24 @@ import { InventoryHelper } from "@spt/helpers/InventoryHelper";
 import { ItemHelper } from "@spt/helpers/ItemHelper";
 import { ProfileHelper } from "@spt/helpers/ProfileHelper";
 import { IPmcData } from "@spt/models/eft/common/IPmcData";
+<<<<<<< HEAD
 import { IBotHideoutArea, IHideoutImprovement, IProduction, IProductive } from "@spt/models/eft/common/tables/IBotBase";
 import { IItem, IUpd } from "@spt/models/eft/common/tables/IItem";
 import { IHideoutArea, IStageBonus } from "@spt/models/eft/hideout/IHideoutArea";
+=======
+import { HideoutArea, IHideoutImprovement, Production, Productive } from "@spt/models/eft/common/tables/IBotBase";
+import { Item, Upd } from "@spt/models/eft/common/tables/IItem";
+import { StageBonus } from "@spt/models/eft/hideout/IHideoutArea";
+>>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
 import { IHideoutContinuousProductionStartRequestData } from "@spt/models/eft/hideout/IHideoutContinuousProductionStartRequestData";
 import { IHideoutProduction } from "@spt/models/eft/hideout/IHideoutProduction";
 import { IHideoutSingleProductionStartRequestData } from "@spt/models/eft/hideout/IHideoutSingleProductionStartRequestData";
 import { IHideoutTakeProductionRequestData } from "@spt/models/eft/hideout/IHideoutTakeProductionRequestData";
 import { IItemEventRouterResponse } from "@spt/models/eft/itemEvent/IItemEventRouterResponse";
+<<<<<<< HEAD
 import { HideoutAreas } from "@spt/models/enums/HideoutAreas";
+=======
+>>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
 import { SkillTypes } from "@spt/models/enums/SkillTypes";
 import { IHideoutConfig } from "@spt/models/spt/config/IHideoutConfig";
 import { ILogger } from "@spt/models/spt/utils/ILogger";
@@ -217,9 +226,15 @@ export declare class HideoutHelper {
      * @param resourceUnitsConsumed
      * @returns Upd
      */
+<<<<<<< HEAD
     protected getAreaUpdObject(stackCount: number, resourceValue: number, resourceUnitsConsumed: number, isFoundInRaid: boolean): IUpd;
     protected updateAirFilters(airFilterArea: IBotHideoutArea, pmcData: IPmcData, isGeneratorOn: boolean): void;
     protected updateBitcoinFarm(pmcData: IPmcData, btcProduction: IProductive, btcFarmCGs: number, isGeneratorOn: boolean): void;
+=======
+    protected getAreaUpdObject(stackCount: number, resourceValue: number, resourceUnitsConsumed: number, isFoundInRaid: boolean): Upd;
+    protected updateAirFilters(airFilterArea: HideoutArea, pmcData: IPmcData, isGeneratorOn: boolean): void;
+    protected updateBitcoinFarm(pmcData: IPmcData, btcFarmCGs: number, isGeneratorOn: boolean): Production | undefined;
+>>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
     /**
      * Add bitcoin object to btc production products array and set progress time
      * @param btcProd Bitcoin production object

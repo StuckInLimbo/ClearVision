@@ -1,5 +1,9 @@
 import { HideoutController } from "@spt/controllers/HideoutController";
+<<<<<<< HEAD
 import { TraderController } from "@spt/controllers/TraderController";
+=======
+import { RagfairController } from "@spt/controllers/RagfairController";
+>>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
 import { TraderHelper } from "@spt/helpers/TraderHelper";
 import { IEmptyRequestData } from "@spt/models/eft/common/IEmptyRequestData";
 import { IGlobals } from "@spt/models/eft/common/IGlobals";
@@ -7,7 +11,12 @@ import { ICustomizationItem } from "@spt/models/eft/common/tables/ICustomization
 import { IHandbookBase } from "@spt/models/eft/common/tables/IHandbookBase";
 import { IGetItemPricesResponse } from "@spt/models/eft/game/IGetItemPricesResponse";
 import { IHideoutArea } from "@spt/models/eft/hideout/IHideoutArea";
+<<<<<<< HEAD
 import { IHideoutProductionData } from "@spt/models/eft/hideout/IHideoutProduction";
+=======
+import { IHideoutProduction } from "@spt/models/eft/hideout/IHideoutProduction";
+import { IHideoutScavCase } from "@spt/models/eft/hideout/IHideoutScavCase";
+>>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
 import { IHideoutSettingsBase } from "@spt/models/eft/hideout/IHideoutSettingsBase";
 import { IGetBodyResponseData } from "@spt/models/eft/httpResponse/IGetBodyResponseData";
 import { ISettingsBase } from "@spt/models/spt/server/ISettingsBase";
@@ -22,9 +31,15 @@ export declare class DataCallbacks {
     protected timeUtil: TimeUtil;
     protected traderHelper: TraderHelper;
     protected databaseService: DatabaseService;
+<<<<<<< HEAD
     protected traderController: TraderController;
     protected hideoutController: HideoutController;
     constructor(httpResponse: HttpResponseUtil, timeUtil: TimeUtil, traderHelper: TraderHelper, databaseService: DatabaseService, traderController: TraderController, hideoutController: HideoutController);
+=======
+    protected ragfairController: RagfairController;
+    protected hideoutController: HideoutController;
+    constructor(httpResponse: HttpResponseUtil, timeUtil: TimeUtil, traderHelper: TraderHelper, databaseService: DatabaseService, ragfairController: RagfairController, hideoutController: HideoutController);
+>>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
     /**
      * Handle client/settings
      * @returns ISettingsBase

@@ -1,5 +1,9 @@
 import { MinMax } from "@spt/models/common/MinMax";
+<<<<<<< HEAD
 export interface IBotGenerationDetails {
+=======
+export interface BotGenerationDetails {
+>>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
     /** Should the bot be generated as a PMC */
     isPmc: boolean;
     /** assault/pmcBot etc */

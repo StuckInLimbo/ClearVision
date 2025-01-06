@@ -4,8 +4,11 @@ import { OnUpdate } from "@spt/di/OnUpdate";
 import { IEmptyRequestData } from "@spt/models/eft/common/IEmptyRequestData";
 import { ITraderAssort, ITraderBase } from "@spt/models/eft/common/tables/ITrader";
 import { IGetBodyResponseData } from "@spt/models/eft/httpResponse/IGetBodyResponseData";
+<<<<<<< HEAD
 import { IModdedTraders } from "@spt/models/spt/config/ITraderConfig";
 import { ConfigServer } from "@spt/servers/ConfigServer";
+=======
+>>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
 import { HttpResponseUtil } from "@spt/utils/HttpResponseUtil";
 export declare class TraderCallbacks implements OnLoad, OnUpdate {
     protected httpResponse: HttpResponseUtil;

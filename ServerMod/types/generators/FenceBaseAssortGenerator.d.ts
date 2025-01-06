@@ -1,7 +1,11 @@
 import { HandbookHelper } from "@spt/helpers/HandbookHelper";
 import { ItemHelper } from "@spt/helpers/ItemHelper";
 import { PresetHelper } from "@spt/helpers/PresetHelper";
+<<<<<<< HEAD
 import { IItem } from "@spt/models/eft/common/tables/IItem";
+=======
+import { Item } from "@spt/models/eft/common/tables/IItem";
+>>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
 import { ITemplateItem } from "@spt/models/eft/common/tables/ITemplateItem";
 import { ITraderConfig } from "@spt/models/spt/config/ITraderConfig";
 import { ILogger } from "@spt/models/spt/utils/ILogger";

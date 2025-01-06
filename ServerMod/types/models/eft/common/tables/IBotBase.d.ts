@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import { IItem, IUpd } from "@spt/models/eft/common/tables/IItem";
+=======
+import { Item, Upd } from "@spt/models/eft/common/tables/IItem";
+>>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
 import { IPmcDataRepeatableQuest } from "@spt/models/eft/common/tables/IRepeatableQuests";
 import { IRagfairOffer } from "@spt/models/eft/ragfair/IRagfairOffer";
 import { BonusSkillType } from "@spt/models/enums/BonusSkillType";
@@ -35,7 +39,11 @@ export interface IBotBase {
     CarExtractCounts: Record<string, number>;
     CoopExtractCounts: Record<string, number>;
     SurvivorClass: SurvivorClass;
+<<<<<<< HEAD
     WishList: Record<string, number>;
+=======
+    WishList: string[];
+>>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
     moneyTransferLimitData: IMoneyTransferLimits;
     /** SPT specific property used during bot generation in raid */
     sptIsPmc?: boolean;
@@ -85,7 +93,12 @@ export interface IInfo {
     BannedState: boolean;
     BannedUntil: number;
     IsStreamerModeAvailable: boolean;
+<<<<<<< HEAD
     lastCompletedEvent?: ILastCompleted;
+=======
+    lastCompletedEvent?: LastCompleted;
+    SelectedMemberCategory: number;
+>>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
     isMigratedSkills: boolean;
 }
 export interface IBotInfoSettings {
@@ -178,7 +191,11 @@ export interface Common extends IBaseSkill {
 }
 export interface IMastering extends IBaseSkill {
 }
+<<<<<<< HEAD
 export interface IStats {
+=======
+export interface Stats {
+>>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
     Eft?: IEftStats;
 }
 export interface IEftStats {
@@ -385,9 +402,16 @@ export interface IHideoutItem {
 export interface ILastCompleted {
     $oid: string;
 }
+<<<<<<< HEAD
 export interface INotes {
     Notes: INote[];
 }
+=======
+export interface Notes {
+    Notes: Note[];
+}
+export type CarExtractCounts = {};
+>>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
 export declare enum SurvivorClass {
     UNKNOWN = 0,
     NEUTRALIZER = 1,

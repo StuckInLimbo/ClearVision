@@ -13,10 +13,17 @@ export interface IScavCaseConfig extends IBaseConfig {
 }
 export interface IMoneyRewards {
     moneyRewardChancePercent: number;
+<<<<<<< HEAD
     rubCount: IMoneyLevels;
     usdCount: IMoneyLevels;
     eurCount: IMoneyLevels;
     gpCount: IMoneyLevels;
+=======
+    rubCount: MoneyLevels;
+    usdCount: MoneyLevels;
+    eurCount: MoneyLevels;
+    gpCount: MoneyLevels;
+>>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
 }
 export interface IMoneyLevels {
     common: MinMax;

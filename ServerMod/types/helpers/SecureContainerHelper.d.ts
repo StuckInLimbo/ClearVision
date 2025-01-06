@@ -1,8 +1,15 @@
 import { ItemHelper } from "@spt/helpers/ItemHelper";
+<<<<<<< HEAD
 import { IItem } from "@spt/models/eft/common/tables/IItem";
 export interface IOwnerInventoryItems {
     from: IItem[];
     to: IItem[];
+=======
+import { Item } from "@spt/models/eft/common/tables/IItem";
+export interface OwnerInventoryItems {
+    from: Item[];
+    to: Item[];
+>>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
     sameInventory: boolean;
     isMail: boolean;
 }

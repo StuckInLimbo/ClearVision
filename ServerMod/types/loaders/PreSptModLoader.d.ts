@@ -1,6 +1,10 @@
 import { ModLoadOrder } from "@spt/loaders/ModLoadOrder";
 import { ModTypeCheck } from "@spt/loaders/ModTypeCheck";
+<<<<<<< HEAD
 import { IModDetails } from "@spt/models/eft/profile/ISptProfile";
+=======
+import { ModDetails } from "@spt/models/eft/profile/ISptProfile";
+>>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
 import { ICoreConfig } from "@spt/models/spt/config/ICoreConfig";
 import { IModLoader } from "@spt/models/spt/mod/IModLoader";
 import { IPackageJsonData } from "@spt/models/spt/mod/IPackageJsonData";
@@ -36,7 +40,11 @@ export declare class PreSptModLoader implements IModLoader {
      */
     getImportedModsNames(): string[];
     getImportedModDetails(): Record<string, IPackageJsonData>;
+<<<<<<< HEAD
     getProfileModsGroupedByModName(profileMods: IModDetails[]): IModDetails[];
+=======
+    getProfileModsGroupedByModName(profileMods: ModDetails[]): ModDetails[];
+>>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
     getModPath(mod: string): string;
     protected importModsAsync(): Promise<void>;
     protected sortMods(prev: string, next: string, missingFromOrderJSON: Record<string, boolean>): number;

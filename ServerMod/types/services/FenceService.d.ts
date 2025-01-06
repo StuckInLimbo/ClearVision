@@ -3,8 +3,13 @@ import { ItemHelper } from "@spt/helpers/ItemHelper";
 import { PresetHelper } from "@spt/helpers/PresetHelper";
 import { IFenceLevel } from "@spt/models/eft/common/IGlobals";
 import { IPmcData } from "@spt/models/eft/common/IPmcData";
+<<<<<<< HEAD
 import { IItem, IUpdRepairable } from "@spt/models/eft/common/tables/IItem";
 import { ISlot, ITemplateItem } from "@spt/models/eft/common/tables/ITemplateItem";
+=======
+import { Item, Repairable } from "@spt/models/eft/common/tables/IItem";
+import { ITemplateItem, Slot } from "@spt/models/eft/common/tables/ITemplateItem";
+>>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
 import { IBarterScheme, ITraderAssort } from "@spt/models/eft/common/tables/ITrader";
 import { IItemDurabilityCurrentMax, ITraderConfig } from "@spt/models/spt/config/ITraderConfig";
 import { ICreateFenceAssortsResult } from "@spt/models/spt/fence/ICreateFenceAssortsResult";
@@ -217,7 +222,11 @@ export declare class FenceService {
      * @param itemsWithChildren Items to search through
      * @returns Matching assort item
      */
+<<<<<<< HEAD
     protected getMatchingItem(rootItemBeingAdded: IItem, itemDbDetails: ITemplateItem, itemsWithChildren: IItem[][]): IItem | undefined;
+=======
+    protected getMatchingItem(rootItemBeingAdded: Item, itemDbDetails: ITemplateItem, itemsWithChildren: Item[][]): Item | undefined;
+>>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
     /**
      * Should this item be forced into only 1 stack on fence
      * @param existingItem Existing item from fence assort
@@ -267,6 +276,19 @@ export declare class FenceService {
      * @param armorItemAndMods Array of armor + inserts to get items from
      */
     protected randomiseArmorInsertsDurabilities(plateSlots: ISlot[], armorItemAndMods: IItem[]): void;
+    /**
+     * Randomise the durability values of items on armor with a passed in slot
+     * @param softInsertSlots Slots of items to randomise
+     * @param armorItemAndMods Array of armor + inserts to get items from
+     */
+    protected randomiseArmorSoftInsertDurabilities(softInsertSlots: Slot[], armorItemAndMods: Item[]): void;
+    /**
+     * Randomise the durability values of plate items in armor
+     * Has chance to remove plate
+     * @param plateSlots Slots of items to randomise
+     * @param armorItemAndMods Array of armor + inserts to get items from
+     */
+    protected randomiseArmorInsertsDurabilities(plateSlots: Slot[], armorItemAndMods: Item[]): void;
     /**
      * Get stack size of a singular item (no mods)
      * @param itemDbDetails item being added to fence

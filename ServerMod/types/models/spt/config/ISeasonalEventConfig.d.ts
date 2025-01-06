@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import { IAdditionalHostilitySettings, IBossLocationSpawn, IWave } from "@spt/models/eft/common/ILocationBase";
+=======
+import { BossLocationSpawn } from "@spt/models/eft/common/ILocationBase";
+>>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
 import { SeasonalEventType } from "@spt/models/enums/SeasonalEventType";
 import { IBaseConfig } from "@spt/models/spt/config/IBaseConfig";
 export interface ISeasonalEventConfig extends IBaseConfig {

@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+/// <reference types="node" />
+/// <reference types="node" />
+>>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
 import { IncomingMessage, ServerResponse } from "node:http";
 import { Serializer } from "@spt/di/Serializer";
 import { ILogger } from "@spt/models/spt/utils/ILogger";
@@ -19,13 +24,19 @@ export declare class SptHttpListener implements IHttpListener {
     canHandle(_: string, req: IncomingMessage): boolean;
     handle(sessionId: string, req: IncomingMessage, resp: ServerResponse): Promise<void>;
     /**
+<<<<<<< HEAD
      * Send HTTP response back to sender
      * @param sessionID Player id making request
+=======
+     * Send http response to the client
+     * @param sessionID Player id
+>>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
      * @param req Incoming request
      * @param resp Outgoing response
      * @param body Buffer
      * @param output Server generated response data
      */
+<<<<<<< HEAD
     sendResponse(sessionID: string, req: IncomingMessage, resp: ServerResponse, body: Buffer, output: string): Promise<void>;
     /**
      * Is request flagged as debug enabled
@@ -43,4 +54,11 @@ export declare class SptHttpListener implements IHttpListener {
     protected getBodyInfo(body: Buffer, requestUrl?: any): any;
     sendJson(resp: ServerResponse, output: string, sessionID: string): void;
     sendZlibJson(resp: ServerResponse, output: string, sessionID: string): Promise<void>;
+=======
+    sendResponse(sessionID: string, req: IncomingMessage, resp: ServerResponse, body: Buffer, output: string): void;
+    getResponse(sessionID: string, req: IncomingMessage, body: Buffer): Promise<string>;
+    protected getBodyInfo(body: Buffer, requestUrl?: any): any;
+    sendJson(resp: ServerResponse, output: string, sessionID: string): void;
+    sendZlibJson(resp: ServerResponse, output: string, sessionID: string): void;
+>>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
 }

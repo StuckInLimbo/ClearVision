@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 import { IRequirementBase } from "@spt/models/eft/hideout/IHideoutProduction";
+=======
+>>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
 import { BonusSkillType } from "@spt/models/enums/BonusSkillType";
 import { BonusType } from "@spt/models/enums/BonusType";
 export interface IHideoutArea {

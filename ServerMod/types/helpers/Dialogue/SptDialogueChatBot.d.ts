@@ -6,9 +6,13 @@ import { ICoreConfig } from "@spt/models/spt/config/ICoreConfig";
 import { IWeatherConfig } from "@spt/models/spt/config/IWeatherConfig";
 import { ConfigServer } from "@spt/servers/ConfigServer";
 import { GiftService } from "@spt/services/GiftService";
+<<<<<<< HEAD
 import { LocalisationService } from "@spt/services/LocalisationService";
 import { MailSendService } from "@spt/services/MailSendService";
 import { SeasonalEventService } from "@spt/services/SeasonalEventService";
+=======
+import { MailSendService } from "@spt/services/MailSendService";
+>>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
 import { RandomUtil } from "@spt/utils/RandomUtil";
 export declare class SptDialogueChatBot implements IDialogueChatBot {
     protected profileHelper: ProfileHelper;

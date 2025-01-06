@@ -3,7 +3,11 @@ import { ItemHelper } from "@spt/helpers/ItemHelper";
 import { TraderAssortHelper } from "@spt/helpers/TraderAssortHelper";
 import { TraderHelper } from "@spt/helpers/TraderHelper";
 import { IPmcData } from "@spt/models/eft/common/IPmcData";
+<<<<<<< HEAD
 import { IItem } from "@spt/models/eft/common/tables/IItem";
+=======
+import { Item } from "@spt/models/eft/common/tables/IItem";
+>>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
 import { IItemEventRouterResponse } from "@spt/models/eft/itemEvent/IItemEventRouterResponse";
 import { IProcessBuyTradeRequestData } from "@spt/models/eft/trade/IProcessBuyTradeRequestData";
 import { IProcessSellTradeRequestData } from "@spt/models/eft/trade/IProcessSellTradeRequestData";
@@ -13,7 +17,10 @@ import { ILogger } from "@spt/models/spt/utils/ILogger";
 import { EventOutputHolder } from "@spt/routers/EventOutputHolder";
 import { ConfigServer } from "@spt/servers/ConfigServer";
 import { RagfairServer } from "@spt/servers/RagfairServer";
+<<<<<<< HEAD
 import { DatabaseService } from "@spt/services/DatabaseService";
+=======
+>>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
 import { FenceService } from "@spt/services/FenceService";
 import { LocalisationService } from "@spt/services/LocalisationService";
 import { PaymentService } from "@spt/services/PaymentService";
@@ -22,7 +29,10 @@ import { HttpResponseUtil } from "@spt/utils/HttpResponseUtil";
 import { ICloner } from "@spt/utils/cloners/ICloner";
 export declare class TradeHelper {
     protected logger: ILogger;
+<<<<<<< HEAD
     protected databaseService: DatabaseService;
+=======
+>>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
     protected eventOutputHolder: EventOutputHolder;
     protected traderHelper: TraderHelper;
     protected itemHelper: ItemHelper;
@@ -38,7 +48,11 @@ export declare class TradeHelper {
     protected cloner: ICloner;
     protected traderConfig: ITraderConfig;
     protected inventoryConfig: IInventoryConfig;
+<<<<<<< HEAD
     constructor(logger: ILogger, databaseService: DatabaseService, eventOutputHolder: EventOutputHolder, traderHelper: TraderHelper, itemHelper: ItemHelper, paymentService: PaymentService, fenceService: FenceService, localisationService: LocalisationService, httpResponse: HttpResponseUtil, inventoryHelper: InventoryHelper, ragfairServer: RagfairServer, traderAssortHelper: TraderAssortHelper, traderPurchasePersisterService: TraderPurchasePersisterService, configServer: ConfigServer, cloner: ICloner);
+=======
+    constructor(logger: ILogger, eventOutputHolder: EventOutputHolder, traderHelper: TraderHelper, itemHelper: ItemHelper, paymentService: PaymentService, fenceService: FenceService, localisationService: LocalisationService, httpResponse: HttpResponseUtil, inventoryHelper: InventoryHelper, ragfairServer: RagfairServer, traderAssortHelper: TraderAssortHelper, traderPurchasePersisterService: TraderPurchasePersisterService, configServer: ConfigServer, cloner: ICloner);
+>>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
     /**
      * Buy item from flea or trader
      * @param pmcData Player profile
@@ -68,5 +82,9 @@ export declare class TradeHelper {
      * @param assortId Id of assort being purchased
      * @param count How many of the item are being bought
      */
+<<<<<<< HEAD
     protected checkPurchaseIsWithinTraderItemLimit(sessionId: string, pmcData: IPmcData, traderId: string, assortBeingPurchased: IItem, assortId: string, count: number): void;
+=======
+    protected checkPurchaseIsWithinTraderItemLimit(sessionId: string, pmcData: IPmcData, traderId: string, assortBeingPurchased: Item, assortId: string, count: number): void;
+>>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
 }

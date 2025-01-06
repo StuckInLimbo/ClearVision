@@ -1,7 +1,11 @@
 import { ItemHelper } from "@spt/helpers/ItemHelper";
 import { PresetHelper } from "@spt/helpers/PresetHelper";
 import { IPreset } from "@spt/models/eft/common/IGlobals";
+<<<<<<< HEAD
 import { IItem } from "@spt/models/eft/common/tables/IItem";
+=======
+import { Item } from "@spt/models/eft/common/tables/IItem";
+>>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
 import { IRagfairConfig } from "@spt/models/spt/config/IRagfairConfig";
 import { ConfigServer } from "@spt/servers/ConfigServer";
 import { DatabaseServer } from "@spt/servers/DatabaseServer";

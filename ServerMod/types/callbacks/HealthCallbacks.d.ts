@@ -4,6 +4,10 @@ import { IPmcData } from "@spt/models/eft/common/IPmcData";
 import { IHealthTreatmentRequestData } from "@spt/models/eft/health/IHealthTreatmentRequestData";
 import { IOffraidEatRequestData } from "@spt/models/eft/health/IOffraidEatRequestData";
 import { IOffraidHealRequestData } from "@spt/models/eft/health/IOffraidHealRequestData";
+<<<<<<< HEAD
+=======
+import { ISyncHealthRequestData } from "@spt/models/eft/health/ISyncHealthRequestData";
+>>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
 import { IWorkoutData } from "@spt/models/eft/health/IWorkoutData";
 import { IGetBodyResponseData } from "@spt/models/eft/httpResponse/IGetBodyResponseData";
 import { IItemEventRouterResponse } from "@spt/models/eft/itemEvent/IItemEventRouterResponse";
@@ -14,6 +18,17 @@ export declare class HealthCallbacks {
     protected healthController: HealthController;
     constructor(httpResponse: HttpResponseUtil, profileHelper: ProfileHelper, healthController: HealthController);
     /**
+<<<<<<< HEAD
+=======
+     * Custom spt server request found in modules/HealthSynchronizer.cs
+     * @param url
+     * @param info HealthListener.Instance.CurrentHealth class
+     * @param sessionID session id
+     * @returns empty response, no data sent back to client
+     */
+    syncHealth(url: string, info: ISyncHealthRequestData, sessionID: string): IGetBodyResponseData<string>;
+    /**
+>>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
      * Custom spt server request found in modules/QTEPatch.cs
      * @param url
      * @param info HealthListener.Instance.CurrentHealth class

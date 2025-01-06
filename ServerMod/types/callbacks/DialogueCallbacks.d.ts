@@ -27,7 +27,11 @@ import { ISendMessageRequest } from "@spt/models/eft/dialog/ISendMessageRequest"
 import { ISetDialogReadRequestData } from "@spt/models/eft/dialog/ISetDialogReadRequestData";
 import { IGetBodyResponseData } from "@spt/models/eft/httpResponse/IGetBodyResponseData";
 import { INullResponseData } from "@spt/models/eft/httpResponse/INullResponseData";
+<<<<<<< HEAD
 import { IDialogueInfo } from "@spt/models/eft/profile/ISptProfile";
+=======
+import { DialogueInfo } from "@spt/models/eft/profile/ISptProfile";
+>>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
 import { HashUtil } from "@spt/utils/HashUtil";
 import { HttpResponseUtil } from "@spt/utils/HttpResponseUtil";
 import { TimeUtil } from "@spt/utils/TimeUtil";

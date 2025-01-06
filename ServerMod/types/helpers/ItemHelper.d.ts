@@ -1,8 +1,13 @@
 import { HandbookHelper } from "@spt/helpers/HandbookHelper";
 import { IStaticAmmoDetails } from "@spt/models/eft/common/ILocation";
 import { IPmcData } from "@spt/models/eft/common/IPmcData";
+<<<<<<< HEAD
 import { IInsuredItem } from "@spt/models/eft/common/tables/IBotBase";
 import { IItem, IUpd, IUpdRepairable } from "@spt/models/eft/common/tables/IItem";
+=======
+import { InsuredItem } from "@spt/models/eft/common/tables/IBotBase";
+import { Item, Repairable, Upd } from "@spt/models/eft/common/tables/IItem";
+>>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
 import { ITemplateItem } from "@spt/models/eft/common/tables/ITemplateItem";
 import { ItemTpl } from "@spt/models/enums/ItemTpl";
 import { ILogger } from "@spt/models/spt/utils/ILogger";
@@ -42,7 +47,11 @@ export declare class ItemHelper {
      * @param slotId OPTIONAL - slotid of desired item
      * @returns True if pool contains item
      */
+<<<<<<< HEAD
     hasItemWithTpl(itemPool: IItem[], item: ItemTpl, slotId?: string): boolean;
+=======
+    hasItemWithTpl(itemPool: Item[], item: ItemTpl, slotId?: string): boolean;
+>>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
     /**
      * Get the first item from provided pool with the desired tpl
      * @param itemPool Item collection to search
@@ -50,7 +59,11 @@ export declare class ItemHelper {
      * @param slotId OPTIONAL - slotid of desired item
      * @returns Item or undefined
      */
+<<<<<<< HEAD
     getItemFromPoolByTpl(itemPool: IItem[], item: ItemTpl, slotId?: string): IItem | undefined;
+=======
+    getItemFromPoolByTpl(itemPool: Item[], item: ItemTpl, slotId?: string): Item | undefined;
+>>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
     /**
      * This method will compare two items (with all its children) and see if the are equivalent.
      * This method will NOT compare IDs on the items
@@ -191,7 +204,11 @@ export declare class ItemHelper {
      * @param skipArmorItemsWithoutDurability Skip over armor items without durability
      * @returns % quality modifer between 0 and 1
      */
+<<<<<<< HEAD
     getItemQualityModifierForItems(items: IItem[], skipArmorItemsWithoutDurability?: boolean): number;
+=======
+    getItemQualityModifierForItems(items: Item[], skipArmorItemsWithoutDurability?: boolean): number;
+>>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
     /**
      * get normalized value (0-1) based on item condition
      * Will return -1 for base armor items with 0 durability
@@ -199,7 +216,11 @@ export declare class ItemHelper {
      * @param skipArmorItemsWithoutDurability return -1 for armor items that have maxdurability of 0
      * @returns Number between 0 and 1
      */
+<<<<<<< HEAD
     getItemQualityModifier(item: IItem, skipArmorItemsWithoutDurability?: boolean): number;
+=======
+    getItemQualityModifier(item: Item, skipArmorItemsWithoutDurability?: boolean): number;
+>>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
     /**
      * Get a quality value based on a repairable items (weapon/armor) current state between current and max durability
      * @param itemDetails Db details for item we want quality value for
@@ -291,7 +312,11 @@ export declare class ItemHelper {
      * @param fastPanel Quick slot panel
      * @returns Item[]
      */
+<<<<<<< HEAD
     replaceIDs(originalItems: IItem[], pmcData?: IPmcData, insuredItems?: IInsuredItem[], fastPanel?: any): IItem[];
+=======
+    replaceIDs(originalItems: Item[], pmcData?: IPmcData, insuredItems?: InsuredItem[], fastPanel?: any): Item[];
+>>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
     /**
      * Mark the passed in array of items as found in raid.
      * Modifies passed in items
@@ -322,7 +347,11 @@ export declare class ItemHelper {
      * @param parent The parent of the item to be checked
      * @returns True if the item is actually moddable, false if it is not, and undefined if the check cannot be performed.
      */
+<<<<<<< HEAD
     isRaidModdable(item: IItem, parent: IItem): boolean | undefined;
+=======
+    isRaidModdable(item: Item, parent: Item): boolean | undefined;
+>>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
     /**
      * Retrieves the main parent item for a given attachment item.
      *
@@ -339,7 +368,11 @@ export declare class ItemHelper {
      * @param itemsMap - A Map containing item IDs mapped to their corresponding Item objects for quick lookup.
      * @returns The Item object representing the top-most parent of the given item, or `undefined` if no such parent exists.
      */
+<<<<<<< HEAD
     getAttachmentMainParent(itemId: string, itemsMap: Map<string, IItem>): IItem | undefined;
+=======
+    getAttachmentMainParent(itemId: string, itemsMap: Map<string, Item>): Item | undefined;
+>>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
     /**
      * Determines if an item is an attachment that is currently attached to it's parent item.
      *
@@ -362,7 +395,11 @@ export declare class ItemHelper {
      * @param itemsMap - A Map containing item IDs mapped to their corresponding Item objects for quick lookup.
      * @returns The Item object representing the equipment parent of the given item, or `undefined` if no such parent exists.
      */
+<<<<<<< HEAD
     getEquipmentParent(itemId: string, itemsMap: Map<string, IItem>): IItem | undefined;
+=======
+    getEquipmentParent(itemId: string, itemsMap: Map<string, Item>): Item | undefined;
+>>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
     /**
      * Get the inventory size of an item
      * @param items Item with children
@@ -406,7 +443,11 @@ export declare class ItemHelper {
      * @param defaultCartridgeTpl Cartridge to use when none found
      * @param weapon Weapon the magazine will be used for (if passed in uses Chamber as whitelist)
      */
+<<<<<<< HEAD
     fillMagazineWithRandomCartridge(magazine: IItem[], magTemplate: ITemplateItem, staticAmmoDist: Record<string, IStaticAmmoDetails[]>, caliber?: string, minSizePercent?: number, defaultCartridgeTpl?: string, weapon?: ITemplateItem): void;
+=======
+    fillMagazineWithRandomCartridge(magazine: Item[], magTemplate: ITemplateItem, staticAmmoDist: Record<string, IStaticAmmoDetails[]>, caliber?: string, minSizePercent?: number, defaultCartridgeTpl?: string, weapon?: ITemplateItem): void;
+>>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
     /**
      * Add child items to a magazine of a specific cartridge
      * @param magazineWithChildCartridges Magazine to add child items to

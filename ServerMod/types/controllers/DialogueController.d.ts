@@ -1,8 +1,11 @@
 import { IDialogueChatBot } from "@spt/helpers/Dialogue/IDialogueChatBot";
 import { DialogueHelper } from "@spt/helpers/DialogueHelper";
+<<<<<<< HEAD
 import { NotificationSendHelper } from "@spt/helpers/NotificationSendHelper";
 import { ProfileHelper } from "@spt/helpers/ProfileHelper";
 import { IDeleteFriendRequest } from "@spt/models/eft/dialog/IDeleteFriendRequest";
+=======
+>>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
 import { IFriendRequestData } from "@spt/models/eft/dialog/IFriendRequestData";
 import { IFriendRequestSendResponse } from "@spt/models/eft/dialog/IFriendRequestSendResponse";
 import { IGetAllAttachmentsResponse } from "@spt/models/eft/dialog/IGetAllAttachmentsResponse";
@@ -10,7 +13,11 @@ import { IGetFriendListDataResponse } from "@spt/models/eft/dialog/IGetFriendLis
 import { IGetMailDialogViewRequestData } from "@spt/models/eft/dialog/IGetMailDialogViewRequestData";
 import { IGetMailDialogViewResponseData } from "@spt/models/eft/dialog/IGetMailDialogViewResponseData";
 import { ISendMessageRequest } from "@spt/models/eft/dialog/ISendMessageRequest";
+<<<<<<< HEAD
 import { IDialogue, IDialogueInfo, IMessage, ISptProfile, IUserDialogInfo } from "@spt/models/eft/profile/ISptProfile";
+=======
+import { Dialogue, DialogueInfo, ISptProfile, IUserDialogInfo, Message } from "@spt/models/eft/profile/ISptProfile";
+>>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
 import { MessageType } from "@spt/models/enums/MessageType";
 import { ILogger } from "@spt/models/spt/utils/ILogger";
 import { ConfigServer } from "@spt/servers/ConfigServer";
@@ -29,7 +36,11 @@ export declare class DialogueController {
     protected localisationService: LocalisationService;
     protected configServer: ConfigServer;
     protected dialogueChatBots: IDialogueChatBot[];
+<<<<<<< HEAD
     constructor(logger: ILogger, saveServer: SaveServer, timeUtil: TimeUtil, dialogueHelper: DialogueHelper, notificationSendHelper: NotificationSendHelper, profileHelper: ProfileHelper, mailSendService: MailSendService, localisationService: LocalisationService, configServer: ConfigServer, dialogueChatBots: IDialogueChatBot[]);
+=======
+    constructor(logger: ILogger, saveServer: SaveServer, timeUtil: TimeUtil, dialogueHelper: DialogueHelper, mailSendService: MailSendService, localisationService: LocalisationService, configServer: ConfigServer, dialogueChatBots: IDialogueChatBot[]);
+>>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
     registerChatBot(chatBot: IDialogueChatBot): void;
     /** Handle onUpdate spt event */
     update(): void;
@@ -60,7 +71,11 @@ export declare class DialogueController {
      * @param sessionID Player id
      * @returns IUserDialogInfo array
      */
+<<<<<<< HEAD
     getDialogueUsers(dialog: IDialogue, messageType: MessageType, sessionID: string): IUserDialogInfo[] | undefined;
+=======
+    getDialogueUsers(dialog: Dialogue, messageType: MessageType, sessionID: string): IUserDialogInfo[] | undefined;
+>>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
     /**
      * Handle client/mail/dialog/view
      * Handle player clicking 'messenger' and seeing all the messages they've recieved
@@ -77,7 +92,11 @@ export declare class DialogueController {
      * @param request get dialog request (params used when dialog doesnt exist in profile)
      * @returns Dialogue
      */
+<<<<<<< HEAD
     protected getDialogByIdFromProfile(profile: ISptProfile, request: IGetMailDialogViewRequestData): IDialogue;
+=======
+    protected getDialogByIdFromProfile(profile: ISptProfile, request: IGetMailDialogViewRequestData): Dialogue;
+>>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
     /**
      * Get the users involved in a mail between two entities
      * @param fullProfile Player profile
@@ -153,9 +172,15 @@ export declare class DialogueController {
      * @param message Message to check expiry of
      * @returns true or false
      */
+<<<<<<< HEAD
     protected messageHasExpired(message: IMessage): boolean;
     /** Handle client/friend/request/send  */
     sendFriendRequest(sessionID: string, request: IFriendRequestData): IFriendRequestSendResponse;
     /** Handle client/friend/delete */
     deleteFriend(sessionID: string, request: IDeleteFriendRequest): void;
+=======
+    protected messageHasExpired(message: Message): boolean;
+    /** Handle client/friend/request/send  */
+    sendFriendRequest(sessionID: string, request: IFriendRequestData): IFriendRequestSendResponse;
+>>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
 }

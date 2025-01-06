@@ -1,8 +1,14 @@
 import { InraidController } from "@spt/controllers/InraidController";
 import { IEmptyRequestData } from "@spt/models/eft/common/IEmptyRequestData";
 import { INullResponseData } from "@spt/models/eft/httpResponse/INullResponseData";
+<<<<<<< HEAD
 import { IRegisterPlayerRequestData } from "@spt/models/eft/inRaid/IRegisterPlayerRequestData";
 import { IScavSaveRequestData } from "@spt/models/eft/inRaid/IScavSaveRequestData";
+=======
+import { IItemDeliveryRequestData } from "@spt/models/eft/inRaid/IItemDeliveryRequestData";
+import { IRegisterPlayerRequestData } from "@spt/models/eft/inRaid/IRegisterPlayerRequestData";
+import { ISaveProgressRequestData } from "@spt/models/eft/inRaid/ISaveProgressRequestData";
+>>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
 import { HttpResponseUtil } from "@spt/utils/HttpResponseUtil";
 /**
  * Handle client requests
@@ -34,5 +40,9 @@ export declare class InraidCallbacks {
      */
     getRaidMenuSettings(): string;
     getTraitorScavHostileChance(url: string, info: IEmptyRequestData, sessionId: string): string;
+<<<<<<< HEAD
+=======
+    getSandboxMaxPatrolValue(url: string, info: IEmptyRequestData, sessionId: string): string;
+>>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
     getBossConvertSettings(url: string, info: IEmptyRequestData, sessionId: string): string;
 }

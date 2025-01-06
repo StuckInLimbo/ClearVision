@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 import { IHealth, IHideoutImprovement, IMoneyTransferLimits, IProductive, IQuestStatus, ISkills } from "@spt/models/eft/common/tables/IBotBase";
 import { IItem, IItemLocation, IUpd } from "@spt/models/eft/common/tables/IItem";
+=======
+import { Health, IQuestStatus, Productive, Skills } from "@spt/models/eft/common/tables/IBotBase";
+import { Item, Upd } from "@spt/models/eft/common/tables/IItem";
+>>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
 import { IQuest } from "@spt/models/eft/common/tables/IQuest";
 import { IPmcDataRepeatableQuest } from "@spt/models/eft/common/tables/IRepeatableQuests";
 import { IRagfairOffer } from "@spt/models/eft/ragfair/IRagfairOffer";

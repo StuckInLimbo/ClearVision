@@ -1,5 +1,9 @@
 import { ItemHelper } from "@spt/helpers/ItemHelper";
+<<<<<<< HEAD
 import { IProps, ITemplateItem } from "@spt/models/eft/common/tables/ITemplateItem";
+=======
+import { ITemplateItem, Props } from "@spt/models/eft/common/tables/ITemplateItem";
+>>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
 import { CreateItemResult, LocaleDetails, NewItemDetails, NewItemFromCloneDetails } from "@spt/models/spt/mod/NewItemDetails";
 import { ILogger } from "@spt/models/spt/utils/ILogger";
 import { DatabaseService } from "@spt/services/DatabaseService";

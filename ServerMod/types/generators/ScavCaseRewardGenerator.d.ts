@@ -1,10 +1,18 @@
 import { ItemHelper } from "@spt/helpers/ItemHelper";
 import { PresetHelper } from "@spt/helpers/PresetHelper";
+<<<<<<< HEAD
 import { IItem } from "@spt/models/eft/common/tables/IItem";
 import { ITemplateItem } from "@spt/models/eft/common/tables/ITemplateItem";
 import { IScavRecipe } from "@spt/models/eft/hideout/IHideoutProduction";
 import { IScavCaseConfig } from "@spt/models/spt/config/IScavCaseConfig";
 import { IRewardCountAndPriceDetails, IScavCaseRewardCountsAndPrices } from "@spt/models/spt/hideout/ScavCaseRewardCountsAndPrices";
+=======
+import { Item } from "@spt/models/eft/common/tables/IItem";
+import { ITemplateItem } from "@spt/models/eft/common/tables/ITemplateItem";
+import { IHideoutScavCase } from "@spt/models/eft/hideout/IHideoutScavCase";
+import { IScavCaseConfig } from "@spt/models/spt/config/IScavCaseConfig";
+import { RewardCountAndPriceDetails, ScavCaseRewardCountsAndPrices } from "@spt/models/spt/hideout/ScavCaseRewardCountsAndPrices";
+>>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
 import { ILogger } from "@spt/models/spt/utils/ILogger";
 import { ConfigServer } from "@spt/servers/ConfigServer";
 import { DatabaseService } from "@spt/services/DatabaseService";

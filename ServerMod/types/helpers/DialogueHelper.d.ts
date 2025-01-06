@@ -1,8 +1,13 @@
 import { ItemHelper } from "@spt/helpers/ItemHelper";
 import { NotificationSendHelper } from "@spt/helpers/NotificationSendHelper";
 import { NotifierHelper } from "@spt/helpers/NotifierHelper";
+<<<<<<< HEAD
 import { IItem } from "@spt/models/eft/common/tables/IItem";
 import { IDialogue, IMessagePreview } from "@spt/models/eft/profile/ISptProfile";
+=======
+import { Item } from "@spt/models/eft/common/tables/IItem";
+import { Dialogue, MessagePreview } from "@spt/models/eft/profile/ISptProfile";
+>>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
 import { ILogger } from "@spt/models/spt/utils/ILogger";
 import { DatabaseServer } from "@spt/servers/DatabaseServer";
 import { SaveServer } from "@spt/servers/SaveServer";

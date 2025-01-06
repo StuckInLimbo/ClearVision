@@ -1,6 +1,7 @@
 import { BotHelper } from "@spt/helpers/BotHelper";
 import { ProfileHelper } from "@spt/helpers/ProfileHelper";
 import { IConfig } from "@spt/models/eft/common/IGlobals";
+<<<<<<< HEAD
 import { IAdditionalHostilitySettings } from "@spt/models/eft/common/ILocationBase";
 import { IInventory } from "@spt/models/eft/common/tables/IBotType";
 import { Season } from "@spt/models/enums/Season";
@@ -9,6 +10,14 @@ import { IHttpConfig } from "@spt/models/spt/config/IHttpConfig";
 import { ILocationConfig } from "@spt/models/spt/config/ILocationConfig";
 import { IQuestConfig } from "@spt/models/spt/config/IQuestConfig";
 import { ISeasonalEvent, ISeasonalEventConfig, IZombieSettings } from "@spt/models/spt/config/ISeasonalEventConfig";
+=======
+import { Inventory } from "@spt/models/eft/common/tables/IBotType";
+import { Season } from "@spt/models/enums/Season";
+import { SeasonalEventType } from "@spt/models/enums/SeasonalEventType";
+import { IHttpConfig } from "@spt/models/spt/config/IHttpConfig";
+import { IQuestConfig } from "@spt/models/spt/config/IQuestConfig";
+import { ISeasonalEvent, ISeasonalEventConfig } from "@spt/models/spt/config/ISeasonalEventConfig";
+>>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
 import { IWeatherConfig } from "@spt/models/spt/config/IWeatherConfig";
 import { ILogger } from "@spt/models/spt/utils/ILogger";
 import { ConfigServer } from "@spt/servers/ConfigServer";
@@ -29,11 +38,18 @@ export declare class SeasonalEventService {
     protected questConfig: IQuestConfig;
     protected httpConfig: IHttpConfig;
     protected weatherConfig: IWeatherConfig;
+<<<<<<< HEAD
     protected locationConfig: ILocationConfig;
     protected halloweenEventActive?: boolean;
     protected christmasEventActive?: boolean;
     /** All events active at this point in time */
     protected currentlyActiveEvents: ISeasonalEvent[];
+=======
+    protected halloweenEventActive?: boolean;
+    protected christmasEventActive?: boolean;
+    /** All events active at this point in time */
+    protected currentlyActiveEvents: SeasonalEventType[];
+>>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
     constructor(logger: ILogger, databaseService: DatabaseService, databaseImporter: DatabaseImporter, giftService: GiftService, localisationService: LocalisationService, botHelper: BotHelper, profileHelper: ProfileHelper, configServer: ConfigServer);
     protected get christmasEventItems(): string[];
     protected get halloweenEventItems(): string[];
@@ -109,6 +125,7 @@ export declare class SeasonalEventService {
     /**
      * Handle activating seasonal events
      */
+<<<<<<< HEAD
     enableSeasonalEvents(): void;
     forceSeasonalEvent(eventType: SeasonalEventType): boolean;
     /**
@@ -119,6 +136,10 @@ export declare class SeasonalEventService {
      * Get the currently active weather season e.g. SUMMER/AUTUMN/WINTER
      * @returns Season enum value
      */
+=======
+    enableSeasonalEvents(sessionId: string): void;
+    protected cacheActiveEvents(): void;
+>>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
     getActiveWeatherSeason(): Season;
     /**
      * Iterate through bots inventory and loot to find and remove christmas items (as defined in SeasonalEventService)

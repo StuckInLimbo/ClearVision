@@ -4,9 +4,15 @@ import { BotHelper } from "@spt/helpers/BotHelper";
 import { ItemHelper } from "@spt/helpers/ItemHelper";
 import { ProfileHelper } from "@spt/helpers/ProfileHelper";
 import { IPmcData } from "@spt/models/eft/common/IPmcData";
+<<<<<<< HEAD
 import { IBotBase, ISkills, IStats } from "@spt/models/eft/common/tables/IBotBase";
 import { IBotType } from "@spt/models/eft/common/tables/IBotType";
 import { IKarmaLevel, IPlayerScavConfig } from "@spt/models/spt/config/IPlayerScavConfig";
+=======
+import { IBotBase, Skills, Stats } from "@spt/models/eft/common/tables/IBotBase";
+import { IBotType } from "@spt/models/eft/common/tables/IBotType";
+import { IPlayerScavConfig, KarmaLevel } from "@spt/models/spt/config/IPlayerScavConfig";
+>>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
 import { ILogger } from "@spt/models/spt/utils/ILogger";
 import { ConfigServer } from "@spt/servers/ConfigServer";
 import { SaveServer } from "@spt/servers/SaveServer";

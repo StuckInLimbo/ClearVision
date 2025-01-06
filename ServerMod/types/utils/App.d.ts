@@ -7,7 +7,10 @@ import { HttpServer } from "@spt/servers/HttpServer";
 import { LocalisationService } from "@spt/services/LocalisationService";
 import { EncodingUtil } from "@spt/utils/EncodingUtil";
 import { TimeUtil } from "@spt/utils/TimeUtil";
+<<<<<<< HEAD
 import { DatabaseService } from "@spt/services/DatabaseService";
+=======
+>>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
 export declare class App {
     protected logger: ILogger;
     protected timeUtil: TimeUtil;

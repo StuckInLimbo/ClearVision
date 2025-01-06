@@ -1,7 +1,11 @@
 import { ProfileHelper } from "@spt/helpers/ProfileHelper";
 import { GiftSentResult } from "@spt/models/enums/GiftSentResult";
 import { MessageType } from "@spt/models/enums/MessageType";
+<<<<<<< HEAD
 import { IGift, IGiftsConfig } from "@spt/models/spt/config/IGiftsConfig";
+=======
+import { Gift, IGiftsConfig } from "@spt/models/spt/config/IGiftsConfig";
+>>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
 import { ILogger } from "@spt/models/spt/utils/ILogger";
 import { ConfigServer } from "@spt/servers/ConfigServer";
 import { LocalisationService } from "@spt/services/LocalisationService";
@@ -24,12 +28,20 @@ export declare class GiftService {
      * @returns True if it exists in  db
      */
     giftExists(giftId: string): boolean;
+<<<<<<< HEAD
     getGiftById(giftId: string): IGift;
+=======
+    getGiftById(giftId: string): Gift;
+>>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
     /**
      * Get dictionary of all gifts
      * @returns Dict keyed by gift id
      */
+<<<<<<< HEAD
     getGifts(): Record<string, IGift>;
+=======
+    getGifts(): Record<string, Gift>;
+>>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
     /**
      * Get an array of all gift ids
      * @returns string array of gift ids
@@ -47,13 +59,21 @@ export declare class GiftService {
      * @param giftData Gift to send player
      * @returns trader/user/system id
      */
+<<<<<<< HEAD
     protected getSenderId(giftData: IGift): string | undefined;
+=======
+    protected getSenderId(giftData: Gift): string | undefined;
+>>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
     /**
      * Convert GiftSenderType into a dialog MessageType
      * @param giftData Gift to send player
      * @returns MessageType enum value
      */
+<<<<<<< HEAD
     protected getMessageType(giftData: IGift): MessageType | undefined;
+=======
+    protected getMessageType(giftData: Gift): MessageType | undefined;
+>>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
     /**
      * Prapor sends gifts to player for first week after profile creation
      * @param sessionId Player id

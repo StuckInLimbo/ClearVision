@@ -5,8 +5,13 @@ import { PresetHelper } from "@spt/helpers/PresetHelper";
 import { TraderHelper } from "@spt/helpers/TraderHelper";
 import { MinMax } from "@spt/models/common/MinMax";
 import { IPreset } from "@spt/models/eft/common/IGlobals";
+<<<<<<< HEAD
 import { IHandbookItem } from "@spt/models/eft/common/tables/IHandbookBase";
 import { IItem } from "@spt/models/eft/common/tables/IItem";
+=======
+import { HandbookItem } from "@spt/models/eft/common/tables/IHandbookBase";
+import { Item } from "@spt/models/eft/common/tables/IItem";
+>>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
 import { IBarterScheme } from "@spt/models/eft/common/tables/ITrader";
 import { IRagfairConfig, IUnreasonableModPrices } from "@spt/models/spt/config/IRagfairConfig";
 import { IRagfairServerPrices } from "@spt/models/spt/ragfair/IRagfairServerPrices";

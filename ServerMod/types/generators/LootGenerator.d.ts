@@ -2,12 +2,21 @@ import { InventoryHelper } from "@spt/helpers/InventoryHelper";
 import { ItemHelper } from "@spt/helpers/ItemHelper";
 import { PresetHelper } from "@spt/helpers/PresetHelper";
 import { WeightedRandomHelper } from "@spt/helpers/WeightedRandomHelper";
+<<<<<<< HEAD
 import { MinMax } from "@spt/models/common/MinMax";
 import { IPreset } from "@spt/models/eft/common/IGlobals";
 import { IItem } from "@spt/models/eft/common/tables/IItem";
 import { ITemplateItem } from "@spt/models/eft/common/tables/ITemplateItem";
 import { IRewardDetails, ISealedAirdropContainerSettings } from "@spt/models/spt/config/IInventoryConfig";
 import { ILootRequest } from "@spt/models/spt/services/ILootRequest";
+=======
+import { IPreset } from "@spt/models/eft/common/IGlobals";
+import { Item } from "@spt/models/eft/common/tables/IItem";
+import { ITemplateItem } from "@spt/models/eft/common/tables/ITemplateItem";
+import { ISealedAirdropContainerSettings, RewardDetails } from "@spt/models/spt/config/IInventoryConfig";
+import { LootItem } from "@spt/models/spt/services/LootItem";
+import { LootRequest } from "@spt/models/spt/services/LootRequest";
+>>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
 import { ILogger } from "@spt/models/spt/utils/ILogger";
 import { DatabaseService } from "@spt/services/DatabaseService";
 import { ItemFilterService } from "@spt/services/ItemFilterService";
@@ -63,7 +72,11 @@ export declare class LootGenerator {
      * @param options Loot request options - armor level etc
      * @returns True if item has desired armor level
      */
+<<<<<<< HEAD
     protected isArmorOfDesiredProtectionLevel(armor: IPreset, options: ILootRequest): boolean;
+=======
+    protected isArmorOfDesiredProtectionLevel(armor: IPreset, options: LootRequest): boolean;
+>>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
     /**
      * Construct item limit record to hold max and current item count for each item type
      * @param limits limits as defined in config

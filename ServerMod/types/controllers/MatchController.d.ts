@@ -1,10 +1,19 @@
 import { ApplicationContext } from "@spt/context/ApplicationContext";
+<<<<<<< HEAD
 import { IEndLocalRaidRequestData } from "@spt/models/eft/match/IEndLocalRaidRequestData";
+=======
+import { LootGenerator } from "@spt/generators/LootGenerator";
+import { ProfileHelper } from "@spt/helpers/ProfileHelper";
+import { TraderHelper } from "@spt/helpers/TraderHelper";
+import { IPmcData } from "@spt/models/eft/common/IPmcData";
+import { IEndOfflineRaidRequestData } from "@spt/models/eft/match/IEndOfflineRaidRequestData";
+>>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
 import { IGetRaidConfigurationRequestData } from "@spt/models/eft/match/IGetRaidConfigurationRequestData";
 import { IMatchGroupStartGameRequest } from "@spt/models/eft/match/IMatchGroupStartGameRequest";
 import { IMatchGroupStatusRequest } from "@spt/models/eft/match/IMatchGroupStatusRequest";
 import { IMatchGroupStatusResponse } from "@spt/models/eft/match/IMatchGroupStatusResponse";
 import { IProfileStatusResponse } from "@spt/models/eft/match/IProfileStatusResponse";
+<<<<<<< HEAD
 import { IStartLocalRaidRequestData } from "@spt/models/eft/match/IStartLocalRaidRequestData";
 import { IStartLocalRaidResponseData } from "@spt/models/eft/match/IStartLocalRaidResponseData";
 import { IMatchConfig } from "@spt/models/spt/config/IMatchConfig";
@@ -15,6 +24,23 @@ import { SaveServer } from "@spt/servers/SaveServer";
 import { LocationLifecycleService } from "@spt/services/LocationLifecycleService";
 import { MatchLocationService } from "@spt/services/MatchLocationService";
 import { ICloner } from "@spt/utils/cloners/ICloner";
+=======
+import { IInRaidConfig } from "@spt/models/spt/config/IInRaidConfig";
+import { IMatchConfig } from "@spt/models/spt/config/IMatchConfig";
+import { IPmcConfig } from "@spt/models/spt/config/IPmcConfig";
+import { ITraderConfig } from "@spt/models/spt/config/ITraderConfig";
+import { ILogger } from "@spt/models/spt/utils/ILogger";
+import { ConfigServer } from "@spt/servers/ConfigServer";
+import { SaveServer } from "@spt/servers/SaveServer";
+import { BotGenerationCacheService } from "@spt/services/BotGenerationCacheService";
+import { BotLootCacheService } from "@spt/services/BotLootCacheService";
+import { MailSendService } from "@spt/services/MailSendService";
+import { MatchLocationService } from "@spt/services/MatchLocationService";
+import { ProfileSnapshotService } from "@spt/services/ProfileSnapshotService";
+import { HashUtil } from "@spt/utils/HashUtil";
+import { RandomUtil } from "@spt/utils/RandomUtil";
+import { TimeUtil } from "@spt/utils/TimeUtil";
+>>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
 export declare class MatchController {
     protected logger: ILogger;
     protected saveServer: SaveServer;

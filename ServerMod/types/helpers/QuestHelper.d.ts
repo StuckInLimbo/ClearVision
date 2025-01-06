@@ -8,12 +8,19 @@ import { RagfairServerHelper } from "@spt/helpers/RagfairServerHelper";
 import { TraderHelper } from "@spt/helpers/TraderHelper";
 import { IPmcData } from "@spt/models/eft/common/IPmcData";
 import { Common, IQuestStatus } from "@spt/models/eft/common/tables/IBotBase";
+<<<<<<< HEAD
 import { IItem } from "@spt/models/eft/common/tables/IItem";
 import { IQuest, IQuestCondition, IQuestReward } from "@spt/models/eft/common/tables/IQuest";
 import { IHideoutProduction } from "@spt/models/eft/hideout/IHideoutProduction";
 import { IItemEventRouterResponse } from "@spt/models/eft/itemEvent/IItemEventRouterResponse";
 import { IAcceptQuestRequestData } from "@spt/models/eft/quests/IAcceptQuestRequestData";
 import { ICompleteQuestRequestData } from "@spt/models/eft/quests/ICompleteQuestRequestData";
+=======
+import { Item } from "@spt/models/eft/common/tables/IItem";
+import { IQuest, IQuestCondition, IQuestReward } from "@spt/models/eft/common/tables/IQuest";
+import { IItemEventRouterResponse } from "@spt/models/eft/itemEvent/IItemEventRouterResponse";
+import { IAcceptQuestRequestData } from "@spt/models/eft/quests/IAcceptQuestRequestData";
+>>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
 import { IFailQuestRequestData } from "@spt/models/eft/quests/IFailQuestRequestData";
 import { QuestStatus } from "@spt/models/enums/QuestStatus";
 import { IQuestConfig } from "@spt/models/spt/config/IQuestConfig";
@@ -24,7 +31,10 @@ import { DatabaseService } from "@spt/services/DatabaseService";
 import { LocaleService } from "@spt/services/LocaleService";
 import { LocalisationService } from "@spt/services/LocalisationService";
 import { MailSendService } from "@spt/services/MailSendService";
+<<<<<<< HEAD
 import { PlayerService } from "@spt/services/PlayerService";
+=======
+>>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
 import { SeasonalEventService } from "@spt/services/SeasonalEventService";
 import { HashUtil } from "@spt/utils/HashUtil";
 import { TimeUtil } from "@spt/utils/TimeUtil";
@@ -51,7 +61,11 @@ export declare class QuestHelper {
     protected configServer: ConfigServer;
     protected cloner: ICloner;
     protected questConfig: IQuestConfig;
+<<<<<<< HEAD
     constructor(logger: ILogger, timeUtil: TimeUtil, hashUtil: HashUtil, itemHelper: ItemHelper, databaseService: DatabaseService, questConditionHelper: QuestConditionHelper, eventOutputHolder: EventOutputHolder, localeService: LocaleService, ragfairServerHelper: RagfairServerHelper, dialogueHelper: DialogueHelper, profileHelper: ProfileHelper, paymentHelper: PaymentHelper, localisationService: LocalisationService, seasonalEventService: SeasonalEventService, traderHelper: TraderHelper, presetHelper: PresetHelper, mailSendService: MailSendService, playerService: PlayerService, configServer: ConfigServer, cloner: ICloner);
+=======
+    constructor(logger: ILogger, timeUtil: TimeUtil, hashUtil: HashUtil, itemHelper: ItemHelper, databaseService: DatabaseService, questConditionHelper: QuestConditionHelper, eventOutputHolder: EventOutputHolder, localeService: LocaleService, ragfairServerHelper: RagfairServerHelper, dialogueHelper: DialogueHelper, profileHelper: ProfileHelper, paymentHelper: PaymentHelper, localisationService: LocalisationService, seasonalEventService: SeasonalEventService, traderHelper: TraderHelper, presetHelper: PresetHelper, mailSendService: MailSendService, configServer: ConfigServer, cloner: ICloner);
+>>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
     /**
      * Get status of a quest in player profile by its id
      * @param pmcData Profile to search
@@ -172,7 +186,11 @@ export declare class QuestHelper {
     /**
      * Adjust quest money rewards by passed in multiplier
      * @param quest Quest to multiple money rewards
+<<<<<<< HEAD
      * @param bonusPercent Pecent to adjust money rewards by
+=======
+     * @param bonusPercent Value to adjust money rewards by
+>>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
      * @param questStatus Status of quest to apply money boost to rewards of
      * @returns Updated quest
      */
@@ -320,6 +338,7 @@ export declare class QuestHelper {
      * @returns Hours item will be available for
      */
     getMailItemRedeemTimeHoursForProfile(pmcData: IPmcData): number;
+<<<<<<< HEAD
     completeQuest(pmcData: IPmcData, body: ICompleteQuestRequestData, sessionID: string): IItemEventRouterResponse;
     /**
      * Handle client/quest/list
@@ -387,4 +406,6 @@ export declare class QuestHelper {
      * @returns true if quest can be seen/accepted by player of defined level
      */
     protected playerLevelFulfillsQuestRequirement(quest: IQuest, playerLevel: number): boolean;
+=======
+>>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
 }

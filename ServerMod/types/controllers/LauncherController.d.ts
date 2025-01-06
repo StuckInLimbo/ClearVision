@@ -5,7 +5,11 @@ import { IChangeRequestData } from "@spt/models/eft/launcher/IChangeRequestData"
 import { ILoginRequestData } from "@spt/models/eft/launcher/ILoginRequestData";
 import { IRegisterData } from "@spt/models/eft/launcher/IRegisterData";
 import { IConnectResponse } from "@spt/models/eft/profile/IConnectResponse";
+<<<<<<< HEAD
 import { IModDetails, Info } from "@spt/models/eft/profile/ISptProfile";
+=======
+import { Info, ModDetails } from "@spt/models/eft/profile/ISptProfile";
+>>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
 import { ICoreConfig } from "@spt/models/spt/config/ICoreConfig";
 import { IPackageJsonData } from "@spt/models/spt/mod/IPackageJsonData";
 import { ILogger } from "@spt/models/spt/utils/ILogger";

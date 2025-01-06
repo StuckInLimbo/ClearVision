@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { ItemHelper } from "@spt/helpers/ItemHelper";
 import { ProfileHelper } from "@spt/helpers/ProfileHelper";
 import { TraderHelper } from "@spt/helpers/TraderHelper";
@@ -5,11 +6,29 @@ import { IPmcData } from "@spt/models/eft/common/IPmcData";
 import { IItem } from "@spt/models/eft/common/tables/IItem";
 import { ITraderBase } from "@spt/models/eft/common/tables/ITrader";
 import { IInsuranceConfig } from "@spt/models/spt/config/IInsuranceConfig";
+=======
+import { DialogueHelper } from "@spt/helpers/DialogueHelper";
+import { HandbookHelper } from "@spt/helpers/HandbookHelper";
+import { ItemHelper } from "@spt/helpers/ItemHelper";
+import { SecureContainerHelper } from "@spt/helpers/SecureContainerHelper";
+import { TraderHelper } from "@spt/helpers/TraderHelper";
+import { IPmcData } from "@spt/models/eft/common/IPmcData";
+import { Item } from "@spt/models/eft/common/tables/IItem";
+import { ITraderBase } from "@spt/models/eft/common/tables/ITrader";
+import { IInsuredItemsData } from "@spt/models/eft/inRaid/IInsuredItemsData";
+import { ISaveProgressRequestData } from "@spt/models/eft/inRaid/ISaveProgressRequestData";
+import { IInsuranceConfig } from "@spt/models/spt/config/IInsuranceConfig";
+import { ILostOnDeathConfig } from "@spt/models/spt/config/ILostOnDeathConfig";
+>>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
 import { IInsuranceEquipmentPkg } from "@spt/models/spt/services/IInsuranceEquipmentPkg";
 import { ILogger } from "@spt/models/spt/utils/ILogger";
 import { ConfigServer } from "@spt/servers/ConfigServer";
 import { SaveServer } from "@spt/servers/SaveServer";
 import { DatabaseService } from "@spt/services/DatabaseService";
+<<<<<<< HEAD
+=======
+import { LocaleService } from "@spt/services/LocaleService";
+>>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
 import { LocalisationService } from "@spt/services/LocalisationService";
 import { MailSendService } from "@spt/services/MailSendService";
 import { HashUtil } from "@spt/utils/HashUtil";
@@ -19,6 +38,10 @@ import { ICloner } from "@spt/utils/cloners/ICloner";
 export declare class InsuranceService {
     protected logger: ILogger;
     protected databaseService: DatabaseService;
+<<<<<<< HEAD
+=======
+    protected secureContainerHelper: SecureContainerHelper;
+>>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
     protected randomUtil: RandomUtil;
     protected itemHelper: ItemHelper;
     protected hashUtil: HashUtil;
@@ -30,9 +53,16 @@ export declare class InsuranceService {
     protected mailSendService: MailSendService;
     protected configServer: ConfigServer;
     protected cloner: ICloner;
+<<<<<<< HEAD
     protected insured: Record<string, Record<string, IItem[]>>;
     protected insuranceConfig: IInsuranceConfig;
     constructor(logger: ILogger, databaseService: DatabaseService, randomUtil: RandomUtil, itemHelper: ItemHelper, hashUtil: HashUtil, timeUtil: TimeUtil, saveServer: SaveServer, traderHelper: TraderHelper, profileHelper: ProfileHelper, localisationService: LocalisationService, mailSendService: MailSendService, configServer: ConfigServer, cloner: ICloner);
+=======
+    protected insured: Record<string, Record<string, Item[]>>;
+    protected insuranceConfig: IInsuranceConfig;
+    protected lostOnDeathConfig: ILostOnDeathConfig;
+    constructor(logger: ILogger, databaseService: DatabaseService, secureContainerHelper: SecureContainerHelper, randomUtil: RandomUtil, itemHelper: ItemHelper, hashUtil: HashUtil, timeUtil: TimeUtil, saveServer: SaveServer, traderHelper: TraderHelper, dialogueHelper: DialogueHelper, handbookHelper: HandbookHelper, localisationService: LocalisationService, localeService: LocaleService, mailSendService: MailSendService, configServer: ConfigServer, cloner: ICloner);
+>>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
     /**
      * Does player have insurance array
      * @param sessionId Player id
@@ -118,5 +148,15 @@ export declare class InsuranceService {
      * @param traderId Trader item is insured with
      * @returns price in roubles
      */
+<<<<<<< HEAD
     getRoublePriceToInsureItemWithTrader(pmcData: IPmcData, inventoryItem: IItem, traderId: string): number;
+=======
+    getRoublePriceToInsureItemWithTrader(pmcData: IPmcData, inventoryItem: Item, traderId: string): number;
+    /**
+     * Returns the ID that should be used for a root-level Item's parentId property value within in the context of insurance.
+     * @param sessionID Players id
+     * @returns The root item Id.
+     */
+    getRootItemParentID(sessionID: string): string;
+>>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
 }

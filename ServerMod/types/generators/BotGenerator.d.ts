@@ -1,5 +1,6 @@
 import { BotInventoryGenerator } from "@spt/generators/BotInventoryGenerator";
 import { BotLevelGenerator } from "@spt/generators/BotLevelGenerator";
+<<<<<<< HEAD
 import { BotGeneratorHelper } from "@spt/helpers/BotGeneratorHelper";
 import { BotHelper } from "@spt/helpers/BotHelper";
 import { ProfileHelper } from "@spt/helpers/ProfileHelper";
@@ -9,14 +10,29 @@ import { IPmcData } from "@spt/models/eft/common/IPmcData";
 import { IBaseJsonSkills, IBaseSkill, IBotBase, IInfo, IHealth as PmcHealth, ISkills as botSkills } from "@spt/models/eft/common/tables/IBotBase";
 import { IAppearance, IBodyPart, IBotType, IHealth, IInventory } from "@spt/models/eft/common/tables/IBotType";
 import { IBotGenerationDetails } from "@spt/models/spt/bots/BotGenerationDetails";
+=======
+import { BotDifficultyHelper } from "@spt/helpers/BotDifficultyHelper";
+import { BotHelper } from "@spt/helpers/BotHelper";
+import { ProfileHelper } from "@spt/helpers/ProfileHelper";
+import { WeightedRandomHelper } from "@spt/helpers/WeightedRandomHelper";
+import { IBaseJsonSkills, IBaseSkill, IBotBase, Info, Health as PmcHealth, Skills as botSkills } from "@spt/models/eft/common/tables/IBotBase";
+import { Appearance, Health, IBotType, Inventory } from "@spt/models/eft/common/tables/IBotType";
+import { BotGenerationDetails } from "@spt/models/spt/bots/BotGenerationDetails";
+>>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
 import { IBotConfig } from "@spt/models/spt/config/IBotConfig";
 import { IPmcConfig } from "@spt/models/spt/config/IPmcConfig";
 import { ILogger } from "@spt/models/spt/utils/ILogger";
 import { ConfigServer } from "@spt/servers/ConfigServer";
 import { BotEquipmentFilterService } from "@spt/services/BotEquipmentFilterService";
+<<<<<<< HEAD
 import { BotNameService } from "@spt/services/BotNameService";
 import { DatabaseService } from "@spt/services/DatabaseService";
 import { ItemFilterService } from "@spt/services/ItemFilterService";
+=======
+import { DatabaseService } from "@spt/services/DatabaseService";
+import { ItemFilterService } from "@spt/services/ItemFilterService";
+import { LocalisationService } from "@spt/services/LocalisationService";
+>>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
 import { SeasonalEventService } from "@spt/services/SeasonalEventService";
 import { HashUtil } from "@spt/utils/HashUtil";
 import { RandomUtil } from "@spt/utils/RandomUtil";
@@ -36,13 +52,22 @@ export declare class BotGenerator {
     protected botHelper: BotHelper;
     protected botGeneratorHelper: BotGeneratorHelper;
     protected seasonalEventService: SeasonalEventService;
+<<<<<<< HEAD
     protected itemFilterService: ItemFilterService;
     protected botNameService: BotNameService;
+=======
+    protected localisationService: LocalisationService;
+    protected itemFilterService: ItemFilterService;
+>>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
     protected configServer: ConfigServer;
     protected cloner: ICloner;
     protected botConfig: IBotConfig;
     protected pmcConfig: IPmcConfig;
+<<<<<<< HEAD
     constructor(logger: ILogger, hashUtil: HashUtil, randomUtil: RandomUtil, timeUtil: TimeUtil, profileHelper: ProfileHelper, databaseService: DatabaseService, botInventoryGenerator: BotInventoryGenerator, botLevelGenerator: BotLevelGenerator, botEquipmentFilterService: BotEquipmentFilterService, weightedRandomHelper: WeightedRandomHelper, botHelper: BotHelper, botGeneratorHelper: BotGeneratorHelper, seasonalEventService: SeasonalEventService, itemFilterService: ItemFilterService, botNameService: BotNameService, configServer: ConfigServer, cloner: ICloner);
+=======
+    constructor(logger: ILogger, hashUtil: HashUtil, randomUtil: RandomUtil, timeUtil: TimeUtil, profileHelper: ProfileHelper, databaseService: DatabaseService, botInventoryGenerator: BotInventoryGenerator, botLevelGenerator: BotLevelGenerator, botEquipmentFilterService: BotEquipmentFilterService, weightedRandomHelper: WeightedRandomHelper, botHelper: BotHelper, botDifficultyHelper: BotDifficultyHelper, seasonalEventService: SeasonalEventService, localisationService: LocalisationService, itemFilterService: ItemFilterService, configServer: ConfigServer, cloner: ICloner);
+>>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
     /**
      * Generate a player scav bot object
      * @param role e.g. assault / pmcbot
@@ -68,6 +93,14 @@ export declare class BotGenerator {
      */
     protected getPreparedBotBase(botRole: string, botSide: string, difficulty: string): IBotBase;
     /**
+     * Get a clone of the default bot base object and adjust its role/side/difficulty values
+     * @param botRole Role bot should have
+     * @param botSide Side bot should have
+     * @param difficulty Difficult bot should have
+     * @returns Cloned bot base
+     */
+    protected getPreparedBotBase(botRole: string, botSide: string, difficulty: string): IBotBase;
+    /**
      * Get a clone of the database\bots\base.json file
      * @returns IBotBase object
      */
@@ -80,6 +113,7 @@ export declare class BotGenerator {
      * @param botGenerationDetails details on how to generate the bot
      * @returns IBotBase object
      */
+<<<<<<< HEAD
     protected generateBot(sessionId: string, bot: IBotBase, botJsonTemplate: IBotType, botGenerationDetails: IBotGenerationDetails): IBotBase;
     /**
      * Should this bot have a name like "name (Pmc Name)" and be alterd by client patch to be hostile to player
@@ -123,13 +157,37 @@ export declare class BotGenerator {
      * @param botInventory Bot to filter
      */
     protected removeBlacklistedLootFromBotTemplate(botInventory: IInventory): void;
+=======
+    protected generateBot(sessionId: string, bot: IBotBase, botJsonTemplate: IBotType, botGenerationDetails: BotGenerationDetails): IBotBase;
+    protected addAdditionalPocketLootWeightsForUnheardBot(botJsonTemplate: IBotType): void;
+    /**
+     * Remove items from item.json/lootableItemBlacklist from bots inventory
+     * @param botInventory Bot to filter
+     */
+    protected removeBlacklistedLootFromBotTemplate(botInventory: Inventory): void;
+>>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
     /**
      * Choose various appearance settings for a bot using weights: head/body/feet/hands
      * @param bot Bot to adjust
      * @param appearance Appearance settings to choose from
      * @param botGenerationDetails Generation details
      */
+<<<<<<< HEAD
     protected setBotAppearance(bot: IBotBase, appearance: IAppearance, botGenerationDetails: IBotGenerationDetails): void;
+=======
+    protected setBotAppearance(bot: IBotBase, appearance: Appearance, botGenerationDetails: BotGenerationDetails): void;
+    /**
+     * Create a bot nickname
+     * @param botJsonTemplate x.json from database
+     * @param botGenerationDetails
+     * @param botRole role of bot e.g. assault
+     * @param sessionId OPTIONAL: profile session id
+     * @returns Nickname for bot
+     */
+    protected generateBotNickname(botJsonTemplate: IBotType, botGenerationDetails: BotGenerationDetails, botRole: string, sessionId?: string): string;
+    protected shouldSimulatePlayerScavName(botRole: string, isPlayerScav: boolean): boolean;
+    protected addPlayerScavNameSimulationSuffix(nickname: string): string;
+>>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
     /**
      * Log the number of PMCs generated to the debug console
      * @param output Generated bot array, ready to send to client
@@ -180,7 +238,11 @@ export declare class BotGenerator {
      * @param botInfo bot info object to update
      * @returns Chosen game version
      */
+<<<<<<< HEAD
     protected setRandomisedGameVersionAndCategory(botInfo: IInfo): string;
+=======
+    protected setRandomisedGameVersionAndCategory(botInfo: Info): string;
+>>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
     /**
      * Add a side-specific (usec/bear) dogtag item to a bots inventory
      * @param bot bot to add dogtag to

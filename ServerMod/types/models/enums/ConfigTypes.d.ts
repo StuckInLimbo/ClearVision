@@ -1,6 +1,9 @@
 export declare enum ConfigTypes {
     AIRDROP = "spt-airdrop",
+<<<<<<< HEAD
     BACKUP = "spt-backup",
+=======
+>>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
     BOT = "spt-bot",
     PMC = "spt-pmc",
     CORE = "spt-core",
@@ -25,5 +28,10 @@ export declare enum ConfigTypes {
     WEATHER = "spt-weather",
     SEASONAL_EVENT = "spt-seasonalevents",
     LOST_ON_DEATH = "spt-lostondeath",
+<<<<<<< HEAD
     GIFTS = "spt-gifts"
+=======
+    GIFTS = "spt-gifts",
+    BTR = "spt-btr"
+>>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
 }

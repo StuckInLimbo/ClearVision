@@ -1,8 +1,17 @@
 import { MinMax } from "@spt/models/common/MinMax";
+<<<<<<< HEAD
 import { IBossLocationSpawn, IWave } from "@spt/models/eft/common/ILocationBase";
 import { IBaseConfig } from "@spt/models/spt/config/IBaseConfig";
 export interface ILocationConfig extends IBaseConfig {
     kind: "spt-location";
+=======
+import { BossLocationSpawn, Wave } from "@spt/models/eft/common/ILocationBase";
+import { IBaseConfig } from "@spt/models/spt/config/IBaseConfig";
+export interface ILocationConfig extends IBaseConfig {
+    kind: "spt-location";
+    /** Waves with a min/max of the same value don't spawn any bots, bsg only spawn the difference between min and max */
+    fixEmptyBotWavesSettings: IFixEmptyBotWavesSettings;
+>>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
     /** Rogues are classified as bosses and spawn immediatly, this can result in no scavs spawning, delay rogues spawning to allow scavs to spawn first */
     rogueLighthouseSpawnTimeSettings: IRogueLighthouseSpawnTimeSettings;
     /** When a map has hit max alive bots, any wave that should spawn will be reduced to 1 bot in size and placed in a spawn queue, this splits waves into smaller sizes to reduce the impact of this behaviour */

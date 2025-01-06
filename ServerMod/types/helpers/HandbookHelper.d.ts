@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 import { IHandbookCategory } from "@spt/models/eft/common/tables/IHandbookBase";
 import { IItem } from "@spt/models/eft/common/tables/IItem";
+=======
+import { Category } from "@spt/models/eft/common/tables/IHandbookBase";
+import { Item } from "@spt/models/eft/common/tables/IItem";
+>>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
 import { IItemConfig } from "@spt/models/spt/config/IItemConfig";
 import { ConfigServer } from "@spt/servers/ConfigServer";
 import { DatabaseService } from "@spt/services/DatabaseService";

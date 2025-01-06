@@ -1,8 +1,14 @@
 import { BotHelper } from "@spt/helpers/BotHelper";
 import { ProfileHelper } from "@spt/helpers/ProfileHelper";
+<<<<<<< HEAD
 import { EquipmentChances, IBotType, IGeneration, IGenerationData, IModsChances } from "@spt/models/eft/common/tables/IBotType";
 import { IBotGenerationDetails } from "@spt/models/spt/bots/BotGenerationDetails";
 import { EquipmentFilters, IAdjustmentDetails, IBotConfig, IEquipmentFilterDetails, IWeightingAdjustmentDetails } from "@spt/models/spt/config/IBotConfig";
+=======
+import { EquipmentChances, Generation, GenerationData, IBotType, ModsChances } from "@spt/models/eft/common/tables/IBotType";
+import { BotGenerationDetails } from "@spt/models/spt/bots/BotGenerationDetails";
+import { EquipmentFilterDetails, EquipmentFilters, IAdjustmentDetails, IBotConfig, WeightingAdjustmentDetails } from "@spt/models/spt/config/IBotConfig";
+>>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
 import { ILogger } from "@spt/models/spt/utils/ILogger";
 import { ConfigServer } from "@spt/servers/ConfigServer";
 export declare class BotEquipmentFilterService {
@@ -51,28 +57,44 @@ export declare class BotEquipmentFilterService {
      * @param playerLevel Level of the player
      * @returns EquipmentBlacklistDetails object
      */
+<<<<<<< HEAD
     getBotEquipmentBlacklist(botRole: string, playerLevel: number): IEquipmentFilterDetails | undefined;
+=======
+    getBotEquipmentBlacklist(botRole: string, playerLevel: number): EquipmentFilterDetails | undefined;
+>>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
     /**
      * Get the whitelist for a specific bot type that's within the players level
      * @param botRole Bot type
      * @param playerLevel Players level
      * @returns EquipmentFilterDetails object
      */
+<<<<<<< HEAD
     protected getBotEquipmentWhitelist(botRole: string, playerLevel: number): IEquipmentFilterDetails | undefined;
+=======
+    protected getBotEquipmentWhitelist(botRole: string, playerLevel: number): EquipmentFilterDetails | undefined;
+>>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
     /**
      * Retrieve item weighting adjustments from bot.json config based on bot level
      * @param botRole Bot type to get adjustments for
      * @param botLevel Level of bot
      * @returns Weighting adjustments for bot items
      */
+<<<<<<< HEAD
     protected getBotWeightingAdjustments(botRole: string, botLevel: number): IWeightingAdjustmentDetails | undefined;
+=======
+    protected getBotWeightingAdjustments(botRole: string, botLevel: number): WeightingAdjustmentDetails | undefined;
+>>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
     /**
      * Retrieve item weighting adjustments from bot.json config based on player level
      * @param botRole Bot type to get adjustments for
      * @param playerlevel Level of bot
      * @returns Weighting adjustments for bot items
      */
+<<<<<<< HEAD
     protected getBotWeightingAdjustmentsByPlayerLevel(botRole: string, playerlevel: number): IWeightingAdjustmentDetails | undefined;
+=======
+    protected getBotWeightingAdjustmentsByPlayerLevel(botRole: string, playerlevel: number): WeightingAdjustmentDetails | undefined;
+>>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
     /**
      * Filter bot equipment based on blacklist and whitelist from config/bot.json
      * Prioritizes whitelist first, if one is found blacklist is ignored

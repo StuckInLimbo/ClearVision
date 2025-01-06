@@ -1,5 +1,9 @@
 import { SaveLoadRouter } from "@spt/di/Router";
 import { ISptProfile, Info } from "@spt/models/eft/profile/ISptProfile";
+<<<<<<< HEAD
+=======
+import { ICoreConfig } from "@spt/models/spt/config/ICoreConfig";
+>>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
 import { ILogger } from "@spt/models/spt/utils/ILogger";
 import { ConfigServer } from "@spt/servers/ConfigServer";
 import { LocalisationService } from "@spt/services/LocalisationService";
@@ -18,6 +22,7 @@ export declare class SaveServer {
     protected profiles: {};
     protected onBeforeSaveCallbacks: {};
     protected saveMd5: {};
+    protected coreConfig: ICoreConfig;
     constructor(vfs: VFS, saveLoadRouters: SaveLoadRouter[], jsonUtil: JsonUtil, hashUtil: HashUtil, localisationService: LocalisationService, logger: ILogger, configServer: ConfigServer);
     /**
      * Add callback to occur prior to saving profile changes

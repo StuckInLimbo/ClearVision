@@ -5,9 +5,23 @@ import { IBaseConfig } from "@spt/models/spt/config/IBaseConfig";
 export interface IWeatherConfig extends IBaseConfig {
     kind: "spt-weather";
     acceleration: number;
+<<<<<<< HEAD
     weather: IWeatherValues;
     seasonDates: ISeasonDateTimes[];
     overrideSeason?: Season;
+=======
+    weather: Weather;
+    seasonDates: ISeasonDateTimes[];
+    overrideSeason?: Season;
+}
+export interface ISeasonDateTimes {
+    seasonType: Season;
+    name: string;
+    startDay: number;
+    startMonth: number;
+    endDay: number;
+    endMonth: number;
+>>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
 }
 export interface ISeasonDateTimes {
     seasonType: Season;

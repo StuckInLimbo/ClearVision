@@ -13,9 +13,13 @@ import { IGameModeResponse } from "@spt/models/eft/game/IGameModeResponse";
 import { IGameStartResponse } from "@spt/models/eft/game/IGameStartResponse";
 import { IGetRaidTimeRequest } from "@spt/models/eft/game/IGetRaidTimeRequest";
 import { IGetRaidTimeResponse } from "@spt/models/eft/game/IGetRaidTimeResponse";
+<<<<<<< HEAD
 import { ISendSurveyOpinionRequest } from "@spt/models/eft/game/ISendSurveyOpinionRequest";
 import { IServerDetails } from "@spt/models/eft/game/IServerDetails";
 import { ISurveyResponseData } from "@spt/models/eft/game/ISurveyResponseData";
+=======
+import { IServerDetails } from "@spt/models/eft/game/IServerDetails";
+>>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
 import { IVersionValidateRequestData } from "@spt/models/eft/game/IVersionValidateRequestData";
 import { IGetBodyResponseData } from "@spt/models/eft/httpResponse/IGetBodyResponseData";
 import { INullResponseData } from "@spt/models/eft/httpResponse/INullResponseData";

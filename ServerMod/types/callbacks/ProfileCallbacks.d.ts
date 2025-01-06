@@ -5,7 +5,11 @@ import { IPmcData } from "@spt/models/eft/common/IPmcData";
 import { IGetBodyResponseData } from "@spt/models/eft/httpResponse/IGetBodyResponseData";
 import { INullResponseData } from "@spt/models/eft/httpResponse/INullResponseData";
 import { IGetMiniProfileRequestData } from "@spt/models/eft/launcher/IGetMiniProfileRequestData";
+<<<<<<< HEAD
 import { IGetProfileStatusResponseData } from "@spt/models/eft/profile/GetProfileStatusResponseData";
+=======
+import { GetProfileStatusResponseData } from "@spt/models/eft/profile/GetProfileStatusResponseData";
+>>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
 import { ICreateProfileResponse } from "@spt/models/eft/profile/ICreateProfileResponse";
 import { IGetOtherProfileRequest } from "@spt/models/eft/profile/IGetOtherProfileRequest";
 import { IGetOtherProfileResponse } from "@spt/models/eft/profile/IGetOtherProfileResponse";

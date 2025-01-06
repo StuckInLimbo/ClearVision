@@ -3,7 +3,10 @@ import { ILocation } from "@spt/models/eft/common/ILocation";
 import { IAchievement } from "@spt/models/eft/common/tables/IAchievement";
 import { ICustomizationItem } from "@spt/models/eft/common/tables/ICustomizationItem";
 import { IHandbookBase } from "@spt/models/eft/common/tables/IHandbookBase";
+<<<<<<< HEAD
 import { ILocationServices } from "@spt/models/eft/common/tables/ILocationServices";
+=======
+>>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
 import { IMatch } from "@spt/models/eft/common/tables/IMatch";
 import { IProfileTemplates } from "@spt/models/eft/common/tables/IProfileTemplate";
 import { IQuest } from "@spt/models/eft/common/tables/IQuest";
@@ -21,15 +24,23 @@ import { ITemplates } from "@spt/models/spt/templates/ITemplates";
 import { ILogger } from "@spt/models/spt/utils/ILogger";
 import { DatabaseServer } from "@spt/servers/DatabaseServer";
 import { LocalisationService } from "@spt/services/LocalisationService";
+<<<<<<< HEAD
 import { HashUtil } from "@spt/utils/HashUtil";
+=======
+>>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
 export declare class DatabaseService {
     protected logger: ILogger;
     protected databaseServer: DatabaseServer;
     protected localisationService: LocalisationService;
+<<<<<<< HEAD
     protected hashUtil: HashUtil;
     protected locationConfig: ILocationConfig;
     protected isDataValid: boolean;
     constructor(logger: ILogger, databaseServer: DatabaseServer, localisationService: LocalisationService, hashUtil: HashUtil);
+=======
+    protected locationConfig: ILocationConfig;
+    constructor(logger: ILogger, databaseServer: DatabaseServer, localisationService: LocalisationService);
+>>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
     /**
      * @returns assets/database/
      */
@@ -85,7 +96,11 @@ export declare class DatabaseService {
      */
     getCustomization(): Record<string, ICustomizationItem>;
     /**
+<<<<<<< HEAD
      * @returns assets/database/templates/handbook.json
+=======
+     * @returns assets/database/templates/items.json
+>>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
      */
     getHandbook(): IHandbookBase;
     /**
@@ -101,7 +116,11 @@ export declare class DatabaseService {
      */
     getProfiles(): IProfileTemplates;
     /**
+<<<<<<< HEAD
      * @returns assets/database/templates/quests.json
+=======
+     * @returns assets/database/templates/items.json
+>>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
      */
     getQuests(): Record<string, IQuest>;
     /**
@@ -114,6 +133,7 @@ export declare class DatabaseService {
      * @returns assets/database/traders/
      */
     getTrader(traderId: string): ITrader;
+<<<<<<< HEAD
     /**
      * @returns assets/database/locationServices/
      */
@@ -134,4 +154,6 @@ export declare class DatabaseService {
      * @returns True if the database contains valid data, false otherwise
      */
     isDatabaseValid(): boolean;
+=======
+>>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
 }

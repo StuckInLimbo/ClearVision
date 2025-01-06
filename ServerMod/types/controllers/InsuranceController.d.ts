@@ -4,12 +4,20 @@ import { ProfileHelper } from "@spt/helpers/ProfileHelper";
 import { TraderHelper } from "@spt/helpers/TraderHelper";
 import { WeightedRandomHelper } from "@spt/helpers/WeightedRandomHelper";
 import { IPmcData } from "@spt/models/eft/common/IPmcData";
+<<<<<<< HEAD
 import { IItem } from "@spt/models/eft/common/tables/IItem";
+=======
+import { Item } from "@spt/models/eft/common/tables/IItem";
+>>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
 import { IGetInsuranceCostRequestData } from "@spt/models/eft/insurance/IGetInsuranceCostRequestData";
 import { IGetInsuranceCostResponseData } from "@spt/models/eft/insurance/IGetInsuranceCostResponseData";
 import { IInsureRequestData } from "@spt/models/eft/insurance/IInsureRequestData";
 import { IItemEventRouterResponse } from "@spt/models/eft/itemEvent/IItemEventRouterResponse";
+<<<<<<< HEAD
 import { IInsurance } from "@spt/models/eft/profile/ISptProfile";
+=======
+import { Insurance } from "@spt/models/eft/profile/ISptProfile";
+>>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
 import { IInsuranceConfig } from "@spt/models/spt/config/IInsuranceConfig";
 import { ILogger } from "@spt/models/spt/utils/ILogger";
 import { EventOutputHolder } from "@spt/routers/EventOutputHolder";
@@ -189,7 +197,11 @@ export declare class InsuranceController {
      * @param insuredItem Optional. The item to roll for. Only used for logging.
      * @returns true if the insured item should be removed from inventory, false otherwise, or undefined on error.
      */
+<<<<<<< HEAD
     protected rollForDelete(traderId: string, insuredItem?: IItem): boolean | undefined;
+=======
+    protected rollForDelete(traderId: string, insuredItem?: Item): boolean | undefined;
+>>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
     /**
      * Handle Insure event
      * Add insurance to an item

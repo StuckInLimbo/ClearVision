@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import { IDialogue, IUserDialogInfo } from "@spt/models/eft/profile/ISptProfile";
+=======
+import { Dialogue, IUserDialogInfo } from "@spt/models/eft/profile/ISptProfile";
+>>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
 import { IWsNotificationEvent } from "@spt/models/eft/ws/IWsNotificationEvent";
 import { MessageType } from "@spt/models/enums/MessageType";
 import { SaveServer } from "@spt/servers/SaveServer";

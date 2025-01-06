@@ -1,11 +1,19 @@
 import { MinMax } from "@spt/models/common/MinMax";
+<<<<<<< HEAD
 import { IGenerationData } from "@spt/models/eft/common/tables/IBotType";
+=======
+import { GenerationData } from "@spt/models/eft/common/tables/IBotType";
+>>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
 import { IBaseConfig } from "@spt/models/spt/config/IBaseConfig";
 import { IBotDurability } from "@spt/models/spt/config/IBotDurability";
 export interface IBotConfig extends IBaseConfig {
     kind: "spt-bot";
     /** How many variants of each bot should be generated on raid start */
+<<<<<<< HEAD
     presetBatch: IPresetBatch;
+=======
+    presetBatch: PresetBatch;
+>>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
     /** Bot roles that should not have PMC types (pmcBEAR/pmcUSEC) added as enemies to */
     botsToNotAddPMCsAsEnemiesTo: string[];
     /** What bot types should be classified as bosses */
@@ -44,10 +52,13 @@ export interface IBotConfig extends IBaseConfig {
     /** What bottypes should be excluded from having loot generated on them (backpack/pocket/vest) does not disable food/drink/special/ */
     disableLootOnBotTypes: string[];
     assaultToBossConversion: IAssaultToBossConversion;
+<<<<<<< HEAD
     /** Max length a bots name can be */
     botNameLengthLimit: number;
     /** Bot roles that must have a unique name when generated vs other bots in raid */
     botRolesThatMustHaveUniqueName: string[];
+=======
+>>>>>>> 8b338f9de36d43ac2ef5da215cdc74d78c8e8a39
 }
 export interface IAssaultToBossConversion {
     bossConvertEnabled: boolean;

@@ -1,10 +1,10 @@
 {
        "name": "clearvision",
-       "version": "2.0.4",
+       "version": "2.0.6",
        "author": "LimboFPS",
        "license": "CC BY-NC 4.0",
        "main": "src/mod.js",
-       "akiVersion": "~3.8.3",
+       "akiVersion": "~3.10.x",
        "isBundleMod": true,
        "scripts": {
         "setup": "npm i",
@@ -19,7 +19,6 @@
         "eslint": "8.57",
         "fs-extra": "11.2",
         "ignore": "^5.2",
-        "os": "^0.1",
         "tsyringe": "4.8.0",
         "typescript": "5.4",
         "winston": "3.12"

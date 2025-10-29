@@ -1,6 +1,19 @@
 {
-	"GPNVG" : {
-		"Enabled": false,
+	"GPNVG": {
+		"Enabled": true,
+		"Intensity": 2.3,
+		"NoiseIntensity": 0.0,
+		"NoiseScale": 0.0,
+		"DiffuseIntensity": 0.0,
+		"Mask": "Anvis",
+		"MaskSize": 1.5,
+		"Red": 83,
+		"Green": 255,
+		"Blue": 69,
+		"Alpha": 254
+	},
+	"N15": {
+		"Enabled": true,
 		"Intensity": 2.3,
 		"NoiseIntensity": 0.0,
 		"NoiseScale": 0.0,
@@ -8,38 +21,25 @@
 		"Mask": "Anvis",
 		"MaskSize": 1.5,
 		"Red": 0,
-		"Green": 200,
-		"Blue": 200,
+		"Green": 255,
+		"Blue": 243,
 		"Alpha": 254
 	},
-	"N15" : {
-		"Enabled": false,
+	"PVS14": {
+		"Enabled": true,
 		"Intensity": 2.3,
 		"NoiseIntensity": 0.0,
 		"NoiseScale": 0.0,
 		"DiffuseIntensity": 0.0,
 		"Mask": "Anvis",
 		"MaskSize": 1.5,
-		"Red": 0,
-		"Green": 100,
-		"Blue": 200,
-		"Alpha": 254
-	},
-	"PVS14" : {
-		"Enabled": false,
-		"Intensity": 2.3,
-		"NoiseIntensity": 0.0,
-		"NoiseScale": 0.0,
-		"DiffuseIntensity": 0.0,
-		"Mask": "Anvis",
-		"MaskSize": 1.5,
-		"Red": 200,
-		"Green": 100,
-		"Blue": 100,
+		"Red": 183,
+		"Green": 255,
+		"Blue": 86,
 		"Alpha": 235
 	},
-	"PNV10T" : {
-		"Enabled": false,
+	"PNV10T": {
+		"Enabled": true,
 		"Intensity": 2.3,
 		"NoiseIntensity": 0.0,
 		"NoiseScale": 0.0,
@@ -47,12 +47,25 @@
 		"Mask": "Anvis",
 		"MaskSize": 1.5,
 		"Red": 0,
-		"Green": 200,
-		"Blue": 0,
+		"Green": 255,
+		"Blue": 32,
+		"Alpha": 254
+	},
+	"PNV57E": {
+		"Enabled": true,
+		"Intensity": 2.3,
+		"NoiseIntensity": 0.0,
+		"NoiseScale": 0.0,
+		"DiffuseIntensity": 0.0,
+		"Mask": "Anvis",
+		"MaskSize": 1.5,
+		"Red": 83,
+		"Green": 255,
+		"Blue": 69,
 		"Alpha": 254
 	},
 	"T7": {
-		"Enabled": false,
+		"Enabled": true,
 		"Noise": false,
 		"NoiseIntensity": 0.0,
 		"MotionBlur": false,

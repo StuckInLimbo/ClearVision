@@ -43,7 +43,9 @@ public class ClearVision(ISptLogger<ClearVision> logger, DatabaseService databas
 			{ ItemTpl.NIGHTVISION_L3HARRIS_GPNVG18_NIGHT_VISION_GOGGLES, NVGConfig.GPNVG },
 			{ ItemTpl.NIGHTVISION_ARMASIGHT_N15_NIGHT_VISION_GOGGLES, NVGConfig.N15 },
 			{ ItemTpl.NIGHTVISION_L3HARRIS_ANPVS14_NIGHT_VISION_MONOCULAR, NVGConfig.PVS14 },
-			{ ItemTpl.NIGHTVISION_PNV10T_NIGHT_VISION_GOGGLES, NVGConfig.PNV10T }
+			{ ItemTpl.NIGHTVISION_PNV10T_NIGHT_VISION_GOGGLES, NVGConfig.PNV10T },
+			{ ItemTpl.NIGHTVISION_PNV57E_NIGHT_VISION_GOGGLES, NVGConfig.PNV57E }
+
 		};
 
 		// Iterate over the mappings and apply the configurations

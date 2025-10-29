@@ -6,6 +6,7 @@ internal class Config
 	public N15Config N15 { get; set; }
 	public PVS14Config PVS14 { get; set; }
 	public PNV10TConfig PNV10T { get; set; }
+	public PNV57EConfig PNV57E { get; set; }
 	public T7Config T7 { get; set; }
 
 	public Config()
@@ -14,6 +15,7 @@ internal class Config
 		N15 = new N15Config();
 		PVS14 = new PVS14Config();
 		PNV10T = new PNV10TConfig();
+		PNV57E = new PNV57EConfig();
 		T7 = new T7Config();
 	}
 }
@@ -38,6 +40,8 @@ internal class N15Config : GPNVGConfig { }
 internal class PVS14Config : GPNVGConfig { }
 
 internal class PNV10TConfig : GPNVGConfig { }
+
+internal class PNV57EConfig : GPNVGConfig { }
 
 internal class T7Config
 {
